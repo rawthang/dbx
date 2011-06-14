@@ -41,3 +41,4 @@ class Login{
 		return $this->login;
 	}
 }
+?>
