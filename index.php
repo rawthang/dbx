@@ -2,7 +2,7 @@
 require_once ('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once('classes/Exploit.php');
-$e=new Exploid();
+$e=new Exploit();
 ?>
 <!DOCTYPE html>
 <html>
