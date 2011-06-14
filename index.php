@@ -1,5 +1,5 @@
 <?php
-require_once ('credentials.php');
+require_once('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once('classes/Exploit.php');
 $e=new Exploid();
@@ -16,14 +16,11 @@ $e=new Exploid();
 		<h1>ue-cr3w exploits</h1>
 		<img src="img/logo.png" alt="logo" />
 	</div>
-
 	<div>
 		<h2>new exploit</h2>
-
 		<form id="newexploit" action="index.php" enctype="multipart/form-data"
 			method="get">
 			<fieldset>
-
 				<ul>
 					<li>
 						<label for="name">name</label>
@@ -37,8 +34,7 @@ $e=new Exploid();
 							<option value="3">item 3</option>
 							<option value="4">item 4</option>
 					</select>
-					</li>
-					
+					</li>					
 					<li>
 						<label for="description">description</label> 
 						<textarea id="description" rows="40" cols=70" name="description"></textarea>
@@ -65,17 +61,12 @@ $e=new Exploid();
 								value="manual_challenge">
 						</noscript>
 					</li>
-
-
 				</ul>
 			</fieldset>
-
 			<fieldset>
 				<button type="submit" name="submit" value="true">anlegen</button>
 			</fieldset>
 		</form>
-
 	</div>
 </body>
 </html>
-
