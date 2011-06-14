@@ -3,7 +3,8 @@ require_once ('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once('classes/Exploit.php');
 require_once ('classes/other/geshi/geshi.php');
-
+require ('classes/Platform.php');
+require ('classes/pPlatform.php');
 
 
 /**Beispiel objekt erzeugen
@@ -43,6 +44,7 @@ echo $geshi->parse_code();');
 
 $e->codeLanguage('php');
 $e->verified(true);
+$e->file('/bin/cp');
 ?>
 
 
@@ -60,10 +62,45 @@ $e->verified(true);
 	</div>
 
 	<div>
-	<!--  beispielausgabe -->
-	<!-- wenn die ordentlich ist kann man sie auch in die Klasse packen.... -->
+	<?php echo "Ausgabe Platform----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>		
+	<?php 
+	//das hier können wir für die listbox bei der eingabemaske für exploits verwenden :)
 	
-	<?php echo "---------------------------------------------------------------------------------------------------------<p>";?>
+	$p = new pPlatform();
+	$dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
+	//$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
+
+	$p->dbh($dbh);
+	//alle ausgeben
+	$platforms=$p->mysqlSelect();	
+	foreach($platforms as $p_db)
+		echo " $p_db";
+	
+	echo "<h5>Element mit id 1 ausgeben + löschen -  klappt nur einmal</h5>"; 
+	
+	$p->mysqlSelect(1);		
+	echo $p;
+	echo $p->mysqlDelete(1);
+	echo "<h5>Element mit id 2 ändern</h5>";		
+	$p->mysqlSelect(2);
+	echo $p.'<p>';
+	
+	$p->name('alfons68');
+	$p->mysqlUpdate();
+	$p->mysqlSelect(2);	
+	echo $p.'<p>';
+		
+	$p->name('Spielautomat');
+	$p->mysqlUpdate();
+	$p->mysqlSelect(2);	
+	echo $p.'<p>';
+	?>
+	<p>
+	<?php echo "Ausgabe Platform----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>
+	
+	<!--  beispielausgabe -->
+	<!-- wenn die ordentlich ist kann man sie auch in die Klasse packen.... -->	
+	<?php echo "Ausgabe Exploit----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>
 	<div class="exploit">
 	<div class="exploit-title"><?php echo $e->title();?></div>
 	<div class="exploit-autor">Author: <?php echo $e->autor();?></div>
@@ -71,8 +108,9 @@ $e->verified(true);
 	<div class="exploit-hits">Views: <?php echo $e->hits(); ?></div>	
 	<div class="exploit-content"><?php echo $e->getFormatedCode();?></div>
 	<div class="exploit-verified">Verified: <?php echo $e->verified();?></div>
+	<div class="exploit-download">download: <a href="<?php echo $e->file()?>">here</a></div>
 	</div>
-	<?php echo "---------------------------------------------------------------------------------------------------------<p>";?>
+		<?php echo "Ausgabe Exploit----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>
 	<!--  beispielausgabe -->
 		<h2>new exploit</h2>
 

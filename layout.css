@@ -23,6 +23,11 @@ html,body,h1,form,fieldset,legend,ol,li {
 	background-color:white;
 	
 	}
+.exploit-download a{
+	font-size:1.5em;
+	
+	}
+
 
 /***********formular***********/
 /*form {
