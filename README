@@ -1,0 +1,18 @@
+Hi, 
+hier schreib ich rein, was mir gerade durch den kopf geht, wie das wetter ist usw....
+Ich stell mir das mit der Hierarchie im Dateisystem so vor:
+
++admin			Hier wollte ich den adminbereich reinlegen
++classes    	Alles an Klassen hier rein   
++-----helper	Hilfsklassen die von uns erstellt werden
++-----other		Sachen wie Geshi, die wir brauchen, die aber nicht von uns sind
++img			Bilder für das Layout	
+upload			Uploads hier rein, oder sollen wir Blobs benutzen?
+credentials.php	Anmeldedaten für die Datenbank
+index.php		???
+layout.css		???	
+README			wirres Zeug
+sql				damit kann die Datenbank angelegt + befüllt werden
+TODO.php  		Bemerkenswertes
+
+Ich seh das mit der Hierarchie recht locker, da können wir quasi noch alles ändern. 

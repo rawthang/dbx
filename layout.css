@@ -12,6 +12,18 @@ html,body,h1,form,fieldset,legend,ol,li {
 	padding: 0;
 	color: f10000;
 }
+.exploit{
+	width:700px;
+	border:1px solid #f10000;
+	margin:3em;
+	}
+.exploit-content{
+	padding:0.5em;
+	margin:0.5em;
+	background-color:white;
+	
+	}
+
 /***********formular***********/
 /*form {
 	color: #f10000;
