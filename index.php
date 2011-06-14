@@ -2,8 +2,43 @@
 require_once ('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once('classes/Exploit.php');
+require_once ('classes/other/geshi/geshi.php');		
 $e=new Exploit();
+$e->title('Example');
+$e->autor('fingerb&auml;ng');
+$e->content('	//
+				// Include the GeSHi library
+				//
+				include_once \'geshi.php\';
+				 
+				//
+				// Define some source to highlight, a language to use
+				// and the path to the language files
+				//
+				 
+				$source = \'$foo = 45;
+				for ( $i = 1; $i < $foo; $i++ )
+				{
+				  echo "$foo\n";
+				  --$foo;
+				}\';
+				$language = \'php\';
+				 
+				//
+				// Create a GeSHi object
+				//
+				 
+				$geshi = new GeSHi($source, $language);
+				 
+				//
+				// And echo the result!
+				//
+				echo $geshi->parse_code();');
+
+$e->codeLanguage('php');
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +53,12 @@ $e=new Exploit();
 	</div>
 
 	<div>
+	<!--  beispielausgabe -->
+	
+	<h1><?php echo $e->title();?></h1>
+	<?php echo $e->getFormatedCode();?>
+	
+	<!--  beispielausgabe -->
 		<h2>new exploit</h2>
 
 		<form id="newexploit" action="index.php" enctype="multipart/form-data"
