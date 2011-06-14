@@ -16,5 +16,10 @@ class Category extends Dbhelper {
 	
 	/**Getter**/
 	public function name($name=""){ if (empty($name)){return $this->name; }else{$this->name=$name; } }
+	
+	
+	public function __toString(){
+		return "id {$this->id()} name {$this->name()}";
+	}
 }//class
 ?>

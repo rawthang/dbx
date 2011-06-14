@@ -2,8 +2,50 @@
 require_once('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once('classes/Exploit.php');
+require_once ('classes/other/geshi/geshi.php');
+
+
+
+/**Beispiel objekt erzeugen
+ * Später wird ein Objekt vom Typ PExploit instanziiert und $obj->mysqlSelect($id) aufgerufen
+ */
 $e=new Exploit();
+$e->title('Geshi Verwenden');
+$e->autor('fingerb&auml;ng');
+$e->content('
+// Include the GeSHi library
+//
+include_once \'geshi.php\';
+
+//
+// Define some source to highlight, a language to use
+//and the path to the language files
+//
+				 
+$source = \'$foo = 45;
+for ( $i = 1; $i < $foo; $i++ )
+{
+	echo "$foo\n";
+	--$foo;
+}\';
+$language = \'php\';
+				 
+//
+// Create a GeSHi object
+//
+				 
+$geshi = new GeSHi($source, $language);
+				 
+//
+// And echo the result!
+//
+echo $geshi->parse_code();');
+
+$e->codeLanguage('php');
+$e->verified(true);
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +59,20 @@ $e=new Exploit();
 		<img src="img/logo.png" alt="logo" />
 	</div>
 	<div>
+	<!--  beispielausgabe -->
+	<!-- wenn die ordentlich ist kann man sie auch in die Klasse packen.... -->
+	
+	<?php echo "---------------------------------------------------------------------------------------------------------<p>";?>
+	<div class="exploit">
+	<div class="exploit-title"><?php echo $e->title();?></div>
+	<div class="exploit-autor">Author: <?php echo $e->autor();?></div>
+	<div class="exploit-date">Date: <?php echo $e->date();?></div>
+	<div class="exploit-hits">Views: <?php echo $e->hits(); ?></div>	
+	<div class="exploit-content"><?php echo $e->getFormatedCode();?></div>
+	<div class="exploit-verified">Verified: <?php echo $e->verified();?></div>
+	</div>
+	<?php echo "---------------------------------------------------------------------------------------------------------<p>";?>
+	<!--  beispielausgabe -->
 		<h2>new exploit</h2>
 		<form id="newexploit" action="index.php" enctype="multipart/form-data"
 			method="get">
@@ -32,7 +88,7 @@ $e=new Exploit();
 							<option value="1">item 1</option>
 							<option value="2">item 2</option>
 							<option value="3">item 3</option>
-							<option value="4">item 4</option>
+							<option value="4">item 4</option>							
 					</select>
 					</li>					
 					<li>
