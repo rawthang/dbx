@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+body {
+	background: black;
+	color: #f10000;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 20px;
+}
+
+html,body,h1,form,fieldset,legend,ol,li {
+	margin: 0;
+	padding: 0;
+	color: f10000;
+}
+/***********formular***********/
+/*form {
+	color: #f10000;
+	
+}
+form {
+	background: #353535;
+
+	padding: 10px;
+	width: 600px;
+	margin: 20px;
+}
+form button {
+	border: none;
+	display: block;
+	color: #f10000;
+	background: black;
+	padding: 7px 7px;
+	
+	margin: auto;
+}
+form li{
+	
+	list-style:none;
+	}
+
+form fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+
+form fieldset:last-of-type {
+	margin-bottom: 0;
+}
+
+form button:hover {
+	background: #1e2506;
+	cursor: pointer;
+}*/
+/***********formular***********/
