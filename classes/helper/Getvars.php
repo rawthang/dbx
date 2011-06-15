@@ -13,7 +13,7 @@ class Getvars{
 	private $vars=array();
 	
 	public function __construct(){
-		$this->vars=array_merge( $_GET, $_POST);
+		$this->vars=$_REQUEST;
 	}//construct
 
 	/**
