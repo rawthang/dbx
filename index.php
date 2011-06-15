@@ -6,6 +6,8 @@ require_once ('classes/other/geshi/geshi.php');
 require ('classes/Platform.php');
 require ('classes/pPlatform.php');
 
+require_once 'classes/Category.php';
+
 /**Passwörter*/
 require_once 'classes/other/phpass-0.3/PasswordHash.php';
 require_once 'classes/helper/Login.php';
@@ -49,9 +51,11 @@ echo $geshi->parse_code();');
 $e->codeLanguage('php');
 $e->verified(true);
 $e->file('/bin/cp');
+
+
+
+$dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,12 +69,20 @@ $e->file('/bin/cp');
 		<img src="img/logo.png" alt="logo" />
 	</div>
 	<div>
+	<?php echo "Ausgabe Categpry----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>
+	<?php 	
+		$c=new pCategory();	
+	
+	
+	
+	
+	?>
 	<?php echo "Ausgabe Platform----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>		
 	<?php 
 	//das hier können wir für die listbox bei der eingabemaske für exploits verwenden :)
 	
 	$p = new pPlatform();
-	$dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
+	
 	//$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
 
 	$p->dbh($dbh);
