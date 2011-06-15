@@ -1,12 +1,11 @@
--- Exploit
 DROP TABLE IF EXISTS `cms_title`;
 CREATE TABLE IF NOT EXISTS `cms_title` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
-  `catid` int(100) NOT NULL,
+  `catid` int(2) NOT NULL,
   `date` datetime NOT NULL,
   `verifi` int(1) NOT NULL,
   `count` int(10) NOT NULL,
-  `platform` varchar(255) NOT NULL,
+  `platformid` int(2) NOT NULL,
   `authorid` int(10) NOT NULL,
   `geshi` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
@@ -15,11 +14,9 @@ CREATE TABLE IF NOT EXISTS `cms_title` (
 
 
 
--- Categories
  DROP TABLE IF EXISTS `cms_cat`;
 CREATE TABLE IF NOT EXISTS `cms_cat` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
-
   `cat` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
   
@@ -34,9 +31,8 @@ INSERT INTO `cms_cat` (`id`, `cat`) VALUES
 (5, 'Web Applications'),
 (6, 'DoS/PoC');
 
--- Platform
 DROP TABLE IF EXISTS `cms_platform`;
-CREATE TABLE `exploit`.`cms_platform` (
+CREATE TABLE `cms_platform` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `name` VARCHAR( 255 ) NOT NULL
 ) ENGINE =MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci;
