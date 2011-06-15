@@ -29,7 +29,7 @@ class Session{
 		$logoutVar=htmlspecialchars($logoutVar);
 		if (isset($logoutVar) && $logoutVar){
 			session_destroy();
-			$this->login=false;
+			$this->loggedIn=false;
 		}
 	}
 	public function loggedIn(){
