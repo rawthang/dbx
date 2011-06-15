@@ -1,5 +1,12 @@
 <?php 
-
+/**
+ * 
+ * 
+ * 
+ * @version 0.1
+ * @author ms
+ *
+ */
 interface CLogin{
 	public function validateLogin($usr, $passwd);
 }
