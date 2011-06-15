@@ -3,7 +3,7 @@
 #name;
 
 /***UML***/
-class Platform extends Dbhelper
+abstract class Platform extends Dbhelper
 {
 
 	/**Attributes**/

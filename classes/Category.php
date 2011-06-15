@@ -3,7 +3,7 @@
 #name;
 
 /***UML***/
-class Category extends Dbhelper {
+abstract class Category extends Dbhelper {
 	/**Attributes**/
 
 	protected $name;
