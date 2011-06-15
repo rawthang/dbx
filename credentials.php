@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME','exploit');
+define('DB_NAME','blah');
 define('DB_USR','root');
-define('DB_PASS','');
+define('DB_PASS','123');
 define('DB_HOST','localhost');
 
 define('DB_DSN','mysql:host='.DB_HOST.';dbname='.DB_NAME);
