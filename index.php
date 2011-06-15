@@ -6,6 +6,10 @@ require_once ('classes/other/geshi/geshi.php');
 require ('classes/Platform.php');
 require ('classes/pPlatform.php');
 
+/**Passwörter*/
+require_once 'classes/other/phpass-0.3/PasswordHash.php';
+require_once 'classes/helper/Login.php';
+require_once 'classes/helper/Session.php';
 
 /**Beispiel objekt erzeugen
  * Später wird ein Objekt vom Typ PExploit instanziiert und $obj->mysqlSelect($id) aufgerufen
