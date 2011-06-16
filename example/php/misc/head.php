@@ -27,44 +27,27 @@ if (!empty($userlg) AND !empty($pwlg)) {
 	$login = "error";
 	$md5pw = md5($pwlg);
 
-	$sqllogin = "SELECT * FROM `clan_user` WHERE `username` = '$userlg' OR `email` = '$userlg'";
-	$datalogin = mysql_query($sqllogin, $db);
 
-	while ($userlogin = mysql_fetch_object ($datalogin)) {
+	$sqllogin = safe_query("SELECT * FROM ".PREFIX."user WHERE username='$userlg' OR email='$userlg'");
+	while ($userlogin = mysql_fetch_object ($sqllogin)) {
 		if ($userlogin->password == $md5pw) { 
 			$login = "true";
-			$_SESSION['myid'] = $userlogin->id;
+			$_SESSION['myid'] = $userlogin->userID;
 			$_SESSION['myip'] = $ip;
-			$_SESSION['user'] = $userlogin->nick;
+			$_SESSION['user'] = $userlogin->nickname;
 			$_SESSION['user'] = $userlogin->email;
-			$_SESSION['laston'] = $userlogin->laston; 
 		} 
 		else { 
 			$login="errorpw";
 		} 
 	}
-
-	mysql_free_result($datalogin);
 } 
 
 $myid = $_SESSION['myid'];
 $myip = $_SESSION['myip'];
 $user = $_SESSION['user'];
-$laston = $_SESSION['laston'];
 
-if (!empty($myid) AND $myip==$ip) {
-
-	$sqlaccess = "SELECT `access` FROM `users` WHERE `id` = '$myid'";
-	$accessdata = mysql_query($sqlaccess, $db);
-
-	while ($useraccess = mysql_fetch_object ($accessdata)) { $access = $useraccess->access; }
-		mysql_free_result($accessdata); 
-		
-		$setlaston="UPDATE `users` SET `laston` = '$time' WHERE `id` = '$myid'";
-		$sqlaction = mysql_query($setlaston); 
-}
-
-if($show == "logout" OR $myip != $ip) { 
+if($site == "logout" OR $myip != $ip) { 
 	session_destroy(); 
 }
 ?>

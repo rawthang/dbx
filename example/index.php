@@ -1,29 +1,28 @@
 <?php
+extract($_REQUEST);
 session_start();
 
-require ("php/misc/conf.php");
+require ("php/misc/conf.php"); // DB Conf
 require ("php/misc/head.php");
-require ("php/misc/common.php");
-require ("php/misc/head_html.php");
+require ("php/misc/common.php"); // Languages [DE, EN]
+require ("php/misc/head_html.php"); // HTML Head
+require ("php/misc/func.php"); // Regulary Functions
 
-$reqsite = $_REQUEST['site'];
-$time = time();
+$site = $_REQUEST['site'];
 
-$today = date ("H:i");
-$date = date ("d.m.y");  
-
-$ergebnis = safe_query("SELECT * FROM ".PREFIX."modules WHERE name='$reqsite'");
-while($ds = mysql_fetch_array($ergebnis)) {
-	$site = $ds[name];
+if (empty($site)) { $page = "php/section/home/index.php"; } 
+	elseif ($site == "login") { $page = "php/section/users/login.php"; }
+	elseif ($site == "logout") { $page = "php/section/users/logout.php"; }
+	elseif ($site == "register") { $page = "php/section/users/register.php"; }	
+	elseif ($site == "error") { $page = "php/misc/error.php"; }
+else {
+	$ergebnis = safe_query("SELECT * FROM ".PREFIX."modules WHERE name='$reqsite'");
+	while($ds = mysql_fetch_array($ergebnis)) {
+		$site = $ds[name];
+	}
+	$page = "php/section/".$site."/index.php";
 }
 
-if (empty($site)) { $page = "php/section/home/index.php"; $site = "home"; } 
-	elseif (!isset($_GET['site'])) { $page = "php/section/home/index.php"; $site = "home"; }
-	elseif (!file_exists("php/section/".$site."/index.php")) { $page = "php/misc/error.php"; header("Location: index.php?site=error"); }
-	elseif ($site == "login") { $page = "php/misc/login.php"; }
-else { $site = $reqsite; $page = "php/section/".$site."/index.php"; }
-
-echo $page."<br />";
 $temp_array = array (
 	'site:site' => $page,
 ); 

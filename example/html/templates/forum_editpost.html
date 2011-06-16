@@ -1,0 +1,36 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.message.value == "") {
+                alert("You have to enter text!");
+                document.post.message.focus();
+                return false;
+        }
+
+}
+-->
+</script>
+
+<form action="forum_topic.php?board=$board&topic=$topic&page=$page" method="post" name="post" onSubmit="return chkFormular()">
+  <table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$border">
+    <tr>
+      <td background="images/news_thead.jpg"><b><font color="white"> Post editieren</font></b></td>
+    </tr>
+    <tr>
+      <td bgcolor="$bg1"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="formtable">
+          <tr>
+            <td colspan="6"><b>Message:</b><br> <textarea name="message" rows="10" cols="35" style="width:90%;" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">$dr[message]</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>Options:</b> <span class="small">&#8226; HTML ist nicht erlaubt&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode ist erlaubt</a>
+              &nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies sind erlaubt</a></span></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right" valign="bottom"><input type="hidden" name="page" value="$page">
+              <input type="hidden" name="id" value="$id"><input type="submit" name="editreply" value="Los!"></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</form>

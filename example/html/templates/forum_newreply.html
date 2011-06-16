@@ -1,0 +1,76 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.message.value == "") {
+                alert("You have to enter text!");
+                document.post.message.focus();
+                return false;
+        }
+}
+
+function ChangeFormAction() {
+        if(document.post.preview.checked == true) {
+                document.post.action = "index.php?site=forum_topic";
+        }
+        else {
+                document.post.action = "forum_topic.php";
+        }
+
+}
+-->
+</script>
+
+<form action="forum_topic.php" method="post" name="post" onSubmit="return chkFormular()">
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+    	<td width="1"><img src="images/ploben.jpg"></td>
+     	<td background="images/oben.jpg"></td>
+     	<td width="1"><img src="images/proben.jpg"></td>
+    </tr>
+    <tr>
+    	<td background="images/links.jpg"></td>
+     	<td>
+      	<table width="100%" cellpadding="1" cellspacing="0" style="margin-top:0px; border:1px solid #cccccc;">
+      		<tr>
+       			<td background="images/news_thead.jpg"><b><font color="white"> Forum: Neue Antwort</font></b></td>
+      		</tr>
+      		<tr>
+       			<td><img src="images/1.gif">
+  				<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$border">
+			    	<tr>
+			    		<td bgcolor="$bg1"><br>
+        				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="formtable">
+ 							<tr>
+	   							<td colspan="2">$addbbcode</td>
+							</tr>
+		  					<tr>
+            					<td colspan="2"><textarea name="message" rows="10" cols="35" style="width:90%;" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">$message</textarea></td>
+							</tr>
+          					<tr>
+            					<td colspan="2"><b>Options:</b> <span class="small">&#8226; HTML ist nicht erlaubt&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode ist erlaubt</a>
+              									&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies sind erlaubt</a></span></td>
+          					</tr>
+          					<tr>
+            					<td><input class="input" type="checkbox" name="preview" value="1" onClick="ChangeFormAction()">Vorschau</td>
+	            				<td align="right" valign="bottom"><input type="hidden" name="userID" value="$userID">
+															  	  <input type="hidden" name="board" value="$board"><input type="hidden" name="topic" value="$topic">
+									              			  	  <input type="hidden" name="page" value="$page"><input type="hidden" name="addreply" value="true">
+								              				  	  <input name="newreply" type="submit" value="Los!"></td>
+          					</tr>
+						</table>
+       					</td>
+					</tr>
+				</table>
+      			</td>
+			</tr>
+		</table>
+    	</td>
+    	<td background="images/rechts.jpg"></td>
+	</tr>
+    <tr>
+		<td width="1"><img src="images/plunten.jpg"></td>
+     	<td background="images/unten.jpg"></td>
+     	<td width="1"><img src="images/prunten.jpg"></td>
+	</tr>
+</table>
+</form>

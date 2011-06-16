@@ -1,0 +1,54 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.topic.value == "") {
+                alert("You have to enter a topic!");
+                document.post.topic.focus();
+                return false;
+        }
+
+        if(document.post.message.value == "") {
+                alert("You have to enter text!");
+                document.post.message.focus();
+                return false;
+        }
+
+}
+-->
+</script>
+
+<form action="forum_topic.php" method="post" name="post" onSubmit="return chkFormular()">
+  <table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$border">
+    <tr>
+      <td class="title" align="center" bgcolor="$bghead">New announcement</td>
+    </tr>
+    <tr>
+      <td bgcolor="$pagebg"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#E3E3E3"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="formtable">
+          <tr>
+            <td colspan="6"><b>Topic:</b><br> <input name="topic" type="text" style="width:90%" value="$ds[topic]" size="45" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6">$addbbcode </td>
+          </tr>
+          <tr>
+            <td colspan="6"><b>Announcement:</b><br> <textarea name="message" rows="10" cols="35" style="width:90%;" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">$ds[announcement]</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Options:</b><br> <span class="small">HTML is off<br>
+              <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode</a>
+              is on<br>
+              <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies</a>
+              are on</span></td>
+            <td colspan="2" align="right" valign="bottom"> <input type="hidden" name="board" value="$board">
+              <input type="hidden" name="announcement" value="$announcement">
+              <br> <br> <input name="editannouncement" type="submit" value="Edit announcement"></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</form>

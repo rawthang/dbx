@@ -1,0 +1,717 @@
+/*	General settings
+--------------------------------------------------------------------------------------------*/
+
+html, body, div, span, small, object, iframe, h1, h2, h3, h4, h5, h6, pre, a, abbr, blockquote, acronym, address, code, del, dfn, dl, dt, dd, em, img, q, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, b, p {
+	border : 0;
+	margin:0;
+	padding:0;
+	font-size : 100%;
+	font-family : inherit;
+}
+body {
+	background:#3f3f3f url(../images/bg.gif);
+	font:normal 12px/20px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	color:#cfcfcf;
+	margin:0;
+}
+ul, ol {
+	margin:0;
+	padding:0;
+}
+
+.scroll { scrollbar-base-color: #C9C9C9; scrollbar-3d-light-color: #ff0000; scrollbar-arrow-color: #8D8D8D; scrollbar-darkshadow-color: #C9C9C9; 
+scrollbar-face-color: #C9C9C9; scrollbar-highlight-color: #DBDBDB; scrollbar-shadow-color: #DBDBDB; scrollbar-track-color: #DBDBDB; }
+	
+/* Selection Styles*/
+::-moz-selection {
+ background:#ed6400;
+ color:#fff;
+}
+::selection {
+ background:#ed6400;
+ color:#fff;
+}
+.alignleft {
+	float:left;
+	margin:0 15px 15px 0;
+}
+.alignright {
+	float:right;
+	margin:0 0 15px 15px;
+}
+.aligncenter {
+	text-align:center;
+}
+.textleft {
+	text-align:left;
+}
+.textright {
+	text-align:right;
+}
+.clear {
+	clear:both;
+}
+.featured {
+	background:#fbf2dd !important;
+	border:1px solid #d6c59c !important;
+}
+p {
+	margin:0 0 15px 0;
+}
+a {
+	color:#ed6400;
+	text-decoration:none;
+}
+a:hover {
+	color:#ed6400;
+	text-decoration:underline;
+}
+.topwrap {
+	background:url(../images/b1.gif) repeat-x top left;
+	height:19px;
+}
+/*	Headings
+--------------------------------------------------------------------------------------------*/
+
+h1 {
+	font-size: 26px;
+	margin:0 0 15px 0;
+	letter-spacing:-1px;
+	padding-bottom:15px;
+	border-bottom:1px solid #ccc;
+}
+h2 {
+	font-size:22px;
+	letter-spacing:-1px;
+	margin:0 0 10px 0;
+}
+h1 strong {
+	color:#ed6400;
+}
+h3 {
+	font-size:18px;
+	letter-spacing:-0.02em;
+	margin:0 0 10px 0;
+}
+h4 {
+	font-size:16px;
+	font-weight:normal;
+	margin:0;
+}
+h5 {
+	font-size:14px;
+	font-weight:normal;
+	margin:0;
+}
+h6 {
+	font-size: 16px;
+	margin:0 5px 10px 5px;
+	letter-spacing:0px;
+}
+h6 strong {
+	color:#ed6400;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans unicode", Sans-serif;
+	color:#f6f6f6;
+}
+/*	view
+------------------------------------------------------------------------------------------*/
+
+a.view {
+	color:#ed6400;
+	text-decoration:underline;
+}
+a.view:hover {
+	color:#fff;
+	text-decoration:none;
+}
+/*	Sidebar
+--------------------------------------------------------------------------------------------*/
+
+.sidebar {
+	padding:15px 10px 20px 0;
+}
+/*	content
+------------------------------------------------------------------------------------------*/
+
+.content {
+	overflow:hidden;
+	height:100%;
+	width: 85%;
+	padding: 5%;
+	clear: both;
+	float: left;
+	margin: 5%;
+}
+
+.content_enter {
+	height:100%;
+	width: 100;
+	padding: 2%;
+	margin: 5%;
+}
+/*	Header
+--------------------------------------------------------------------------------------------*/
+
+/*** DEMO SKIN ***/
+.sf-menu a {
+	border-left:	0px solid #fff;
+	padding: 		0.75em 1.3em;
+	text-decoration:none;
+}
+.sf-menu a, .sf-menu a:visited { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#fff;	
+}
+.sf-menu li {
+	background:#202020;
+	margin-bottom:4px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu li.current a {
+	background:#ed6400;
+	margin-bottom:4px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+	color:#fff;
+}
+
+.sf-menu2 li {
+	background:#202020;
+	padding-bottom:2px;
+	padding-top:2px;
+	margin-bottom:2px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+}
+
+.sf-menu2 li:hover, .sf-menu2 li.sfHover, .sf-menu2 li.current a {
+	margin-bottom:4px;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+	color:#fff;
+}
+/*	Testimonial Block
+------------------------------------------------------------------------------------------*/
+
+	blockquote {
+	padding:0 0 20px 0;
+	margin:0 0 0px 0;
+}
+.entry blockquote {
+	margin:0 0 20px 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+blockquote p {
+}
+blockquote cite {
+	padding-right:10px;
+}
+blockquote cite strong {
+	color:#000;
+	font-style:normal;
+}
+/*	news
+------------------------------------------------------------------------------------------*/
+
+	ul.news {
+	margin:10px 0;
+	padding:0;
+}
+ul.news li {
+	margin:0;
+	list-style:none;
+	list-style-position:outside;
+	padding:0;
+}
+ul.news li a {
+	display:block;
+}
+/*	slider part
+------------------------------------------------------------------------------------------*/
+.slider2 {
+	width:680px;
+	height:300px;
+	cursor:crosshair;
+	background-image: url(../images/Slider2.png);
+	background-repeat: no-repeat;
+	margin-right:25px;
+}
+
+.prev {
+	margin-left:5px;
+}
+.next {
+	margin-left:5px;
+}
+.buttons {
+	width:60px;
+	position:absolute;
+	top:10px;
+	z-index:3;
+	right:1px;
+	height: 40px;
+}
+.img_shade {
+	background:url(../images/image_shade.png) no-repeat;
+	width:642px;
+	height:302px;
+	position:absolute;
+	top:10px;
+	left:0px;
+	z-index:10;
+}
+#nav {
+	position:absolute;
+	top: 103px;
+	right:579px;
+	z-index:100;
+}
+#nav a, #nav a:visited {
+	background:url(../images/nav.png) 0 0 no-repeat;
+	float: left;
+	margin-left:5px;
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: -9999px;
+}
+#nav a:hover {
+	background:url(../images/nav_hover.png) 0 0 no-repeat;
+}
+#nav a.activeSlide {
+	background:url(../images/nav_hover.png) 0 0 no-repeat;
+}
+/*	service box
+------------------------------------------------------------------------------------------*/
+
+	.service_box {
+	margin-left:100px;
+	margin-bottom:20px;
+}
+/*	lists
+------------------------------------------------------------------------------------------*/
+
+	ul.lists {
+	margin:10px 0;
+	padding:0;
+}
+ul.lists li {
+	list-style:none;
+	list-style-position:inside;
+	background:url(../images/icon_check.png) 0 6px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 20px;
+}
+/*	portfolio
+------------------------------------------------------------------------------------------*/
+
+	.port_box {
+	width:190px;
+	float:left;
+	cursor:pointer;
+	background:#FFFFFF;
+	border:1px solid #ccc;
+	padding:10px;
+	margin-bottom:20px;
+	margin-right:10px;
+	text-align:center;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+}
+.port_box:hover {
+	background:#eee;
+}
+.port_box img {
+	width:190px;
+	height:130px;
+}
+.port_box h4 {
+	font-size:14px;
+	margin:0;
+	padding:0;
+	font-weight:bold;
+}
+.port_box h4 a {
+	color:#666;
+}
+.port_box p {
+	margin-top:0px;
+	font:normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	color:#999999;
+}
+.gallery li {
+	list-style:none;
+	list-style-type:none;
+	list-style-position:outside;
+}
+.gallery li img {
+	border:1px solid #FFFFFF;
+}
+/*	Alternate Portfolio
+------------------------------------------------------------------------------------------*/
+
+.accord_right {
+	width:60%;
+	float:left;
+	padding:0;
+}
+.accord_right h2, .accord_right p {
+	color:#fff;
+}
+.imgborder {
+	border:1px solid #444;
+	float:left;
+	padding:1px;
+	margin-right:20px;
+}
+.accordion {
+}
+.accordion h3 {
+	background: #262626 url(../images/arrow_right.gif) no-repeat 10px center;
+	padding: 15px 50px;
+	margin: 0;
+	font:bold 18px Arial, Helvetica, sans-serif;
+	border-bottom:1px solid #444;
+	color:#999;
+	cursor: pointer;
+}
+.accordion h3:hover {
+	background-color: #111;
+}
+.accordion h3.active {
+	background:#111 url(../images/arrow_down.gif) no-repeat 10px center;
+	color:#fff;
+}
+.accordion div.ac_portfolio {
+	background: #222;
+	border-bottom: 1px solid #444;
+	margin: 0;
+	overflow:hidden;
+	_height:100%;
+	padding: 30px;
+}
+span.info {
+	background:#fffae8;
+	border:1px solid #e2c388;
+	padding:10px;
+	display:block;
+	font:normal 11px Tahoma, Verdana, Sans-serif;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+/*	footer
+------------------------------------------------------------------------------------------*/
+
+#footer {
+	width:100%;
+	background: url(../images/login_bottom.jpg) repeat-x 0 0 #1e1e1e;
+	bottom:0;
+	text-align:center;
+	color:#c0c0c0;
+	padding:5px 0 5px 0;
+	margin-top:10px;
+	}
+
+
+/*	Error / Success / Notice	
+-----------------------------------------------------------------------------------*/
+
+.notes {
+	background: #f0f0f0;
+	border: 1px solid #b8b8b8;
+}
+.success {
+	background: #ccfcd1;
+	border: 1px solid #60a400;
+}
+.error {
+	background: #f9e3e3;
+	border: 1px solid #e79e9e;
+}
+.notice {
+	background: #fcf0cc;
+	border: 1px solid #ecc735;
+}
+.notes, .notice, .success, .error {
+	font-size: 100%;
+	color:#484848;
+	padding:10px;
+	width:auto;
+	margin: 0 0 20px 0px;
+	text-align:left
+}
+.notes span, .notice span, .success span, .error span {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 2px 40px;
+}
+.notes p, .success p, .error p, .notice p {
+	margin: 0px;
+	padding: 0px 40px;
+}
+/*	Contact Form
+--------------------------------------------------------------------------------------------*/
+#form {
+	padding: 15px 0;
+}
+#form label {
+	font-size: 1.2em;
+	width: 140px;
+	display: inline-block;
+	margin-right: 0px;
+	margin-bottom: 15px;
+}
+#form .input {
+	background:#fbfbfb;
+	border: 1px solid #e5e5e5;
+	padding: 5px 7px;
+	margin-bottom: 15px;
+	width: 360px;
+}
+#form select {
+	background:#fbfbfb;
+	width: 375px;
+	font: 1.2em Tahoma;
+	border: 1px solid #e5e5e5;
+	padding: 5px 6px;
+	margin-bottom: 15px;
+}
+#form textarea {
+	background:#fbfbfb;
+	border: 1px solid #e5e5e5;
+	vertical-align: top;
+	width: 355px;
+	font: 1.1em Tahoma;
+	line-height: 1.7em;
+	padding: 9px;
+	height: 200px;
+}
+#form .indent {
+	padding-left: 145px;
+	padding-top: 15px;
+}
+/* The button */
+		#form .submitbutton {
+	background:url(../images/button.gif) no-repeat;
+	width: 105px;
+	border:none;
+	height:28px;
+}
+
+input, textarea, select { font-family: Verdana;	font-size: 10pt; color: #4A4A4A; border: 1px solid #666666; }
+
+
+/*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+.sf-vertical, .sf-vertical li {
+	width:	175px;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+	left:	0px; /* match ul width */
+	top:	50px;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator { background-position: 0px 0; } /* IE6 gets solid image only */
+.sf-vertical a > .sf-sub-indicator { background-position: 0 0; } /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator {
+	background-position: 0px 0; /* arrow hovers for modern browsers*/
+}
+
+.sf-vertical2 {
+	width:	100px;
+}
+
+/* Login Panel */
+#top {
+  	background: url(../images/login_top.jpg) repeat-x 0 0;
+	height: 38px;
+	position: relative;
+}
+
+#top ul.login {
+	display: block;
+	position: relative;
+  	float: right;
+  	clear: right;
+  	height: 38px;
+	width: auto;
+  	font-weight: bold;
+	line-height: 38px;
+	margin: 0;
+	right: 150px;
+  	color: white;
+  	font-size: 80%;
+	text-align: center;
+  	background: url(../images/login_r.png) no-repeat right 0;
+	padding-right: 45px;
+}
+
+#top ul.login li.left {
+  	background: url(../images/login_l.png) no-repeat left 0;
+  	height: 38px;
+	width: 45px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+#top ul.login li {
+ 	text-align: left;
+  	padding: 0 6px;
+	display: block;
+	float: left;
+	height: 38px;
+  	background: url(../images/login_m.jpg) repeat-x 0 0;
+}
+
+#top ul.login li a {
+	color: #33CCCC;
+}
+
+#top ul.login li a:hover {
+	color: white;
+}
+
+#login {
+	width: 100%;
+	color: white;
+	background: #1E1E1E;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	height: 0;
+}
+
+#login a {
+	text-decoration: none;
+	color: #33CCCC;
+}
+
+#login a:hover {
+	color: white;
+}
+
+#login .loginContent {
+	width: 550px;
+	height: 80px;
+	margin: 0 auto;
+	padding-top: 25px;
+	text-align: left;
+	font-size: 0.85em;
+}
+
+#login .loginContent .left {
+	width: 120px;
+	float: left;
+	padding-left: 65px;
+	font-size: 0.95em;
+}
+
+#login .loginContent .right {
+	width: 290px;
+	float: right;
+	text-align: right;
+	padding-right: 65px;
+	font-size: 0.95em;
+}
+
+#login .loginContent form {
+	margin: 0 0 10px 0;
+	height: 26px;
+}
+
+#login .loginContent input.field {
+	border: 1px #1A1A1A solid;
+	background: #464646;
+	margin-right: 5px;
+	margin-top: 4px;
+	color: white;
+	height: 16px;
+}
+
+#login .loginContent input:focus.field {
+	background: #545454;
+}
+
+#login .loginContent input.rememberme {
+	border: none;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#login .loginContent input.button_login {
+	width: 47px;
+	height: 20px;
+	cursor: pointer;
+	border: none;
+	background: transparent url(../images/button_login.jpg) no-repeat 0 0;
+}
+
+#login .loginClose {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	width: 70px;
+	font-size: 0.8em;
+	text-align: left;
+}
+
+#login .loginClose a {
+	display: block;
+	width: 100%;
+	height: 20px;
+	background: url(../images/button_close.jpg) no-repeat right 0;
+	padding-right: 10px;
+	border: none;
+	font-size: 0.9em;
+	color: white;
+}
+
+#login .loginClose a:hover {
+	background: url(../images/button_close.jpg) no-repeat right -20px;
+}
+
+#container_login {
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;/* IE fix to center the page */
+}
+
+#content_login {
+  	width: 900px;
+  	margin: 0 auto;/* center the page in Firefox */
+  	text-align: left;
+	padding: 20px;
+}

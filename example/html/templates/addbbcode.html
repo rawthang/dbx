@@ -1,0 +1,49 @@
+<table width="100%" class="formtable" border="0" cellspacing="0" cellpadding="2">
+	<tr align="center" valign="middle">
+		<td><span><input type="button" class="button" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px" onclick="bbstyle(0)" onmouseover="helpline('b')"></span></td>
+		<td><span><input type="button" class="button" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px" onclick="bbstyle(2)" onmouseover="helpline('i')"></span></td>
+		<td><span><input type="button" class="button" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px" onclick="bbstyle(4)" onmouseover="helpline('u')"></span></td>
+		<td><span><input type="button" class="button" accesskey="q" name="addbbcode6" value="Quote" style="width: 50px" onclick="bbstyle(6)" onmouseover="helpline('q')"></span></td>
+		<td><span><input type="button" class="button" accesskey="c" name="addbbcode8" value="Code" style="width: 40px" onclick="bbstyle(8)" onmouseover="helpline('c')"></span></td>
+		<td><span><input type="button" class="button" accesskey="l" name="addbbcode10" value="List" style="width: 40px" onclick="bbstyle(10)" onmouseover="helpline('l')"></span></td>
+		<td><span><input type="button" class="button" accesskey="o" name="addbbcode12" value="List=" style="width: 40px" onclick="bbstyle(12)" onmouseover="helpline('o')"></span></td>
+		<td><span><input type="button" class="button" accesskey="p" name="addbbcode14" value="Img" style="width: 40px"  onclick="bbstyle(14)" onmouseover="helpline('p')"></span></td>
+		<td><span><input type="button" class="button" accesskey="w" name="addbbcode16" value="URL" style="text-decoration: underline; width: 40px" onclick="bbstyle(16)" onmouseover="helpline('w')"></span></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>Schriftfarbe:<select name="addbbcode18" onchange="bbfontstyle('[color=' + this.form.addbbcode18.options[this.form.addbbcode18.selectedIndex].value + ']', '[/color]');this.selectedIndex=0;" onmouseover="helpline('s')">
+						<option style="color:black; background-color: #E7E5F9" value="#000000">Standard</option>
+						<option style="color:darkred; background-color: #E7E5F9" value="darkred">Dunkelrot</option>
+						<option style="color:red; background-color: #E7E5F9" value="red">Rot</option>
+						<option style="color:orange; background-color: #E7E5F9" value="orange">Orange</option>
+						<option style="color:brown; background-color: #E7E5F9" value="brown">Braun</option>
+						<option style="color:yellow; background-color: #E7E5F9" value="yellow">Gelb</option>
+						<option style="color:green; background-color: #E7E5F9" value="green">Gr&uuml;n</option>
+						<option style="color:olive; background-color: #E7E5F9" value="olive">Oliv</option>
+						<option style="color:cyan; background-color: #E7E5F9" value="cyan">Cyan</option>
+						<option style="color:blue; background-color: #E7E5F9" value="blue">Blau</option>
+						<option style="color:darkblue; background-color: #E7E5F9" value="darkblue">Dunkelblau</option>
+						<option style="color:indigo; background-color: #E7E5F9" value="indigo">Indigo</option>
+						<option style="color:violet; background-color: #E7E5F9" value="violet">Violett</option>
+						<option style="color:white; background-color: #E7E5F9" value="white">Weiﬂ</option>
+						<option style="color:black; background-color: #E7E5F9" value="black">Schwarz</option>
+					</select>
+			  &nbsp;Schriftgrˆﬂe:<select name="addbbcode20" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]')" onmouseover="helpline('f')">
+						<option value="7">Winzig</option>
+						<option value="9">Klein</option>
+						<option value="12" selected="selected">Normal</option>
+						<option value="18">Groﬂ</option>
+						<option  value="24">Riesig</option>
+			  </select></td>
+				<td nowrap="nowrap" align="right"><a href="javascript:bbstyle(-1)" onmouseover="helpline('a')">Tags schlieﬂen</a></span></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="9"><input type="text" name="helpbox" size="45" maxlength="100" style="width:450px; font-size:10px" value="Tip: Styles kˆnnen schnell zum markierten Text hinzugef¸gt werden."></span></td>
+	</tr>
+</table>
