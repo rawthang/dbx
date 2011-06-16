@@ -1,6 +1,6 @@
 <?php
 mysql_connect($host, $user, $pwd) or die ('Error: SQL-Daten überprüfen');
-mysql_select_db($db) or die ('Error: Konnte nicht zu Datenbank "'.$db.'" verbinden');
+mysql_select_db($db) or die ('Error: Konnte nicht zur Datenbank "'.$db.'" verbinden');
 mysql_query("SET NAMES 'utf8'"); 
 mysql_query("SET CHARACTER SET 'utf8'");
 

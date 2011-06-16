@@ -1,3 +1,15 @@
+<?php
+/*so würde ich das verarbeiten Achtung, das hirn spielt präprozessor*/
+$validate = new Getvars();
+$validate->requireVar('textfield');
+$validate->requireVar('textfield2');
+    //validateVars prüft, ob alle erforderlichen Variablen angegeben wurden
+if ($validate->validateVars())   
+    //validate->_? ist eine magische methode mit escape funktion
+    $username=$validate->textfield(); 
+    $password=$validate->textfield2();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 

@@ -49,7 +49,7 @@ else {
 ?>
 				<table class="etable" width="164" border="0" cellspacing="0" cellpadding="0">
                 	<tr> 
-                    	<td><? $sql3 = "SELECT * FROM users WHERE id='$myid' LIMIT 1";
+                    	<td><? $sql3 = "SELECT * FROM cmd_user WHERE id='$myid' LIMIT 1";
 
 										   $data = mysql_query($sql3, $db);
 										   while ($myhome = mysql_fetch_object ($data)) { ?>Eingeloggt als <img src="gfx/design/arrow.gif" border="0"> <b><? echo "$myhome->nick" ?></b><? } ?></td>
