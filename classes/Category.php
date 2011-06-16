@@ -3,15 +3,16 @@
 #name;
 
 /***UML***/
-class Category extends Dbhelper {
+abstract class Category extends Dbhelper {
 	/**Attributes**/
 
 	protected $name;
 
 	/**__construct()**/
 
-	public function __construct( $name) {
-		$this->name= $name;
+	public function __construct() {
+		$this->tablename='cms_cat';
+		echo $this->superDelete();
 	}//__construct
 	
 	/**Getter**/
@@ -22,4 +23,23 @@ class Category extends Dbhelper {
 		return "id {$this->id()} name {$this->name()}";
 	}
 }//class
+
+class pCategory extends Category{
+	
+	public function mysqlSelect($id=""){
+		
+	}
+	
+	public function mysqlDelete($id){
+		
+	}
+	
+	public function mysqlInsert(){
+		
+	}
+	public function mysqlUpdate(){
+		
+	}
+}
 ?>
+ 

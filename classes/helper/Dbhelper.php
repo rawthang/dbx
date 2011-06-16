@@ -3,16 +3,26 @@
  *
  *
  *
- * @version 0.2
+ * @version 0.3
  * @author ms
  *
  */
-class Dbhelper{
+abstract class Dbhelper{
 
 	/**Attributes**/
 	protected $id;	//db id
 	protected $dbh=null; //databasehandle
 
+	protected $tablename; 
+	
+	public function  superDelete(){
+		$sql="DELETE FROM {$this->tablename} WHERE id=?";
+		return $sql;
+	}
+	protected function setTableName($name){
+		$this->tablename=$name;
+		
+	}
 	/**SetGetter**/
 
 	public function id($id=""){ if (empty($id)){return $this->id; }else{$this->id=$id; } }
