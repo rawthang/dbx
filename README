@@ -6,13 +6,14 @@ Ich stell mir das mit der Hierarchie im Dateisystem so vor:
 +classes    	Alles an Klassen hier rein   
 +-----helper	Hilfsklassen die von uns erstellt werden
 +-----other		Sachen wie Geshi, die wir brauchen, die aber nicht von uns sind
-+img			Bilder für das Layout	
-upload			Uploads hier rein, oder sollen wir Blobs benutzen?
+upload			/rnd filenames coming later and no blob's ^^ -> Uploads hier rein, oder sollen wir Blobs benutzen?
 credentials.php	Anmeldedaten für die Datenbank
-index.php		???
-layout.css		???	
 README			wirres Zeug
-sql				damit kann die Datenbank angelegt + befüllt werden
 TODO.php  		Bemerkenswertes
+
+-> img			/example Bilder für das Layout
+-> sql			/example damit kann die Datenbank angelegt + befüllt werden
+-> index.php	/example
+-> layout.css	/example
 
 Ich seh das mit der Hierarchie recht locker, da können wir quasi noch alles ändern. 
