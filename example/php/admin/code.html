@@ -201,7 +201,7 @@
 			<ul class="left">
 				<li class="icon dashboard"><a href="dashboard.html">Dashboard</a></li>
 				<li class="icon point_right"><a href="#">Elements</a></li>
-				<li class="icon point_right active"><a href="forms.html">Forms</a></li>
+				<li class="icon point_right active"><a href="code.html">Code</a></li>
 			</ul>
 			<!-- Breadcrumb: End -->
 			
@@ -219,52 +219,6 @@
 	<!-- Header Grid Container: End -->
 
 
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Text Input</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-		<p class="note">These text inputs have a simple validation</p>
-
-		<!-- Text Input: Start -->	
-		<div class="field">
-			<label>Small Text Input</label>
-			<input type="text" class="small validate tip-stay" title="tips can stay while in focus!">
-			<p class="error right small"><span class="icon error"></span>some error message</p>
-		</div>
-
-		<div class="field">
-			<label>Default Text Input</label>
-			<input type="text" class="validate">
-			<p class="success right small"><span class="icon success"></span>success!</p>
-		</div>
-		
-		<div class="field">
-			<label>Medium Text Input</label>
-			<input type="text" class="medium validate">
-			<p class="info right small"><span class="icon info"></span>info?</p>
-		</div>
-		
-		<div class="field">
-			<label>Big Text Input</label>
-			<input type="text" class="big validate">
-		</div>
-		<!-- Text Input: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>	
-<!-- 50% Box Grid Container: End -->
 
 
 <!-- 50% Box Grid Container: Start -->
@@ -273,7 +227,7 @@
 	<!-- Box Header: Start -->
 	<div class="box_top">
 		
-		<h2 class="icon frames">Left Text Input</h2>
+		<h2 class="icon list">CSS Code</h2>
 		
 	</div>
 	<!-- Box Header: End -->
@@ -281,94 +235,31 @@
 	<!-- Box Content: Start -->
 	<div class="box_content padding">
 		
-		<p class="note">You can position the text on the left side easily</p>
 
-		<!-- Text Input - Text Left: Start -->	
-		<div class="field">
-			<label class="left">Small</label>
-			<input type="text" class="small validate">
-		</div>
-
-		<div class="field">
-			<label class="left">Default</label>
-			<input type="text" class="validate">
-		</div>
-		<!-- Text Input - Text Left: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>	
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Buttons</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-
-		<!-- Buttons: Start -->	
-		<div class="field">
-			<a href="#messages" class="button popup">Open Dialog</a>
-		</div>
-		
-		<div class="field">
-			<button>Submit</button>
-			<button class="secondary" type="reset">Reset</button>
-			<button disabled="">Disabled Button</button>
-		</div>
-		
-		<div class="field">
-			<button>This is a superlong button thats really long</button>
-		</div>
-		<!-- Buttons: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon time">Date Pickers</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-		<!-- Date Pickers: Start -->	
-		<div class="field">
-			<label class="left">Date Picker</label>
-			<input type="text" class="date">
-		</div>
+		<!-- Code View: Start -->	
+		<pre name="code" class="css">
+			#userpanel ul li ul.subnav li a {
+				min-width: 99px;
+				display:block;
+				color:#d1d5d8;
+				padding:0px 0px 0px 35px;
+				height:20px;
+				margin:0;
+			}
 			
-		<div class="field">
-			<label>Inline date picker</label>
-		 	<div class="inlinedate"></div>
-		</div>
-		<!-- Date Pickers: End -->
+			#userpanel a.icon {
+				background-repeat:no-repeat;
+				background-position:3px -0px;
+				width:17px;
+				margin:4px 0 0 9px;
+			}
+		</pre>
+		<!-- Code View: End -->
 
 	</div>
 	<!-- Box Content: End -->
 	
-</div>
+</div>	
 <!-- 50% Box Grid Container: End -->
 
 
@@ -378,7 +269,7 @@
 	<!-- Box Header: Start -->
 	<div class="box_top">
 		
-		<h2 class="icon frames">Misc Form Elements</h2>
+		<h2 class="icon list">PHP Code</h2>
 		
 	</div>
 	<!-- Box Header: End -->
@@ -387,117 +278,30 @@
 	<div class="box_content padding">
 		
 
-		<!-- Misc Form Elements: Start -->	
-		<div class="field">
-			<label>File Input</label>
-		 	<input type="file" />
-		</div>
-		  	
-		<div class="field">
-			<label>Select Input</label>
-			<select>
-				<option>Through Google</option>
-				<option>Through Twitter</option>
-				<option>Other&hellip;</option>
-			  </select>
-		</div>
-		  
-		<div class="field">
-			<label>Radio Input</label>
-			<label class="nobold"><input type="radio" name="radio" /> 1 Radio Option </label>
-			<label class="nobold"><input type="radio" name="radio" /> 2 Radio Option </label>
-			<label class="nobold"><input type="radio" name="radio" /> 3 Radio Option </label>
-		</div>
-		<!-- Misc Form Elements: End -->
+		<!-- Code View: Start -->	
+		<pre name="code" class="php">
+			echo "this is some dummy text";
+			
+			function helloWord {
+				echo "hello world";
+			}
+			
+			var $do_something = "nothing";
+			var $id = $user_id;
+			
+			if ($do_something == "nothing") {
+				echo "you are lazy";
+			}
+			else {
+				echo "You are awesome!";
+			}
+		</pre>
+		<!-- Code View: End -->
 
 	</div>
 	<!-- Box Content: End -->
 	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Misc Form Elements</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-
-		<!-- Misc Form Elements: Start -->	
-		<div class="field">
-			<label class="left nomargin">File Input</label>
-			 <input type="file" />
-		</div>
-		  	
-		<div class="field">
-			<label class="left nomargin">Select Input</label>
-			<select>
-				<option>Through Google</option>
-				<option>Through Twitter</option>
-				<option>Other&hellip;</option>
-			</select>
-		</div>
-		  
-		<div class="field">
-			<label class="left">Radio Input</label>
-			<label class="nobold left nowidth"><input type="radio" name="radio" /> 1 Radio</label>
-			<label class="nobold left nowidth"><input type="radio" name="radio" /> 2 Radio</label>
-		</div>
-		  
-		<div class="field">
-			<label class="left">Checkbox Input</label>
-			<label class="nobold left nowidth"><input type="checkbox" /> 1 Check</label>
-			<label class="nobold left nowidth"><input type="checkbox" /> 2 Check</label>
-		</div>
-		<!-- Misc Form Elements: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Textarea</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-
-		<!-- Textarea: Start -->	
-		<div class="field">
-			<label>Small Textarea</label>
-			 <textarea></textarea>
-		</div>
-		
-		<div class="field">
-			<label>Text Area</label>
-			 <textarea rows="4"></textarea>
-		</div>
-		<!-- Textarea: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
+</div>	
 <!-- 50% Box Grid Container: End -->
 
 
@@ -507,7 +311,7 @@
 	<!-- Box Header: Start -->
 	<div class="box_top">
 		
-		<h2 class="icon frames">WYSIWYG</h2>
+		<h2 class="icon list">HTML Code</h2>
 		
 	</div>
 	<!-- Box Header: End -->
@@ -516,17 +320,39 @@
 	<div class="box_content padding">
 		
 
-		<!-- WYSIWYG: Start -->	
-		<div class="field">
-			 <textarea class="wysiwyg"></textarea>
-		</div>
-		<!-- WYSIWYG: End -->
+		<!-- Code View: Start -->	
+		<pre name="code" class="php">
+			<div class="grid_24">
+			
+				<div id="footer">
+					
+					<p class="left">
+						Copyright &#169; 2011 <a href="#">Yourcompany</a>. 
+						Powered by <a href="#">Simplpan</a>.
+					</p>
+					
+					<ul class="right">
+						<li><a href="#" class="icon dashboard tip active" title="Dashboard">Dashboard</a></li>
+						<li><a href="#" class="icon pages tip" title="Pages">Pages</a></li>
+						<li><a href="#" class="icon users tip" title="Users">Users</a></li>
+						<li><a href="#" class="icon settings tip" title="Settings">Settings</a></li>
+						<li><a href="#" class="icon support tip" title="Support">Support</a></li>
+						<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+					</ul>
+					
+				</div>
+				
+			</div>
+		</pre>
+		<!-- Code View: End -->
 
 	</div>
 	<!-- Box Content: End -->
 	
-</div>
-<!-- 100% Box Grid Container: End -->
+</div>	
+<!-- 50% Box Grid Container: End -->
+
+
 
 
 <!-- Footer Grid: Start -->

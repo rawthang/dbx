@@ -156,7 +156,7 @@
 				
 				<!-- Navigation Dropdown Menu Item: Start -->
 				<li class="topnav">
-					<a class="frames" href="#">Layout</a>
+					<a class="frames active" href="#">Layout</a>
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
@@ -169,7 +169,7 @@
 				
 				<!-- Navigation Dropdown Menu Item: Start -->
 				<li class="topnav">
-					<a class="pages active" href="#">Elements</a>
+					<a class="pages" href="#">Elements</a>
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
@@ -200,8 +200,8 @@
 			<!-- Breadcrumb: Start -->
 			<ul class="left">
 				<li class="icon dashboard"><a href="dashboard.html">Dashboard</a></li>
-				<li class="icon point_right"><a href="#">Elements</a></li>
-				<li class="icon point_right active"><a href="forms.html">Forms</a></li>
+				<li class="icon point_right"><a href="#">Layout</a></li>
+				<li class="icon point_right active"><a href="grid.html">Grid</a></li>
 			</ul>
 			<!-- Breadcrumb: End -->
 			
@@ -219,295 +219,13 @@
 	<!-- Header Grid Container: End -->
 
 
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Text Input</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-		<p class="note">These text inputs have a simple validation</p>
-
-		<!-- Text Input: Start -->	
-		<div class="field">
-			<label>Small Text Input</label>
-			<input type="text" class="small validate tip-stay" title="tips can stay while in focus!">
-			<p class="error right small"><span class="icon error"></span>some error message</p>
-		</div>
-
-		<div class="field">
-			<label>Default Text Input</label>
-			<input type="text" class="validate">
-			<p class="success right small"><span class="icon success"></span>success!</p>
-		</div>
-		
-		<div class="field">
-			<label>Medium Text Input</label>
-			<input type="text" class="medium validate">
-			<p class="info right small"><span class="icon info"></span>info?</p>
-		</div>
-		
-		<div class="field">
-			<label>Big Text Input</label>
-			<input type="text" class="big validate">
-		</div>
-		<!-- Text Input: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>	
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Left Text Input</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-		<p class="note">You can position the text on the left side easily</p>
-
-		<!-- Text Input - Text Left: Start -->	
-		<div class="field">
-			<label class="left">Small</label>
-			<input type="text" class="small validate">
-		</div>
-
-		<div class="field">
-			<label class="left">Default</label>
-			<input type="text" class="validate">
-		</div>
-		<!-- Text Input - Text Left: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>	
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Buttons</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-
-		<!-- Buttons: Start -->	
-		<div class="field">
-			<a href="#messages" class="button popup">Open Dialog</a>
-		</div>
-		
-		<div class="field">
-			<button>Submit</button>
-			<button class="secondary" type="reset">Reset</button>
-			<button disabled="">Disabled Button</button>
-		</div>
-		
-		<div class="field">
-			<button>This is a superlong button thats really long</button>
-		</div>
-		<!-- Buttons: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon time">Date Pickers</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-		<!-- Date Pickers: Start -->	
-		<div class="field">
-			<label class="left">Date Picker</label>
-			<input type="text" class="date">
-		</div>
-			
-		<div class="field">
-			<label>Inline date picker</label>
-		 	<div class="inlinedate"></div>
-		</div>
-		<!-- Date Pickers: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Misc Form Elements</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-
-		<!-- Misc Form Elements: Start -->	
-		<div class="field">
-			<label>File Input</label>
-		 	<input type="file" />
-		</div>
-		  	
-		<div class="field">
-			<label>Select Input</label>
-			<select>
-				<option>Through Google</option>
-				<option>Through Twitter</option>
-				<option>Other&hellip;</option>
-			  </select>
-		</div>
-		  
-		<div class="field">
-			<label>Radio Input</label>
-			<label class="nobold"><input type="radio" name="radio" /> 1 Radio Option </label>
-			<label class="nobold"><input type="radio" name="radio" /> 2 Radio Option </label>
-			<label class="nobold"><input type="radio" name="radio" /> 3 Radio Option </label>
-		</div>
-		<!-- Misc Form Elements: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Misc Form Elements</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-
-		<!-- Misc Form Elements: Start -->	
-		<div class="field">
-			<label class="left nomargin">File Input</label>
-			 <input type="file" />
-		</div>
-		  	
-		<div class="field">
-			<label class="left nomargin">Select Input</label>
-			<select>
-				<option>Through Google</option>
-				<option>Through Twitter</option>
-				<option>Other&hellip;</option>
-			</select>
-		</div>
-		  
-		<div class="field">
-			<label class="left">Radio Input</label>
-			<label class="nobold left nowidth"><input type="radio" name="radio" /> 1 Radio</label>
-			<label class="nobold left nowidth"><input type="radio" name="radio" /> 2 Radio</label>
-		</div>
-		  
-		<div class="field">
-			<label class="left">Checkbox Input</label>
-			<label class="nobold left nowidth"><input type="checkbox" /> 1 Check</label>
-			<label class="nobold left nowidth"><input type="checkbox" /> 2 Check</label>
-		</div>
-		<!-- Misc Form Elements: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
-<!-- 50% Box Grid Container: Start -->
-<div class="grid_12">
-
-	<!-- Box Header: Start -->
-	<div class="box_top">
-		
-		<h2 class="icon frames">Textarea</h2>
-		
-	</div>
-	<!-- Box Header: End -->
-	
-	<!-- Box Content: Start -->
-	<div class="box_content padding">
-		
-
-		<!-- Textarea: Start -->	
-		<div class="field">
-			<label>Small Textarea</label>
-			 <textarea></textarea>
-		</div>
-		
-		<div class="field">
-			<label>Text Area</label>
-			 <textarea rows="4"></textarea>
-		</div>
-		<!-- Textarea: End -->
-
-	</div>
-	<!-- Box Content: End -->
-	
-</div>
-<!-- 50% Box Grid Container: End -->
-
-
 <!-- 100% Box Grid Container: Start -->
 <div class="grid_24">
 
 	<!-- Box Header: Start -->
 	<div class="box_top">
 		
-		<h2 class="icon frames">WYSIWYG</h2>
+		<h2 class="icon time">(grid_24) Full width</h2>
 		
 	</div>
 	<!-- Box Header: End -->
@@ -515,18 +233,435 @@
 	<!-- Box Content: Start -->
 	<div class="box_content padding">
 		
-
-		<!-- WYSIWYG: Start -->	
-		<div class="field">
-			 <textarea class="wysiwyg"></textarea>
-		</div>
-		<!-- WYSIWYG: End -->
-
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+		incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+		exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+		irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+		pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+		deserunt mollit anim id est laborum.
+	</p>
+		
 	</div>
 	<!-- Box Content: End -->
 	
 </div>
 <!-- 100% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_12) Half</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h5>(h5) You could put a table in this box or a pie..</h5>
+		
+		<p>
+			(p) Lorem ipsum dolor sit amet, (b) <b>consectetur adipisicing</b> elit, 
+			<s>sed do eiusmod</s> tempor (abbr) <abbr title="">incididunt ut</abbr> 
+			labore et (cite) <cite>dolore magna aliqua</cite>. Ut enim ad minim veniam, 
+			quis (u) <u>nostrud exercitation</u> ullamco laboris nisi ut (i) <i>aliquip 
+			ex ea commodo consequat</i>. Duis aute irure dolor in (em) <em>reprehenderit</em>
+		</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_12) Half</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h5>(h5) or a note!</h5>
+		
+		<p>
+			(p) Lorem ipsum dolor sit amet, (b) <b>consectetur adipisicing</b> elit, 
+			<s>sed do eiusmod</s> tempor (abbr) <abbr title="">incididunt ut</abbr> 
+			labore et (cite) <cite>dolore magna aliqua</cite>. Ut enim ad minim veniam, 
+			quis (u) <u>nostrud exercitation</u> ullamco laboris nisi ut (i) <i>aliquip 
+			ex ea commodo consequat</i>. Duis aute irure dolor in (em) <em>reprehenderit</em>
+		</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 33,33% Box Grid Container: Start -->
+<div class="grid_8">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_8) Third</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 33,33% Box Grid Container: End -->
+
+
+<!-- 33,33% Box Grid Container: Start -->
+<div class="grid_8">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_8) Third</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 33,33% Box Grid Container: End -->
+
+
+<!-- 33,33% Box Grid Container: Start -->
+<div class="grid_8">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_8) Third</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 33,33% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h6>(h6) Heading</h6>
+		
+		<p>(p) Lorem ipsum dolor sit amet, consectetur.</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h6>(h6) Heading</h6>
+		
+		<p>(p) Lorem ipsum dolor sit amet, consectetur.</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h6>(h6) Heading</h6>
+		
+		<p>(p) Lorem ipsum dolor sit amet, consectetur.</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<h6>(h6) Heading</h6>
+		
+		<p>(p) Lorem ipsum dolor sit amet, consectetur.</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 75% Box Grid Container: Start -->
+<div class="grid_18">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_18)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 75% Box Grid Container: End -->
+
+
+<!-- 33,33% Box Grid Container: Start -->
+<div class="grid_8">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_8)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 33,33% Box Grid Container: End -->
+
+
+<!-- 66,66% Box Grid Container: Start -->
+<div class="grid_16">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_16)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 66,66% Box Grid Container: End -->
+
+
+<!-- 75% Box Grid Container: Start -->
+<div class="grid_18">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_18)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 75% Box Grid Container: End -->
+
+
+<!-- 25% Box Grid Container: Start -->
+<div class="grid_6">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_6)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 25% Box Grid Container: End -->
+
+
+<!-- 66,66% Box Grid Container: Start -->
+<div class="grid_16">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_16)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 66,66% Box Grid Container: End -->
+
+
+<!-- 33,33% Box Grid Container: Start -->
+<div class="grid_8">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">(grid_8)</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p>some text</p>
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 33,33% Box Grid Container: End -->
 
 
 <!-- Footer Grid: Start -->
