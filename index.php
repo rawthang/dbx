@@ -55,6 +55,7 @@ $e->file('/bin/cp');
 
 
 $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,8 +73,10 @@ $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 	<?php echo "Ausgabe Categpry----------------------------------------------------------------------------------------------------------------------------------------------------<p>";?>
 	<?php 	
 		$c=new pCategory();	
-	
-	
+		$c->dbh($dbh);
+		$c->id('1');
+	echo 	$c->mysqlDelete();
+				
 	
 	
 	?>
@@ -83,7 +86,7 @@ $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 	
 	$p = new pPlatform();
 	
-	//$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
+	
 
 	$p->dbh($dbh);
 	//alle ausgeben
@@ -95,7 +98,7 @@ $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 	
 	$p->mysqlSelect(1);		
 	echo $p;
-	echo $p->mysqlDelete(1);
+	echo $p->mysqlDelete();
 	echo "<h5>Element mit id 2 ändern</h5>";		
 	$p->mysqlSelect(2);
 	echo $p.'<p>';

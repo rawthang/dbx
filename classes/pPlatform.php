@@ -39,25 +39,18 @@ class pPlatform extends Platform{
 			
 		}
 	}//SELECT
-	public function mysqlDelete(){
-		
-		if(!$this->dbh())
-			return false;			
-		if (!is_numeric($this->id()))
-			return false;
 
-			
-		$sql="DELETE FROM cms_platform WHERE id=?";		
-		$stmt=$this->dbh->prepare($sql);
-		$stmt->bindParam(1, $this->id, PDO::PARAM_INT);
-		
-		return $stmt->execute();	
-		
-	}//Delete
+	/**
+	 * @todo implement me
+	 * Enter description here ...
+	 */
 	public function mysqlInsert(){		
 		if(!$this->dbh())
 			return false;
 		$sql='INSERT INTO `cms_platform` (`name`) VALUES (`?`)';
+		$stmt=$this->dbh->prepare($sql);
+		$stmt->bindParam(1,$this->name, PDO::PARAM_STR);
+		return $stmt->execute();
 	}//Insert
 	
 	public function mysqlUpdate(){				

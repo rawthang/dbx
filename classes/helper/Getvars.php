@@ -1,17 +1,18 @@
 <?php
 /**
- * 
- * @version 0.2
- * 
- * $_POST & $_GET Variablen auswerten :)
+ *
+ * @version 0.3
+ *
+ * Eval $_POST & $_GET Vars
  * @author ms
  *
  */
 class Getvars{
 	private $requiredVars=array();
 	private $assignedVars=array();
+	private $missingVars=array();
 	private $vars=array();
-	
+
 	public function __construct(){
 		$this->vars=$_REQUEST;
 	}//construct
@@ -21,14 +22,14 @@ class Getvars{
 	 * @param a value passed to the script by Post or Get
 	 */
 	public function requireVar($var){
-		if (is_array($var)){			
+		if (is_array($var)){
 			$this->requiredVars= array_merge($this->requiredVars, $var);
 		}
 		if (!is_array($var)){
 			$this->requiredVars[]=$var;
-		}		
+		}
 	}//requireVar
-	
+
 	public function assignVar($var){
 		if(is_array($var)){
 			$this->assignedVars= array_merge($var, $this->assignedVars);
@@ -36,15 +37,17 @@ class Getvars{
 		if (!is_array($var)){
 			$this->assignedVars[]=$var;
 		}
-		
+
 	}
-	public function validateVars(){		
-		foreach($this->requiredVars as $var){				
-			if(!isset($this->vars[$var])||trim($this->vars[$var])==''){		
-				return false;			
+	public function validateVars(){
+		$returnValue=true;
+		foreach($this->requiredVars as $var){
+			if(!isset($this->vars[$var])||trim($this->vars[$var])==''){
+				$this->missingVars[]=$var;
+				$returnValue= false;
 			}
 		}//each
-		return true;
+		return $returnValue;
 	}//function
 
 
@@ -73,8 +76,10 @@ class Getvars{
 		}else {
 			return false;
 		}
-	
+
 	}
+	/**SetGetter**/
+	public function missingVars($missingVars=""){ if (empty($missingVars)){return $this->missingVars; }else{$this->missingVars=$missingVars; } }
 
 }//Getvars
 ?>

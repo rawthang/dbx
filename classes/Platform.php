@@ -11,6 +11,7 @@ abstract class Platform extends Dbhelper
 
 	/**__construct()**/
 	public function __construct( $name=""){
+		$this->tablename="cms_platform";
 		$this->name= $name;
 	}//__construct
 	

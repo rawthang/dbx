@@ -2,49 +2,70 @@
 /**
  * upload file
  * @author ms
- * @version 0.2
+ * @todo variablen sind hard codet, net gut, prüfung auf schreibrechte im ordner
+ * @todo remote uppen geht noch nicht
+ * @version 0.3
  */
 class Upload{
 	/**Attributes**/
-	private $login=null;
+	private $remoteVar, $filevar;
+	
+	
+	private $file;	//pfad zur datei;
 	private $uploaddir;
+	
 
 	private $ilegal=array('#','$','%','^','&','*','?', ' ');
 	private $legal=array('no','dollar'	,'percent'	,'tilde','and','','','');
 
 	/**__construct()**/
 
-	public function __construct(Login $log=null){
-		$this->login=$log;
+	public function __construct(){
+	
 	}//__construct
-	public function upload(){
+	public function upload(){		
 		$this->uploadfromPC();
 		$this->uploadFromUrl();
+		
+		return $this->file;
 	}
 	public function delete($file){
 		 return @unlink($file);
 		
 	}
+	private function listFiles(){
+		$files=array();
+		$handle=opendir($this->uploaddir());
+		while (false !== ($file=readdir($handle))){
+			if ($file !='.' && $file !='..')
+			$files[]=$this->uploaddir().$file;
+
+		}
+		return $files;
+	}
 	private function uploadfromPC(){
-		if (@$_FILES['file']['name']){
+		if ($_FILES['file']['name']){
+			echo "<h1>here</h1>";
 			$this->fileHandle=$_FILES['file']['name'];
 			$safe=str_replace($this->ilegal, $this->legal, $_FILES['file']['name']);
 			$dest=$this->uploaddir.$safe;
 			$source=$_FILES['file']['tmp_name'];
 			$this->copy($source, $dest);
+			$this->file=$dest;
 		}
 	}
 
 	private function uploadFromUrl(){
-		$validUrl=@$_POST['link'];
-		if(@$_POST['link'] && $this->fileExists(@$_POST['link'])&& $validUrl){
-			$handle=fopen($_POST['link'], 'r');
+		$validUrl=@$_POST['url_upload'];
+		if(@$_POST['url_upload'] && $this->fileExists(@$_POST['url_upload'])&& $validUrl){
+			$handle=fopen($_POST['url_upload'], 'r');
 
-			$safe=str_replace($this->ilegal, $this->legal, $_POST['link']);
+			$safe=str_replace($this->ilegal, $this->legal, $_POST['url_upload']);
 			$safe=basename($safe);
 			$dest=$this->uploaddir.$safe;
-			$source=$_POST['link'];
+			$source=$_POST['url_upload'];
 			$this->copy($source, $dest);
+			$this->file=$dest;
 		}
 	}
 	/**
@@ -55,7 +76,7 @@ class Upload{
 	 */
 	private function copy($source, $dest){
 		$shaSource=sha1_file($source);
-		$files=$this->listImages();
+		$files=$this->listFiles();
 
 		//filename in use?
 		$filenameInuse=false;
