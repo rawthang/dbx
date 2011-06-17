@@ -1,43 +1,15 @@
 <?php
-/*****
- *In der Readme steht auch noch was 
+/*
+ *Programmieren
+ *----
+ *@todo: Admin Panel -- Layout, dann die einzelnen Module und ferner evtl. hinzufügen/löschen von Modulen (PHP (Dateien, Klassen), MySQL etc.
+ *
+ *@todo: Pastebin (open Source) auseinander nehmen und so gestalten, dass Random-File Uploads funktionieren. Sowie den Rest für das Modul.
  * 
- * PHP
- * @todo: formulare
- * 		  Für Exploit und Category wird jeweils 1 Formular benötigt. Das wird zum Erzeugen und Ändern von Einträgen verwendet. 
- * 		  Falls ein Eintrag modifiziert wird, senden wir einfach über <input type="hidden" name="id... die Datenbank id mit. 
+ *@todo: Module + Templates
  * 
- * 
- *@todo: listen
- *		  was sollen wir auf der startseite alles anzeigen? für jede Kategorie die aktuellsten exploits wie bei ex*db.com? Die aktuellsten aus jeden bereich?
- *		  Sachen die oft angesehen wurden? Die aktuellsten aus allen Bereichen?
- * 		  ich mach das immer so: ich lade über select* alle Einträge in ein array und kack die dann über angepasste arr_sort() funktion aus. Sollen wir einen 
- * 		  RSS feed anbieten?
- * 
- *@todo: Kategorien und Plattformen 
- * 		In der Kategorie "Local Exploits" gibt es z.b. die Plattformen linux, multiple, windows usw. Das müßten wir auch noch reinschaufeln /tabellen anlegen.
- * 		Sollen wir eine Beziehung zw. Platform und Kategorie anlegen? Ich wär dagegen, weil es z.b Remote Exploits, DoS / PoC, Local Exploits usw. für windows UND linux gibt :)
- * 		Hab die Tabelle und Klasse angelegt, weiß aber nicht, ob da noch was fehlt...
- * 
- * 
- * @todo: Sachen löschen und so
- * 		Ich würde die Elemente auflisten und dahinter einen link stellen der so aussieht index.php?delete=ID
- * 		dann mit $_SESSION oder $_GET oder Getvars schauen, ob das eine gültige und valide abfrage ist und den entsprechenden Eintrag nicht kaskadierend aus der DB 
- * 		entfernen :)
- * 
- * @todo: Suche
- * 		Wo sollen wir überall suchen? sollen wir exploits verschlagworten - sprich tags verwenden?
- * 
- * @todo: mod-rewrite
- * 		Sollen wir das Apache Modul verwenden? Damit könnten wir semantische urls wie http://www.meine-tolle-seite.de/dos/fingerbaengs-untergang/ anlegen
- * 		
- * 
- * MYSQL
- *    @todo: wofür ist das feld cms_cat.catid gut? ich hab die mal ausgeklammert weil unique
- *    @todo: die Klasse Exploit samt Tabelle müßten wir überarbeiten....
- *    @todo: Testdaten
- * 		Habe ich mal für Kategorie und Plattform angelegt / von der exploit-seite übernommen :)
- *		
- * 
- * 	
- */
+ *Müssen andere später machen
+ *---------------------------
+ *@todo: mod-rewrite
+*/
+?>
