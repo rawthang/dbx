@@ -3,12 +3,12 @@
  * upload file
  * @author ms
  * @todo variablen sind hard codet, net gut, prüfung auf schreibrechte im ordner
- * @todo remote uppen geht noch nicht
+ 
  * @version 0.3
  */
 class Upload{
 	/**Attributes**/
-	private $remoteVar, $filevar;
+	private $remoteVar, $localVar;
 	
 	
 	private $file;	//pfad zur datei;
@@ -20,7 +20,9 @@ class Upload{
 
 	/**__construct()**/
 
-	public function __construct(){
+	public function __construct($remoteVar, $localVar){
+		$this->remoteVar=$remoteVar;
+		$this->localVar=$localVar;
 	
 	}//__construct
 	public function upload(){		
@@ -44,26 +46,25 @@ class Upload{
 		return $files;
 	}
 	private function uploadfromPC(){
-		if ($_FILES['file']['name']){
-			echo "<h1>here</h1>";
-			$this->fileHandle=$_FILES['file']['name'];
-			$safe=str_replace($this->ilegal, $this->legal, $_FILES['file']['name']);
+		if ($this->localVar['name']){			
+			$this->fileHandle=$this->localVar['name'];
+			$safe=str_replace($this->ilegal, $this->legal, $this->localVar['name']);
 			$dest=$this->uploaddir.$safe;
-			$source=$_FILES['file']['tmp_name'];
+			$source=$this->localVar['tmp_name'];
 			$this->copy($source, $dest);
 			$this->file=$dest;
 		}
 	}
 
-	private function uploadFromUrl(){
-		$validUrl=@$_POST['url_upload'];
-		if(@$_POST['url_upload'] && $this->fileExists(@$_POST['url_upload'])&& $validUrl){
-			$handle=fopen($_POST['url_upload'], 'r');
+	private function uploadFromUrl(){	
+		$validUrl=$this->remoteVar;
+		if($this->remoteVar && $this->fileExists($this->remoteVar)&& $validUrl){
+			$handle=fopen($this->remoteVar, 'r');
 
-			$safe=str_replace($this->ilegal, $this->legal, $_POST['url_upload']);
+			$safe=str_replace($this->ilegal, $this->legal,$this->remoteVar);
 			$safe=basename($safe);
 			$dest=$this->uploaddir.$safe;
-			$source=$_POST['url_upload'];
+			$source=$this->remoteVar;
 			$this->copy($source, $dest);
 			$this->file=$dest;
 		}
