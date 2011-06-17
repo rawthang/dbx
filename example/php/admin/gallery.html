@@ -1,0 +1,933 @@
+<!DOCTYPE HTML>
+
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Simplpan - Admin Panel</title>
+	
+	<!-- Imports General CSS and jQuery CSS -->
+	<link href="css/screen.css" rel="stylesheet" media="screen" type="text/css" />
+	
+	<!-- CSS for Fluid and Fixed Widths - Double to prevent flickering on change -->
+	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" class="width" />
+	
+	<!-- CSS for Theme Styles - Double to prevent flickering on change -->
+	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" class="theme" />
+	
+	<!-- jQuery thats loaded before document ready to prevent flickering - Rest are found at the bottom -->
+	<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.styleswitcher.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	
+</head>
+
+<body>
+
+<!-- Start: Page Wrap -->
+<div id="wrap" class="container_24">
+	
+	
+	<!-- Header Grid Container: Start -->
+	<div class="grid_24">
+		
+		<!-- User Panel: Start -->
+		<div id="userpanel">
+			
+			<!-- User: Start -->
+			<ul id="user" class="dropdown">
+				<li class="topnav">
+					<!-- User Name -->
+					<a href="#" class="top icon user">Administrator</a>
+					
+					<!-- User Dropdown Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="forms.html" class="icon settings">Settings</a></li>  
+			            <li><a href="#messages" class="icon chatbubbles popup">Messages</a></li> 
+			            <li><a href="login.html" class="icon lock">Log out</a></li>  
+			        </ul>  
+			        <!-- User Dropdown Content: End -->
+				</li>
+			</ul>
+			<!-- User: End -->
+			
+			<!-- Messages: Start -->
+			<ul class="messages">
+				<!-- Messages amount with Popup and Tip -->
+				<li><a href="#messages" class="newmsg tip popup" title="16 Messages"> <span>16</span></a></li>
+			</ul>
+			<!-- Messages: End -->
+			
+			<!-- Messages Popup Content: Start -->
+			<div class="box_content padding hide" id="messages">
+				<form>	
+				  
+					<!-- Message From User: Start -->
+					<h6>
+						<span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">says</span>
+						<small class="right grey nobold">2 hours ago</small> 
+					</h6>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna 
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					</p> 
+					<!-- Message From User: End -->
+					
+					<!-- Message From User: Start -->
+					<h6>
+						<span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">says</span>
+						<small class="right grey nobold">15 hours ago</small> 
+					</h6>
+					<p>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna 
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					</p>
+					<!-- Message From User: End -->
+					
+					<!-- Quick Reply: Start -->
+					<div class="field">
+						<label>
+							<span class="icon chatbubbles"></span>
+							Quick Reply
+						</label>
+						<textarea cols="50" rows="7"></textarea>
+					</div>
+				  
+				  <button>Send</button>
+				  <button class="secondary" type="reset">Reset</button>
+				  <button disabled="">Disabled Button</button>
+				  <!-- Quick Reply: End -->
+				  
+			    </form>
+			</div>
+			<!-- Messages Popup Content: End -->
+			
+			<!-- Style (Themes) Switcher: Start -->
+			<ul id="style" class="dropdown right">
+				<li class="topnav">
+					<a href="#" class="top icon brush">Style</a>
+					
+					<!-- Style (Themes) Switcher Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="#blue" class="icon circle">Blue</a></li>  
+			            <li><a href="#red" class="icon circle">Red</a></li> 
+			            <li><a href="#dark" class="icon circle">Dark</a></li> 
+			            <li><a href="#green" class="icon circle">Green</a></li> 
+			            <li><a href="#purple" class="icon circle">Purple</a></li> 
+			            <li><a href="#brown" class="icon circle">Brown</a></li> 
+			        </ul>  
+			        <!-- Style (Themes) Switcher Content: End -->
+				</li>
+			</ul>
+			<!-- Style Switcher: End -->
+			
+			<!-- Width Switcher: Start -->
+			<ul id="width" class="dropdown right">
+				<li class="topnav">
+					<a href="#" class="top icon coverflow">Width</a>
+					
+					<!-- Width Switcher Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="#fluid" class="icon coverflow">Fluid</a></li>  
+			            <li><a href="#fixed" class="icon coverflow">Fixed</a></li> 
+			        </ul>  
+			        <!-- Width Switcher Content: End -->
+				</li>
+			</ul>
+			<!-- Width Switcher: End -->
+			
+		</div>
+		<!-- User Panel: End -->
+		
+		<!-- Header: Start -->
+		<div id="header">
+				
+			<!-- Logo: Start -->
+			<a href="dashboard.html" id="logo">Simplpan - Admin Panel</a>
+			<!-- Logo: End -->
+			
+			<!-- Navigation: Start -->
+			<ul id="navigation" class="dropdown">
+				<li><a class="dashboard" href="dashboard.html">Dashboard</a></li>
+				
+				<!-- Navigation Dropdown Menu Item: Start -->
+				<li class="topnav">
+					<a class="frames" href="#">Layout</a>
+					
+					<!-- Navigation Dropdown Menu Item Content: Start -->
+					<ul class="subnav">
+						<li><a href="typography.html" class="icon typography">Typography</a></li> 
+			            <li><a href="grid.html" class="icon blocks">Grid System</a></li>  
+			        </ul> 
+			        <!-- Navigation Dropdown Menu Item Content: End --> 
+				</li>
+				<!-- Navigation Dropdown Menu Item: End -->
+				
+				<!-- Navigation Dropdown Menu Item: Start -->
+				<li class="topnav">
+					<a class="pages" href="#">Elements</a>
+					
+					<!-- Navigation Dropdown Menu Item Content: Start -->
+					<ul class="subnav">
+						<li><a href="code.html" class="icon list">Code View</a></li>  
+			            <li><a href="accordion.html" class="icon pages">Accordion</a></li>  
+			            <li><a href="tabs.html" class="icon pages">Tabs</a></li> 
+			            <li><a href="forms.html" class="icon frames">Forms</a></li>  
+			            <li><a href="charts.html" class="icon graph">Charts</a></li>  
+			            <li><a href="tables.html" class="icon list">Tables</a></li>  
+			            <li><a href="login.html" class="icon user">Login</a></li>  
+			        </ul>  
+			        <!-- Navigation Dropdown Menu Item Content: End --> 
+				</li>
+				<!-- Navigation Dropdown Menu Item: End -->
+				
+				<!-- Navigation Menu Item: Start -->
+				<li><a class="pictures active" href="gallery.html">Gallery</a></li>
+				<!-- Navigation Menu Item: End -->
+			</ul>
+			<!-- Navigation: End -->
+			
+		</div>
+		<!-- Header: End -->
+		
+		<!-- Breadcrumb Bar: Start -->
+		<div id="breadcrumb">
+			
+			<!-- Breadcrumb: Start -->
+			<ul class="left">
+				<li class="icon dashboard"><a href="dashboard.html">Dashboard</a></li>
+				<li class="icon point_right active"><a href="gallery.html">Gallery</a></li>
+			</ul>
+			<!-- Breadcrumb: End -->
+			
+			<!-- Breadcrumb Icon Links: Start -->
+			<ul class="right">
+				<li><a href="#" class="icon support tip" title="FAQ">FAQ</a></li>
+				<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+			</ul>
+			<!-- Breadcrumb Icon Links: End -->
+			
+		</div>
+		<!-- Breadcrumb Bar: End -->
+		
+	</div>
+	<!-- Header Grid Container: End -->
+
+
+<!-- 100% Box Grid Container: Start -->
+<div class="grid_24">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon pictures">Small Gallery  <span>45</span></h2>
+		
+		<!-- Big Gallery Sorting: Start -->
+		<ul class="sorting">
+			<li><a href="#" data-type="all" class="active">Show All</a></li>
+			<li><a href="#" data-type="buildings">Buildings</a></li>
+			<li><a href="#" data-type="streets">Streets</a></li>
+			<li><a href="#" data-type="nature">Nature</a></li>
+			<li><a href="#" data-type="clothing">Clothing</a></li>
+		</ul>
+		<!-- Big Gallery Sorting: End -->
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content">
+		
+		<!-- Small Gallery Content: Start -->
+		<ul class="gallery small">
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g001">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_01.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_01.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_01.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g002">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_02.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_02.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_02.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g003">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_03.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_03.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_03.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g004">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_04.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_04.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_04.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g005">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_05.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_05.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_05.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g006">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_06.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_06.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_06.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g007">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_07.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_07.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_07.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g008">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_08.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_08.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_08.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g009">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_09.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_09.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_09.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g010">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_10.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_10.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_10.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g0011">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_11.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_11.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_11.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g012">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_12.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_12.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_12.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g013">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_13.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_13.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_13.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g014">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_14.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_14.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_14.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g015">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_15.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_15.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_15.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g016">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_16.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_16.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_16.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g017">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_17.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_17.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_17.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g018">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_18.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_18.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_18.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g019">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_19.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_19.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_19.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g020">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_20.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_20.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_20.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g021">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_21.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_21.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_21.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="nature" data-id="g022">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_22.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_22.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_22.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g023">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_23.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_23.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_23.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="clothing" data-id="g024">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_24.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_24.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_24.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="clothing" data-id="g025">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_25.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_25.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_25.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="clothing" data-id="g026">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_26.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_26.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_26.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="clothing" data-id="g027">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_27.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_27.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_27.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g028">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_28.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_28.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_28.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="streets" data-id="g029">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_29.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_29.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_29.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+			
+			<!-- Small Gallery Image: Start -->
+			<li data-type="buildings" data-id="g030">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_30.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_30.jpg" class="popup">
+					<img src="img/gallery/thumbs_small/image_30.png" alt="" />
+				</a>
+			</li>
+			<!-- Small Gallery Image: End -->
+
+			
+		</ul>
+		<!-- Small Gallery Content: End -->
+		
+		<!-- Small Gallery Footer: Start -->
+		<div class="padding">
+			<button>Add Image to Gallery</button>
+			
+			<!-- Pagination: Start -->
+			<ul class="pagination right nomargin">
+				<li><a href="#" class="active">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+			<!-- Pagination: End -->
+		</div>
+		<!-- Small Gallery Footer: End -->
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 100% Box Grid Container: End -->
+
+
+<!-- 100% Box Grid Container: Start -->
+<div class="grid_24">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon pictures">Large Gallery  <span>129</span></h2>
+		
+		<!-- Big Gallery Sorting: Start -->
+		<ul class="sorting">
+			<li><a href="#" data-type="all" class="active">All</a></li>
+			<li><a href="#" data-type="buildings">Buildings</a></li>
+			<li><a href="#" data-type="streets">Streets</a></li>
+			<li><a href="#" data-type="nature">Nature</a></li>
+		</ul>
+		<!-- Big Gallery Sorting: End -->
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content">
+		
+		<!-- Big Gallery Content: Start -->
+		<ul class="gallery">
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="buildings" data-id="g001">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_01.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_01.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_01.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="nature" data-id="g002">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_02.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_02.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_02.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="buildings" data-id="g003">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_03.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_03.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_03.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="streets" data-id="g004">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_04.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_04.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_04.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="streets" data-id="g005">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_05.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_05.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_05.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="nature" data-id="g006">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_06.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_06.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_06.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="nature" data-id="g007">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_07.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_07.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_07.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="buildings" data-id="g008">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_08.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_08.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_08.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+			<!-- Big Gallery Image: Start -->
+			<li data-type="streets" data-id="g009">
+				<div class="actions">
+					<a href="#" class="delete">delete</a>
+					<a href="#" class="edit">edit</a>
+					<a href="img/gallery/image_09.jpg" class="view popup">view</a>
+				</div>
+				
+				<a href="img/gallery/image_09.jpg" class="popup">
+					<img src="img/gallery/thumbs/image_09.png" alt="" />
+				</a>
+			</li>
+			<!-- Big Gallery Image: End -->
+			
+		</ul>
+		<!-- Gallery Content: End -->
+		
+		<!-- Big Gallery Footer: Start -->
+		<div class="padding">
+			<button>Add Image to Gallery</button>
+			
+			<!-- Pagination: Start -->
+			<ul class="pagination right nomargin">
+				<li><a href="#" class="active">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+			<!-- Pagination: End -->
+		</div>
+		<!-- Big Gallery Footer: End -->
+		
+		<!-- Delete Dialog: Start -->
+		<div id="dialog-confirm" title="Delete this image?">
+			<p>Do you really want to delete this?</p>
+		</div>
+		<!-- Delete Dialog: End -->
+		
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 100% Box Grid Container: End -->
+
+
+<!-- Footer Grid: Start -->
+<div class="grid_24">
+
+	<!-- Footer: Start -->
+	<div id="footer">
+		
+		<p class="left">
+			Copyright &#169; 2011 <a href="#">Yourcompany</a>. 
+			Powered by <a href="http://themeforest.net/user/Kaasper/?ref=kaasper">Simplpan</a>.
+		</p>
+		
+		<!-- Footer Icon Navigation: Start -->
+		<ul class="right">
+			<li><a href="#" class="icon dashboard tip active" title="Dashboard">Dashboard</a></li>
+			<li><a href="#" class="icon pages tip" title="Pages">Pages</a></li>
+			<li><a href="#" class="icon users tip" title="Users">Users</a></li>
+			<li><a href="#" class="icon settings tip" title="Settings">Settings</a></li>
+			<li><a href="#" class="icon support tip" title="Support">Support</a></li>
+			<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+		</ul>
+		<!--Footer Icon Navigation: End -->
+		
+	</div>
+	<!-- Footer: End -->
+	
+</div>
+<!-- Footer Grid: End -->
+
+</div>
+<!-- End: Page Wrap -->
+
+	<!-- jQuery libs - Rest are found in the head section (at top) -->
+	<script type="text/javascript" src="js/jquery.visualize-tooltip.js"></script>
+	<script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+	<script type="text/javascript" src="js/jquery.quicksand.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/jquery.facebox.js"></script>
+	<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushPhp.js"></script>
+	
+	<!-- jQuery Customization -->
+	<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>

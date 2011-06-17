@@ -1,18 +1,22 @@
-Hi, 
-hier schreib ich rein, was mir gerade durch den kopf geht, wie das wetter ist usw....
-Ich stell mir das mit der Hierarchie im Dateisystem so vor:
+Dateisystem:
+
++index, (login, checklogin, logout), acentre (admin startseite) [alles PHP-Dateien]
 
 +admin			Hier wollte ich den adminbereich reinlegen
-+classes    	Alles an Klassen hier rein   
-+-----helper	Hilfsklassen die von uns erstellt werden
-+-----other		Sachen wie Geshi, die wir brauchen, die aber nicht von uns sind
-+img			Bilder für das Layout	
-upload			Uploads hier rein, oder sollen wir Blobs benutzen?
-credentials.php	Anmeldedaten für die Datenbank
-index.php		???
-layout.css		???	
-README			wirres Zeug
-sql				damit kann die Datenbank angelegt + befüllt werden
-TODO.php  		Bemerkenswertes
 
-Ich seh das mit der Hierarchie recht locker, da können wir quasi noch alles ändern. 
++css			CSS mon!
+
++html
++-----templates Alle Templates für die normale Seite
+
++images			Alle Prons, ähh.. ^^
+
++js				Alle JavaScript Dateien
+
++php
++-----classes  	Alles an Klassen
++-----helper	Hilfsklassen von uns
++-----other 	Klassen die aber nicht von uns sind
+
+
+TODO.php  		Das müssen wir noch u.a. leisten.. Oder auch nich, oder noch? ^^

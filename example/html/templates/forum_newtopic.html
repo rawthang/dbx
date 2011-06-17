@@ -1,0 +1,116 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.topicname.value == "") {
+                alert("Es fehlt die Überschrift!");
+                document.post.topicname.focus();
+                return false;
+        }
+
+        if(document.post.message.value == "") {
+                alert("Es fehlt jeglicher Text");
+                document.post.message.focus();
+                return false;
+        }
+}
+
+function ChangeFormAction() {
+        if(document.post.preview.checked == true) {
+                document.post.action = "index.php?site=forum";
+        }
+        else {
+                document.post.action = "forum.php";
+        }
+}
+-->
+</script>
+
+<form action="forum.php" method="post" name="post" onSubmit="return chkFormular()">
+<table width="95%" cellpadding="2" cellspacing="1">
+	<tr>
+		<td width="1"><img src="images/ploben.jpg"></td>
+     	<td background="images/oben.jpg"></td>
+     	<td width="1"><img src="images/proben.jpg"></td>
+    </tr>
+    <tr>
+    	<td background="images/links.jpg"></td>
+     	<td>
+	    <table width="100%" cellpadding="1" cellspacing="0" style="margin-top:0px; border:1px solid #cccccc;">
+      		<tr>
+       			<td background="images/news_thead.jpg"><b><font color="white"> Foren: Neues Topic</font></b></td>
+      		</tr>
+      		<tr>
+       			<td>
+          		<p style="margin:2px;"><img src="images/1.gif"> 
+ 		  		<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$border">
+    	  			<tr>
+      					<td bgcolor="$bg1">
+          				<table width="100%" align="center" cellpadding="2" cellspacing="0" class="formtable">
+          					<tr>
+            					<td colspan="2">
+                       			<table width="100%" cellpadding="2" cellspacing="0">
+                					<tr>
+                  						<td colspan="8"><b>Topic Icon:</b></td>
+                					</tr>
+                					<tr>
+                  						<td colspan="8"></td>
+                					</tr>
+                					<tr bgcolor="$bg1">
+                  						<td><input type="radio" class="input" name="icon" value="icon1.gif"> <img src="images/icons/topicicons/icon1.gif"></td>
+                  						<td><input type="radio" class="input" name="icon" value="icon2.gif"> <img src="images/icons/topicicons/icon2.gif"></td>
+		                  				<td><input type="radio" class="input" name="icon" value="icon3.gif"> <img src="images/icons/topicicons/icon3.gif"></td>
+        		          				<td><input type="radio" class="input" name="icon" value="icon4.gif"> <img src="images/icons/topicicons/icon4.gif"></td>
+                		  				<td><input type="radio" class="input" name="icon" value="icon5.gif"> <img src="images/icons/topicicons/icon5.gif"></td>
+							        	<td><input type="radio" class="input" name="icon" value="icon6.gif"> <img src="images/icons/topicicons/icon6.gif"></td>
+        		          				<td><input type="radio" class="input" name="icon" value="icon7.gif"> <img src="images/icons/topicicons/icon7.gif"></td>
+                		  				<td><input type="radio" class="input" name="icon" value="icon8.gif"> <img src="images/icons/topicicons/icon8.gif"></td>
+										<td>&nbsp;</td>
+                					</tr>
+		                			<tr bgcolor="$bg1">
+        		          				<td><input type="radio" class="input" name="icon" value="icon9.gif"> <img src="images/icons/topicicons/icon9.gif"></td>
+						                <td><input type="radio" class="input" name="icon" value="icon10.gif"> <img src="images/icons/topicicons/icon10.gif"></td>
+		                  				<td><input type="radio" class="input" name="icon" value="icon11.gif"> <img src="images/icons/topicicons/icon11.gif"></td>
+        		          				<td><input type="radio" class="input" name="icon" value="icon13.gif"> <img src="images/icons/topicicons/icon13.gif"></td>
+		                  				<td><input type="radio" class="input" name="icon" value="icon14.gif"> <img src="images/icons/topicicons/icon14.gif"></td>
+        		          				<td><input type="radio" class="input" name="icon" value="text.gif"> <img src="images/icons/topicicons/text.gif"></td>
+		                  				<td><input type="radio" class="input" name="icon" value="thumb_down.gif"> <img src="images/icons/topicicons/thumb_down.gif"></td>
+										<td><input type="radio" class="input" name="icon" value="thumb_up.gif"> <img src="images/icons/topicicons/thumb_up.gif"></td>
+									</tr>
+		              			</table>
+		                        </td>
+							</tr>
+					        <tr>
+		            			<td colspan="2"><b>&Uuml;berschrift:</b><br> <input name="topicname" type="text" class="form_off" id="topicname" style="width:90%" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$topicname" size="45"></td>
+        		 			</tr>
+		          			<tr>
+        		    			<td colspan="2">$addbbcode</td>
+		          			</tr>
+		          			<tr>
+		            			<td colspan="2"><textarea name="message" rows="10" cols="35" style="width:90%;" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">$message</textarea></td>
+		          			</tr>
+		          			<tr>
+		            			<td colspan="2"><b>Options:</b> <span class="small">&#8226; HTML ist nicht erlaubt&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode ist erlaubt</a>
+		              			&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies sind erlaubt</a></span></td>
+		          			</tr>
+		          			<tr>
+		            			<td><input class="input" type="checkbox" name="preview" value="1" onClick="ChangeFormAction()">Vorschau</td>
+		            			<td align="right" valign="bottom"><input type="hidden" name="board" value="$board"> <input type="hidden" name="userID" value="$userID"> <input type="hidden" name="addtopic" value="true"> <input name="newtopic" type="submit" value="Los!"></td>
+		          			</tr>
+		        		</table>
+						</td>
+		    		</tr>
+		  		</table>
+				</p>
+				</td>
+			</tr>
+		</table>
+	    </td>
+	    <td background="images/rechts.jpg"></td>
+	</tr>
+    <tr>
+    	<td width="1"><img src="images/plunten.jpg"></td>
+     	<td background="images/unten.jpg"></td>
+     	<td width="1"><img src="images/prunten.jpg"></td>
+    </tr>
+</table>
+</form>

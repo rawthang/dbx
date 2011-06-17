@@ -1,0 +1,100 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.headline1.value == "") {
+                alert("You have to enter a headline!");
+                document.post.headline1.focus();
+                   return false;
+        }
+
+        if(document.post.message.value == "") {
+                alert("You have to enter text!");
+                document.post.message.focus();
+                   return false;
+        }
+
+}
+-->
+</script>
+
+<form action="?site=news&action=save" method="post" enctype="multipart/form-data" name="post" onSubmit="return chkFormular()">
+  <table width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="title" align="left">New post</td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" colspan="2">$addbbcode</td>
+          </tr>
+        </table>
+        <hr noshade size="1" color="$border">
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td><b>Rubric: </b> <select name="rubric">$rubrics
+              </select> <b>
+              <input name="button" type="button" class="button" onClick="MM_openBrWindow('system/scripts/upload.php?newsID=$newsID','Upload','scrollbars=yes,width=800,height=600')" value="Upload images">
+              &nbsp;&nbsp;&nbsp; Options:&nbsp;&nbsp;</b>&#8226; HTML is <b><u>on</u></b>
+              &nbsp;&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('system/scripts/code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode</a>
+              is <b><u>on</u></b> &nbsp;&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('system/scripts/smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies</a>
+              are <b><u>on</u></b></td>
+          </tr>
+          <tr>
+            <td><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr>
+            <td><b>
+              <select name="lang1">$langs1
+              </select>
+              Headline:
+              <input name="headline1" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$headline1" size="80" maxlength="67">
+              </b></td>
+          </tr>
+          <tr>
+            <td><textarea name="message" rows="20" cols="100">$message</textarea></td>
+          </tr>
+        </table>
+        <hr noshade size="1">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="top">Link 1:
+              <input name="link1" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link1" maxlength="8">
+              <input name="url1" type="text" value="$url1" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              $window1 <br>
+              Link 2:
+              <input name="link2" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link2" maxlength="8">
+              <input name="url2" type="text" value="$url2" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              $window2 <br>
+              Link 3:
+              <input name="link3" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link3" maxlength="8">
+              <input name="url3" type="text" value="$url3" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              $window3<br>
+              Link 4:
+              <input name="link4" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link4" maxlength="8">
+              <input name="url4" type="text" value="$url4" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              $window4 <br>
+              </span></td>
+          </tr>
+          <tr>
+           <td><hr noshade size="1"><input type="Checkbox" name="maxtime" value="1" id="maxtime"><label for="maxtime">&nbsp;Set news on first place</label></td>
+          </tr>
+          <tr>
+            <td><hr noshade size="1"></td>
+          </tr>
+          <tr align="left">
+            <td>
+              <input type="hidden" name="comments" value="0">
+              <input type="hidden" name="userID" value="$userID">
+              <input type="hidden" name="newsID" value="$newsID">
+              <input name="preview" type="submit" value="Preview">
+              <input name="save" type="submit" value="Save news">
+            </td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</form>

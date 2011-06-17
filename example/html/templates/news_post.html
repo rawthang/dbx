@@ -1,0 +1,139 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+        if(document.post.headline1.value == "") {
+                alert("You have to enter a headline!");
+                document.post.headline1.focus();
+                   return false;
+        }
+
+        if(document.post.message.value == "") {
+                alert("You have to enter a text!");
+                document.post.message.focus();
+                   return false;
+        }
+}
+-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) {
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+         <script language="jscript" type="text/javascript">
+function emoticon(text) {
+	var txtarea = document.post.message;
+	text = ' ' + text + ' ';
+	if (txtarea.createTextRange && txtarea.caretPos) {
+		var caretPos = txtarea.caretPos;
+		caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? caretPos.text + text + ' ' : caretPos.text + text;
+		txtarea.focus();
+	} else {
+		txtarea.value  += text;
+		txtarea.focus();
+	}
+}
+
+function AddCodeFromWindow(thecode) {
+        opener.document.post.message.value += thecode + "";
+        opener.post.message.focus();
+}
+
+function AddCodeFromWindow2(thecode) {
+        opener.document.post.usertext.value += thecode + "";
+        opener.post.usertext.focus();
+}
+</script>
+<form action="?site=news&action=save" method="post" enctype="multipart/form-data" name="post" onSubmit="return chkFormular()">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="$border">
+    <tr>
+      <td class="title" align="center" bgcolor="$bghead">New post</td>
+    </tr>
+    <tr>
+      <td bgcolor="$pagebg"></td>
+    </tr>
+    <tr>
+      <td bgcolor="$bg1">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" colspan="2">$addbbcode</td>
+          </tr>
+        </table>
+        <hr noshade size="1" color="$border">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formtable">
+          <tr>
+            <td><b>Rubric: </b> <select name="rubric">$rubrics
+              </select>
+              <b>
+              <input name="button" type="button" class="button" onClick="MM_openBrWindow('upload.php?newsID=$newsID','Upload','scrollbars=yes,width=800,height=600')" value="Upload images">
+              </b> <b>&nbsp;&nbsp;&nbsp; Options:&nbsp;&nbsp;</b>&#8226; HTML
+              is <b><u>on</u></b> &nbsp;&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">BBCode</a>
+              is <b><u>on</u></b> &nbsp;&nbsp;&nbsp;&#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">Smilies</a>
+              are <b><u>on</u> </b></td>
+          </tr>
+          <tr>
+            <td><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr>
+            <td width="50%"><b>
+              <select name="lang1">$langs1
+              </select>
+              Headline:
+              <input name="headline1" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$headline1" size="80" maxlength="67">
+              </b></td>
+          </tr>
+          <tr>
+            <td><textarea id="message" name="message" rows="20" cols="99">$message</textarea>
+              <br> </td>
+          </tr>
+        </table>
+        <hr noshade size="1" color="$border">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="formtable">
+          <tr>
+            <td valign="top">Link 1:
+              <input name="link1" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link1" maxlength="8">
+                          <input name="url1" type="text" value="$url1" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              <input class="input" name="window1" type="radio" value="1" checked>
+              Blank
+              <input class="input" type="radio" name="window1" value="0">
+              Self<br>
+              Link 2:
+              <input name="link2" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link2" maxlength="8">
+                          <input name="url2" type="text" value="$url2" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              <input class="input" name="window2" type="radio" value="1" checked>
+              Blank
+              <input class="input" type="radio" name="window2" value="0">
+              Self <br>
+              Link 3:
+              <input name="link3" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link3" maxlength="8">
+                          <input name="url3" type="text" value="$url3" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              <input class="input" name="window3" type="radio" value="1" checked>
+              Blank
+              <input class="input" type="radio" name="window3" value="0">
+              Self <br>
+              Link 4:
+              <input name="link4" type="text" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'" value="$link4" maxlength="8">
+                          <input name="url4" type="text" value="$url4" class="form_off" onFocus="this.className='form_on'" onBlur="this.className='form_off'">
+              <input class="input" name="window4" type="radio" value="1" checked>
+              Blank
+              <input class="input" type="radio" name="window4" value="0">
+              Self </td>
+            <td valign="top"> <br> </td>
+          </tr>
+          <tr>
+            <td colspan="5"><hr noshade size="1" color="$border"></td>
+          </tr>
+          <tr align="right">
+            <td colspan="2"> <input type="hidden" name="userID" value="$userID">
+              <input type="hidden" name="newsID" value="$newsID">
+              <input type="hidden" name="comments" value="0">
+              <input type="submit" name="preview" value="Preview">
+              <input type="submit" name="save" value="Save news">
+            </td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</form>

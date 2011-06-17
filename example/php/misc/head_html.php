@@ -11,9 +11,40 @@ if($site == "error") {
 </head>
 <body>
 <noscript>
+<style rel="stylesheet" type="text/css" media="all">
+	a {
+		cursor:pointer;
+		text-decoration: underline;
+		color: #638f2b;	
+	}
+	a:hover {
+		text-decoration: none;
+		color: #638f2b;	
+	}
+	a img {
+		border:0;
+	}
+	#noscript-bg {
+		position:fixed;left:0;top:0;width:100%;height:100%;background-color:black;opacity:.95;z-index:9999;
+	}
+	#noscript-text {
+		position:absolute;
+		text-align:center;left:0;width:100%;top:30%;
+		font: 14px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; 
+		font-size: 85%;
+		font-size-adjust:none;
+		font-weight:bold;
+		color: #ccc5cc;
+		line-height:1.5em;z-index:10000;
+		padding-top:150px;		
+	}
+	#noscript-text b {
+		font-size:22px;
+	}
+</style>
 <div id="noscript-bg"></div>
-<div id="noscript-text"><b>This Site needs JavaScript for Ajax etc.</b><br/>
-  Please <a href="https://www.google.com/support/adsense/bin/answer.py?answer=12654" target="_blank">enable JavaScript</a> in your browser.</div>
+<div id="noscript-text"><img src="images/noscript.png" center top no-repeat><p><b>This Site needs JavaScript for Ajax etc.</b><br />
+  Please <a href="https://www.google.com/support/adsense/bin/answer.py?answer=12654" target="_blank">enable JavaScript</a> in your browser.</p></div>
 </noscript>
 <?php
 }
@@ -27,9 +58,40 @@ else {
 </head>
 <body>
 <noscript>
+<style rel="stylesheet" type="text/css" media="all">
+	a {
+		cursor:pointer;
+		text-decoration: underline;
+		color: #638f2b;	
+	}
+	a:hover {
+		text-decoration: none;
+		color: #638f2b;	
+	}
+	a img {
+		border:0;
+	}
+	#noscript-bg {
+		position:fixed;left:0;top:0;width:100%;height:100%;background-color:black;opacity:.95;z-index:9999;
+	}
+	#noscript-text {
+		position:absolute;
+		text-align:center;left:0;width:100%;top:30%;
+		font: 14px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; 
+		font-size: 85%;
+		font-size-adjust:none;
+		font-weight:bold;
+		color: #ccc5cc;
+		line-height:1.5em;z-index:10000;
+		padding-top:150px;		
+	}
+	#noscript-text b {
+		font-size:22px;
+	}
+</style>
 <div id="noscript-bg"></div>
-<div id="noscript-text"><b>This Site needs JavaScript for Ajax etc.</b><br/>
-  Please <a href="https://www.google.com/support/adsense/bin/answer.py?answer=12654" target="_blank">enable JavaScript</a> in your browser.</div>
+<div id="noscript-text"><img src="images/noscript.png" center top no-repeat><p><b>This Site needs JavaScript for Ajax etc.</b><br />
+  Please <a href="https://www.google.com/support/adsense/bin/answer.py?answer=12654" target="_blank">enable JavaScript</a> in your browser.</p></div>
 </noscript>
 <?php
 }

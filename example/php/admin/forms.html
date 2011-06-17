@@ -1,184 +1,584 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Mirrored from www.webgurus.biz/adminskin2/forms.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 08 May 2010 07:33:57 GMT -->
+<!DOCTYPE HTML>
+
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Dashboard | Modern Admin</title>
-<link rel="stylesheet" type="text/css" href="css/960.css" />
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="css/text.css" />
-<link rel="stylesheet" type="text/css" href="css/blue.css" />
-<link type="text/css" href="css/smoothness/ui.css" rel="stylesheet" />
-<link type="text/css" href="js/wysiwyg/jquery.wysiwyg.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/wysiwyg/jquery.wysiwyg.js"></script>
-    <script type="text/javascript">
-	$(document).ready(function() {
-		$('#wysiwyg').wysiwyg();
-	});
-    </script>    
-    <script type="text/javascript" src="js/blend/jquery.blend.js"></script>
-	<script type="text/javascript" src="js/ui.core.js"></script>
-	<script type="text/javascript" src="js/ui.sortable.js"></script>    
-    <script type="text/javascript" src="js/ui.dialog.js"></script>
-    <script type="text/javascript" src="js/effects.js"></script>
-    <!--[if IE6]>
-	<link rel="stylesheet" type="text/css" href="css/iefix.css" />
-    <![endif]-->
-    <!--[if IE 6]>
-	<link rel="stylesheet" type="text/css" href="css/iefix.css" />
-	<script src="js/pngfix.js"></script>
-    <script>
-        DD_belatedPNG.fix('#menu ul li a span span');
-    </script>    
-    <![endif]-->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Simplpan - Admin Panel</title>
+	
+	<!-- Imports General CSS and jQuery CSS -->
+	<link href="css/screen.css" rel="stylesheet" media="screen" type="text/css" />
+	
+	<!-- CSS for Fluid and Fixed Widths - Double to prevent flickering on change -->
+	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" class="width" />
+	
+	<!-- CSS for Theme Styles - Double to prevent flickering on change -->
+	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" class="theme" />
+	
+	<!-- jQuery thats loaded before document ready to prevent flickering - Rest are found at the bottom -->
+	<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.styleswitcher.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	
 </head>
 
 <body>
-<!-- WRAPPER START -->
-<div class="container_16" id="wrapper">	
-<!-- HIDDEN COLOR CHANGER -->
-      <div style="position:relative;">
-      	<div id="colorchanger">
-        	<a href="dashboard_red.html"><span class="redtheme">Red Theme</span></a>
-            <a href="dashboard.html"><span class="bluetheme">Blue Theme</span></a>
-            <a href="dashboard_green.html"><span class="greentheme">Green Theme</span></a>
-        </div>
-      </div>
-    <!--LOGO-->
-	<div class="grid_8" id="logo">Profi Admin - Website Administration</div>
-    <div class="grid_8">
-<!-- USER TOOLS START -->      
-      <div id="user_tools"><span><a href="#" class="mail">(1)</a> Welcome <a href="#">Admin Username</a>  |  <a class="dropdown" href="#">Change Theme</a>  |  <a href="#">Logout</a></span></div>
-    </div>
-<div class="grid_16" id="header">
-<!-- MENU START -->
-<div id="menu">
-	<ul class="group" id="menu_group_main">
-		<li class="item first" id="one"><a href="dashboard.html" class="main"><span class="outer"><span class="inner dashboard">Dashboard</span></span></a></li>
-        <li class="item middle" id="two"><a href="forms.html" class="main current"><span class="outer"><span class="inner content">Content</span></span></a></li>
-        <li class="item middle" id="three"><a href="#" class="main"><span class="outer"><span class="inner reports">Reports</span></span></a></li>
-        <li class="item middle" id="four"><a href="#" class="main"><span class="outer"><span class="inner users">Users</span></span></a></li>
-		<li class="item middle" id="five"><a href="#" class="main"><span class="outer"><span class="inner media_library">Media Library</span></span></a></li>        
-		<li class="item middle" id="six"><a href="#" class="main"><span class="outer"><span class="inner event_manager">Event Manager</span></span></a></li>        
-		<li class="item middle" id="seven"><a href="#" class="main"><span class="outer"><span class="inner newsletter">Newsletter</span></span></a></li>        
-		<li class="item last" id="eight"><a href="#" class="main"><span class="outer"><span class="inner settings">Settings</span></span></a></li>        
-    </ul>
-</div>
-<!-- MENU END -->
-</div>
-<div class="grid_16">
-<!-- TABS START -->
-    <div id="tabs">
-         <div class="container">
-            <ul>
-                      <li><a href="dashboard.html"><span>Dashboard elements</span></a></li>
-                      <li><a href="#" class="current"><span>Content Editing</span></a></li>
-                      <li><a href="#"><span>Submenu Link 3</span></a></li>
-                      <li><a href="#"><span>Submenu Link 4</span></a></li>
-                      <li><a href="#"><span>Submenu Link 5</span></a></li>
-                      <li><a href="#"><span>Submenu Link 6</span></a></li>
-                      <li><a href="#" class="more"><span>More Submenus</span></a></li>            
-           </ul>
-        </div>
-    </div>
-<!-- TABS END -->    
-</div>
-<!-- HIDDEN SUBMENU START -->
-	<div class="grid_16" id="hidden_submenu">
-	  <ul class="more_menu">
-		<li><a href="#">More link 1</a></li>
-		<li><a href="#">More link 2</a></li>  
-	    <li><a href="#">More link 3</a></li>    
-        <li><a href="#">More link 4</a></li>                               
-      </ul>
-	  <ul class="more_menu">
-		<li><a href="#">More link 5</a></li>
-		<li><a href="#">More link 6</a></li>  
-	    <li><a href="#">More link 7</a></li> 
-        <li><a href="#">More link 8</a></li>                                  
-      </ul>
-	  <ul class="more_menu">
-		<li><a href="#">More link 9</a></li>
-		<li><a href="#">More link 10</a></li>  
-	    <li><a href="#">More link 11</a></li>  
-        <li><a href="#">More link 12</a></li>                                 
-      </ul>            
-  </div>
-<!-- HIDDEN SUBMENU END -->  
 
-<!-- CONTENT START -->
-    <div class="grid_16" id="content">
-   <!-- CONTENT TITLE -->
-    <div class="grid_9">
-    <h1 class="content_edit">Content Editing and Tables</h1>
-    </div>
-    <!-- CONTENT TITLE RIGHT BOX -->
-    <div class="grid_6" id="eventbox"><a href="#" class="inline_tip">Here would come a small tip of using this admin</a></div>
-    <div class="clear">
-    </div>
-<!--    TEXT CONTENT OR ANY OTHER CONTENT START     -->
-    <div class="grid_15" id="textcontent">
-    <h2>This is a h2 subheading</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan  mauris a enim aliquet at elementum diam condimentum. Donec et sem eros.  Morbi mollis accumsan pellentesque. Duis ultricies, purus in sodales  luctus, urna dolor ultrices ligula, luctus faucibus ante dolor sit amet  tortor. Fusce non purus eros, id pulvinar ligula. Quisque ullamcorper  placerat libero. Mauris pretium purus eu nibh adipiscing pretium. Nam  libero ipsum, laoreet quis convallis id, viverra id dolor. Praesent  dignissim nisl a mauris ultrices eget ultrices libero adipiscing. Fusce  eget pretium nunc. </p>
-    <p>Phasellus elit ipsum, euismod sit amet dignissim sed, varius at  velit. Praesent in tortor sem. Suspendisse potenti. Sed auctor laoreet  metus, quis luctus augue ullamcorper ut. Aenean ultricies interdum  pellentesque. Integer eget quam leo, ut vulputate purus. Suspendisse  semper commodo tellus, quis commodo ligula condimentum vel. </p>
-<form id="edit" action="#" method="post">
-    	<label>Title</label>
-        <input type="text" class="smallInput wide" />
-        <!--WYSIWYG Editor is linked to the textarea with id: #wysiwyg-->
-        <label>Edit Content</label>
-        <textarea id="wysiwyg" class="smallInput wide" rows="7" cols="30"></textarea>
-        <label>Please select some option below</label>
-        <select class="smallInput">
-        	<option>This is one option</option>
-        	<option>This is second option</option>
-        	<option>This is third option</option>            
-        </select>
-        <label>You can use any if the buttons below to submit this form (these are A tags)</label>
-       <!-- BUTTONS -->
-        <a class="button"><span>Submit Form</span></a>
-        <a class="button_grey"><span>Submit Form</span></a>
-        <a class="button_ok"><span>Update information</span></a>
-        <a class="button_notok"><span>Delete this record</span></a>
-        <a class="button_grey_round"><span>This is a rounded button</span></a>
-    </form><br />
-
-    <div class="clear"></div><br />
-    <!--NOTIFICATION MESSAGES-->
-        <p class="info" id="success"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-        <p class="info" id="error"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-        <p class="info" id="warning"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-        <p class="info" id="info"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>    
-    </div>
-    <div class="clear"> </div>
-<!-- END CONTENT-->    
-  </div>
-<div class="clear"> </div>
-
-		<!-- This contains the hidden content for inline calls -->
-		<div class='hidden'>
-			<div id="inline_example1" title="This is a modal box" style='padding:10px; background:#fff;'>
-			<p><strong>This content comes from a hidden element on this page.</strong></p>
-            			
-			<p><strong>Try testing yourself!</strong></p>
-            <p>You can call as many dialogs you want with jQuery UI.</p>
+<!-- Start: Page Wrap -->
+<div id="wrap" class="container_24">
+	
+	
+	<!-- Header Grid Container: Start -->
+	<div class="grid_24">
+		
+		<!-- User Panel: Start -->
+		<div id="userpanel">
 			
+			<!-- User: Start -->
+			<ul id="user" class="dropdown">
+				<li class="topnav">
+					<!-- User Name -->
+					<a href="#" class="top icon user">Administrator</a>
+					
+					<!-- User Dropdown Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="forms.html" class="icon settings">Settings</a></li>  
+			            <li><a href="#messages" class="icon chatbubbles popup">Messages</a></li> 
+			            <li><a href="login.html" class="icon lock">Log out</a></li>  
+			        </ul>  
+			        <!-- User Dropdown Content: End -->
+				</li>
+			</ul>
+			<!-- User: End -->
+			
+			<!-- Messages: Start -->
+			<ul class="messages">
+				<!-- Messages amount with Popup and Tip -->
+				<li><a href="#messages" class="newmsg tip popup" title="16 Messages"> <span>16</span></a></li>
+			</ul>
+			<!-- Messages: End -->
+			
+			<!-- Messages Popup Content: Start -->
+			<div class="box_content padding hide" id="messages">
+				<form>	
+				  
+					<!-- Message From User: Start -->
+					<h6>
+						<span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">says</span>
+						<small class="right grey nobold">2 hours ago</small> 
+					</h6>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna 
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					</p> 
+					<!-- Message From User: End -->
+					
+					<!-- Message From User: Start -->
+					<h6>
+						<span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">says</span>
+						<small class="right grey nobold">15 hours ago</small> 
+					</h6>
+					<p>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna 
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					</p>
+					<!-- Message From User: End -->
+					
+					<!-- Quick Reply: Start -->
+					<div class="field">
+						<label>
+							<span class="icon chatbubbles"></span>
+							Quick Reply
+						</label>
+						<textarea cols="50" rows="7"></textarea>
+					</div>
+				  
+				  <button>Send</button>
+				  <button class="secondary" type="reset">Reset</button>
+				  <button disabled="">Disabled Button</button>
+				  <!-- Quick Reply: End -->
+				  
+			    </form>
 			</div>
+			<!-- Messages Popup Content: End -->
+			
+			<!-- Style (Themes) Switcher: Start -->
+			<ul id="style" class="dropdown right">
+				<li class="topnav">
+					<a href="#" class="top icon brush">Style</a>
+					
+					<!-- Style (Themes) Switcher Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="#blue" class="icon circle">Blue</a></li>  
+			            <li><a href="#red" class="icon circle">Red</a></li> 
+			            <li><a href="#dark" class="icon circle">Dark</a></li> 
+			            <li><a href="#green" class="icon circle">Green</a></li> 
+			            <li><a href="#purple" class="icon circle">Purple</a></li> 
+			            <li><a href="#brown" class="icon circle">Brown</a></li> 
+			        </ul>  
+			        <!-- Style (Themes) Switcher Content: End -->
+				</li>
+			</ul>
+			<!-- Style Switcher: End -->
+			
+			<!-- Width Switcher: Start -->
+			<ul id="width" class="dropdown right">
+				<li class="topnav">
+					<a href="#" class="top icon coverflow">Width</a>
+					
+					<!-- Width Switcher Content: Start -->
+					<ul class="subnav">  
+			            <li><a href="#fluid" class="icon coverflow">Fluid</a></li>  
+			            <li><a href="#fixed" class="icon coverflow">Fixed</a></li> 
+			        </ul>  
+			        <!-- Width Switcher Content: End -->
+				</li>
+			</ul>
+			<!-- Width Switcher: End -->
+			
 		</div>
-        <!--Second hidden element called from the tip message right of the title-->
-        <div class='hidden'>
-			<div id='inline_example2' title="This is a modal" style='padding:10px; background:#fff;'>
-			<p><strong>This content comes from the second hidden element on this page.</strong></p>
-			</div>
+		<!-- User Panel: End -->
+		
+		<!-- Header: Start -->
+		<div id="header">
+				
+			<!-- Logo: Start -->
+			<a href="dashboard.html" id="logo">Simplpan - Admin Panel</a>
+			<!-- Logo: End -->
+			
+			<!-- Navigation: Start -->
+			<ul id="navigation" class="dropdown">
+				<li><a class="dashboard" href="dashboard.html">Dashboard</a></li>
+				
+				<!-- Navigation Dropdown Menu Item: Start -->
+				<li class="topnav">
+					<a class="frames" href="#">Layout</a>
+					
+					<!-- Navigation Dropdown Menu Item Content: Start -->
+					<ul class="subnav">
+						<li><a href="typography.html" class="icon typography">Typography</a></li> 
+			            <li><a href="grid.html" class="icon blocks">Grid System</a></li>  
+			        </ul> 
+			        <!-- Navigation Dropdown Menu Item Content: End --> 
+				</li>
+				<!-- Navigation Dropdown Menu Item: End -->
+				
+				<!-- Navigation Dropdown Menu Item: Start -->
+				<li class="topnav">
+					<a class="pages active" href="#">Elements</a>
+					
+					<!-- Navigation Dropdown Menu Item Content: Start -->
+					<ul class="subnav">
+						<li><a href="code.html" class="icon list">Code View</a></li>  
+			            <li><a href="accordion.html" class="icon pages">Accordion</a></li>  
+			            <li><a href="tabs.html" class="icon pages">Tabs</a></li> 
+			            <li><a href="forms.html" class="icon frames">Forms</a></li>  
+			            <li><a href="charts.html" class="icon graph">Charts</a></li>  
+			            <li><a href="tables.html" class="icon list">Tables</a></li>  
+			            <li><a href="login.html" class="icon user">Login</a></li>  
+			        </ul>  
+			        <!-- Navigation Dropdown Menu Item Content: End --> 
+				</li>
+				<!-- Navigation Dropdown Menu Item: End -->
+				
+				<!-- Navigation Menu Item: Start -->
+				<li><a class="pictures" href="gallery.html">Gallery</a></li>
+				<!-- Navigation Menu Item: End -->
+			</ul>
+			<!-- Navigation: End -->
+			
 		</div>
+		<!-- Header: End -->
+		
+		<!-- Breadcrumb Bar: Start -->
+		<div id="breadcrumb">
+			
+			<!-- Breadcrumb: Start -->
+			<ul class="left">
+				<li class="icon dashboard"><a href="dashboard.html">Dashboard</a></li>
+				<li class="icon point_right"><a href="#">Elements</a></li>
+				<li class="icon point_right active"><a href="forms.html">Forms</a></li>
+			</ul>
+			<!-- Breadcrumb: End -->
+			
+			<!-- Breadcrumb Icon Links: Start -->
+			<ul class="right">
+				<li><a href="#" class="icon support tip" title="FAQ">FAQ</a></li>
+				<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+			</ul>
+			<!-- Breadcrumb Icon Links: End -->
+			
+		</div>
+		<!-- Breadcrumb Bar: End -->
+		
+	</div>
+	<!-- Header Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Text Input</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p class="note">These text inputs have a simple validation</p>
+
+		<!-- Text Input: Start -->	
+		<div class="field">
+			<label>Small Text Input</label>
+			<input type="text" class="small validate tip-stay" title="tips can stay while in focus!">
+			<p class="error right small"><span class="icon error"></span>some error message</p>
+		</div>
+
+		<div class="field">
+			<label>Default Text Input</label>
+			<input type="text" class="validate">
+			<p class="success right small"><span class="icon success"></span>success!</p>
+		</div>
+		
+		<div class="field">
+			<label>Medium Text Input</label>
+			<input type="text" class="medium validate">
+			<p class="info right small"><span class="icon info"></span>info?</p>
+		</div>
+		
+		<div class="field">
+			<label>Big Text Input</label>
+			<input type="text" class="big validate">
+		</div>
+		<!-- Text Input: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>	
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Left Text Input</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<p class="note">You can position the text on the left side easily</p>
+
+		<!-- Text Input - Text Left: Start -->	
+		<div class="field">
+			<label class="left">Small</label>
+			<input type="text" class="small validate">
+		</div>
+
+		<div class="field">
+			<label class="left">Default</label>
+			<input type="text" class="validate">
+		</div>
+		<!-- Text Input - Text Left: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>	
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Buttons</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+
+		<!-- Buttons: Start -->	
+		<div class="field">
+			<a href="#messages" class="button popup">Open Dialog</a>
+		</div>
+		
+		<div class="field">
+			<button>Submit</button>
+			<button class="secondary" type="reset">Reset</button>
+			<button disabled="">Disabled Button</button>
+		</div>
+		
+		<div class="field">
+			<button>This is a superlong button thats really long</button>
+		</div>
+		<!-- Buttons: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
 </div>
-<!-- WRAPPER END -->
-<!-- FOOTER START -->
-<div class="container_16" id="footer">
-	Website Administration by <a href="http://www.webgurus.biz/">WebGurus
-</a></div>
-<!-- FOOTER END -->
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon time">Date Pickers</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+		<!-- Date Pickers: Start -->	
+		<div class="field">
+			<label class="left">Date Picker</label>
+			<input type="text" class="date">
+		</div>
+			
+		<div class="field">
+			<label>Inline date picker</label>
+		 	<div class="inlinedate"></div>
+		</div>
+		<!-- Date Pickers: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Misc Form Elements</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+
+		<!-- Misc Form Elements: Start -->	
+		<div class="field">
+			<label>File Input</label>
+		 	<input type="file" />
+		</div>
+		  	
+		<div class="field">
+			<label>Select Input</label>
+			<select>
+				<option>Through Google</option>
+				<option>Through Twitter</option>
+				<option>Other&hellip;</option>
+			  </select>
+		</div>
+		  
+		<div class="field">
+			<label>Radio Input</label>
+			<label class="nobold"><input type="radio" name="radio" /> 1 Radio Option </label>
+			<label class="nobold"><input type="radio" name="radio" /> 2 Radio Option </label>
+			<label class="nobold"><input type="radio" name="radio" /> 3 Radio Option </label>
+		</div>
+		<!-- Misc Form Elements: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Misc Form Elements</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+
+		<!-- Misc Form Elements: Start -->	
+		<div class="field">
+			<label class="left nomargin">File Input</label>
+			 <input type="file" />
+		</div>
+		  	
+		<div class="field">
+			<label class="left nomargin">Select Input</label>
+			<select>
+				<option>Through Google</option>
+				<option>Through Twitter</option>
+				<option>Other&hellip;</option>
+			</select>
+		</div>
+		  
+		<div class="field">
+			<label class="left">Radio Input</label>
+			<label class="nobold left nowidth"><input type="radio" name="radio" /> 1 Radio</label>
+			<label class="nobold left nowidth"><input type="radio" name="radio" /> 2 Radio</label>
+		</div>
+		  
+		<div class="field">
+			<label class="left">Checkbox Input</label>
+			<label class="nobold left nowidth"><input type="checkbox" /> 1 Check</label>
+			<label class="nobold left nowidth"><input type="checkbox" /> 2 Check</label>
+		</div>
+		<!-- Misc Form Elements: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 50% Box Grid Container: Start -->
+<div class="grid_12">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">Textarea</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+
+		<!-- Textarea: Start -->	
+		<div class="field">
+			<label>Small Textarea</label>
+			 <textarea></textarea>
+		</div>
+		
+		<div class="field">
+			<label>Text Area</label>
+			 <textarea rows="4"></textarea>
+		</div>
+		<!-- Textarea: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 50% Box Grid Container: End -->
+
+
+<!-- 100% Box Grid Container: Start -->
+<div class="grid_24">
+
+	<!-- Box Header: Start -->
+	<div class="box_top">
+		
+		<h2 class="icon frames">WYSIWYG</h2>
+		
+	</div>
+	<!-- Box Header: End -->
+	
+	<!-- Box Content: Start -->
+	<div class="box_content padding">
+		
+
+		<!-- WYSIWYG: Start -->	
+		<div class="field">
+			 <textarea class="wysiwyg"></textarea>
+		</div>
+		<!-- WYSIWYG: End -->
+
+	</div>
+	<!-- Box Content: End -->
+	
+</div>
+<!-- 100% Box Grid Container: End -->
+
+
+<!-- Footer Grid: Start -->
+<div class="grid_24">
+
+	<!-- Footer: Start -->
+	<div id="footer">
+		
+		<p class="left">
+			Copyright &#169; 2011 <a href="#">Yourcompany</a>. 
+			Powered by <a href="http://themeforest.net/user/Kaasper/?ref=kaasper">Simplpan</a>.
+		</p>
+		
+		<!-- Footer Icon Navigation: Start -->
+		<ul class="right">
+			<li><a href="#" class="icon dashboard tip active" title="Dashboard">Dashboard</a></li>
+			<li><a href="#" class="icon pages tip" title="Pages">Pages</a></li>
+			<li><a href="#" class="icon users tip" title="Users">Users</a></li>
+			<li><a href="#" class="icon settings tip" title="Settings">Settings</a></li>
+			<li><a href="#" class="icon support tip" title="Support">Support</a></li>
+			<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+		</ul>
+		<!--Footer Icon Navigation: End -->
+		
+	</div>
+	<!-- Footer: End -->
+	
+</div>
+<!-- Footer Grid: End -->
+
+</div>
+<!-- End: Page Wrap -->
+
+	<!-- jQuery libs - Rest are found in the head section (at top) -->
+	<script type="text/javascript" src="js/jquery.visualize-tooltip.js"></script>
+	<script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+	<script type="text/javascript" src="js/jquery.quicksand.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/jquery.facebox.js"></script>
+	<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="js/syntaxHighlighter/shBrushPhp.js"></script>
+	
+	<!-- jQuery Customization -->
+	<script type="text/javascript" src="js/custom.js"></script>
+
 </body>
 
-<!-- Mirrored from www.webgurus.biz/adminskin2/forms.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 08 May 2010 07:33:57 GMT -->
 </html>

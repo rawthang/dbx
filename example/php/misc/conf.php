@@ -2,7 +2,7 @@
  //SQL - data
  $host = "localhost";
 
- $user = "extern";
+ $user = "root";
  $pwd = "123";
 
  $db = "blah";

@@ -1,297 +1,382 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
 
-<!-- Mirrored from www.webgurus.biz/adminskin2/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 08 May 2010 07:33:19 GMT -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Dashboard | Modern Admin</title>
-<link rel="stylesheet" type="text/css" href="css/960.css" />
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="css/text.css" />
-<link rel="stylesheet" type="text/css" href="css/blue.css" />
-<link type="text/css" href="css/smoothness/ui.css" rel="stylesheet" />  
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/blend/jquery.blend.js"></script>
-	<script type="text/javascript" src="js/ui.core.js"></script>
-	<script type="text/javascript" src="js/ui.sortable.js"></script>    
-    <script type="text/javascript" src="js/ui.dialog.js"></script>
-    <script type="text/javascript" src="js/ui.datepicker.js"></script>
-    <script type="text/javascript" src="js/effects.js"></script>
-    <script type="text/javascript" src="js/flot/jquery.flot.pack.js"></script>
-    <!--[if IE]>
-    <script language="javascript" type="text/javascript" src="js/flot/excanvas.pack.js"></script>
-    <![endif]-->
-	<!--[if IE 6]>
-	<link rel="stylesheet" type="text/css" href="css/iefix.css" />
-	<script src="js/pngfix.js"></script>
-    <script>
-        DD_belatedPNG.fix('#menu ul li a span span');
-    </script>        
-    <![endif]-->
-    <script id="source" language="javascript" type="text/javascript" src="js/graphs.js"></script>
-
+<title>Admin Panel</title>
+<link href="css/screen.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" class="width" />
+<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.styleswitcher.js"></script>
+<script type="text/javascript" src="js/jquery.visualize.js"></script>
 </head>
 
 <body>
-<!-- WRAPPER START -->
-<div class="container_16" id="wrapper">	
-<!-- HIDDEN COLOR CHANGER -->      
-      <div style="position:relative;">
-      	<div id="colorchanger">
-        	<a href="dashboard_red.html"><span class="redtheme">Red Theme</span></a>
-            <a href="dashboard.html"><span class="bluetheme">Blue Theme</span></a>
-            <a href="dashboard_green.html"><span class="greentheme">Green Theme</span></a>
-        </div>
-      </div>
-  	<!--LOGO-->
-	<div class="grid_8" id="logo">Profi Admin - Website Administration</div>
-    <div class="grid_8">
-<!-- USER TOOLS START -->
-      <div id="user_tools"><span><a href="#" class="mail">(1)</a> Welcome <a href="#">Admin Username</a>  |  <a class="dropdown" href="#">Change Theme</a>  |  <a href="#">Logout</a></span></div>
-    </div>
-<!-- USER TOOLS END -->    
-<div class="grid_16" id="header">
-<!-- MENU START -->
-<div id="menu">
-	<ul class="group" id="menu_group_main">
-		<li class="item first" id="one"><a href="#" class="main current"><span class="outer"><span class="inner dashboard">Dashboard</span></span></a></li>
-        <li class="item middle" id="two"><a href="forms.html" class="main"><span class="outer"><span class="inner content">Content</span></span></a></li>
-        <li class="item middle" id="three"><a href="#"><span class="outer"><span class="inner reports png">Reports</span></span></a></li>
-        <li class="item middle" id="four"><a href="#" class="main"><span class="outer"><span class="inner users">Users</span></span></a></li>
-		<li class="item middle" id="five"><a href="#" class="main"><span class="outer"><span class="inner media_library">Media Library</span></span></a></li>        
-		<li class="item middle" id="six"><a href="#" class="main"><span class="outer"><span class="inner event_manager">Event Manager</span></span></a></li>        
-		<li class="item middle" id="seven"><a href="#" class="main"><span class="outer"><span class="inner newsletter">Newsletter</span></span></a></li>        
-		<li class="item last" id="eight"><a href="#" class="main"><span class="outer"><span class="inner settings">Settings</span></span></a></li>        
-    </ul>
-</div>
-<!-- MENU END -->
-</div>
-<div class="grid_16">
-<!-- TABS START -->
-    <div id="tabs">
-         <div class="container">
-            <ul>
-                      <li><a href="#" class="current"><span>Dashboard elements</span></a></li>
-                      <li><a href="forms.html"><span>Content Editing</span></a></li>
-                      <li><a href="#"><span>Submenu Link 3</span></a></li>
-                      <li><a href="#"><span>Submenu Link 4</span></a></li>
-                      <li><a href="#"><span>Submenu Link 5</span></a></li>
-                      <li><a href="#"><span>Submenu Link 6</span></a></li>
-                      <li><a href="#" class="more"><span>More Submenus</span></a></li>            
-           </ul>
-        </div>
-    </div>
-<!-- TABS END -->    
-</div>
-<!-- HIDDEN SUBMENU START -->
-<div class="grid_16" id="hidden_submenu">
-	  <ul class="more_menu">
-		<li><a href="#">More link 1</a></li>
-		<li><a href="#">More link 2</a></li>  
-	    <li><a href="#">More link 3</a></li>    
-        <li><a href="#">More link 4</a></li>                               
+<div id="wrap" class="container_24">
+  <div class="grid_24">
+    <div id="userpanel">
+      <ul id="user" class="dropdown">
+        <li class="topnav"> <a href="#" class="top icon user">Administrator</a>
+          <ul class="subnav">
+	        <li><a href="#" class="icon home tip" title="Home">Hauptseite (Admin)</a></li>
+            <li><a href="#" class="icon support tip" title="Wiki">Wiki</a></li>
+            <li><a href="forms.html" class="icon settings">Einstellungen</a></li>
+            <li><a href="login.html" class="icon lock">Ausloggen</a></li>
+          </ul>
+        </li>
       </ul>
-	  <ul class="more_menu">
-		<li><a href="#">More link 5</a></li>
-		<li><a href="#">More link 6</a></li>  
-	    <li><a href="#">More link 7</a></li> 
-        <li><a href="#">More link 8</a></li>                                  
+      <div class="box_content padding hide" id="messages"></div>      
+    </div>
+    <div id="header">
+      <ul id="navigation" class="dropdown">
+        <li><a class="dashboard active" href="dashboard.html">Dashboard</a></li>
+        <li class="topnav"> <a class="pages" href="#">Elements</a>
+          <ul class="subnav">
+            <li><a href="code.html" class="icon list">Code View</a></li>
+            <li><a href="accordion.html" class="icon pages">Accordion</a></li>
+            <li><a href="tabs.html" class="icon pages">Tabs</a></li>
+            <li><a href="forms.html" class="icon frames">Forms</a></li>
+            <li><a href="charts.html" class="icon graph">Charts</a></li>
+            <li><a href="tables.html" class="icon list">Tables</a></li>
+            <li><a href="login.html" class="icon user">Login</a></li>
+          </ul>
+        </li>
       </ul>
-	  <ul class="more_menu">
-		<li><a href="#">More link 9</a></li>
-		<li><a href="#">More link 10</a></li>  
-	    <li><a href="#">More link 11</a></li>  
-        <li><a href="#">More link 12</a></li>                                 
-      </ul>            
+    </div>
+    </div>
+  <div class="grid_24">
+    <div class="box_top">
+      <h2 class="icon time">Schnelle Verknüpfungen</h2>
+    </div>
+    <div class="box_content">
+      <p class="center"> <a href="#news" class="big_button add_news"><span>add news</span></a> <a href="#gallery" class="big_button upload"><span>upload</span></a> <a href="tables.html" class="big_button add_user"><span>add user</span></a> </p>
+    </div>
   </div>
-<!-- HIDDEN SUBMENU END -->  
-
-<!-- CONTENT START -->
-    <div class="grid_16" id="content">
-    <!--  TITLE START  --> 
-    <div class="grid_9">
-    <h1 class="dashboard">Dashboard</h1>
+  <div class="grid_24">
+    <div class="box_top">
+      <h2 class="icon graph">Besucher Statistiken</h2>
+      <ul class="sorting">
+        <li><a href="#line" class="active">Line</a></li>
+        <li><a href="#area">Area</a></li>
+        <li><a href="#pie">Pie</a></li>
+        <li><a href="#bar">Bars</a></li>
+      </ul>
     </div>
-    <!--RIGHT TEXT/CALENDAR-->
-    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">You don't have any events for today! Yay!</a>
-    	<div class="hidden_calendar"></div>
+    <div class="box_content">
+      <table class="stats">
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col"> Jan </th>
+            <th scope="col"> Feb </th>
+            <th scope="col"> Mar </th>
+            <th scope="col"> Apr </th>
+            <th scope="col"> May </th>
+            <th scope="col"> Jun </th>
+            <th scope="col"> Jul </th>
+            <th scope="col"> Aug </th>
+            <th scope="col"> Sep </th>
+            <th scope="col"> Oct </th>
+            <th scope="col"> Nov </th>
+            <th scope="col"> Dec </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"> Visitors </th>
+            <td> 45 </td>
+            <td> 65 </td>
+            <td> 56 </td>
+            <td> 133 </td>
+            <td> 124 </td>
+            <td> 63 </td>
+            <td> 56 </td>
+            <td> 94 </td>
+            <td> 76 </td>
+            <td> 106 </td>
+            <td> 45 </td>
+            <td> 77 </td>
+          </tr>
+          <tr>
+            <th scope="row"> Returning </th>
+            <td> 34 </td>
+            <td> 34 </td>
+            <td> 45 </td>
+            <td> 45 </td>
+            <td> 34 </td>
+            <td> 56 </td>
+            <td> 34 </td>
+            <td> 56 </td>
+            <td> 45 </td>
+            <td> 65 </td>
+            <td> 56 </td>
+            <td> 78 </td>
+          </tr>
+          <tr>
+            <th scope="row"> Unique </th>
+            <td> 34 </td>
+            <td> 54 </td>
+            <td> 56 </td>
+            <td> 67 </td>
+            <td> 98 </td>
+            <td> 34 </td>
+            <td> 56 </td>
+            <td> 32 </td>
+            <td> 34 </td>
+            <td> 76 </td>
+            <td> 23 </td>
+            <td> 34 </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <!--RIGHT TEXT/CALENDAR END-->
-    <div class="clear">
+  </div>
+  <div class="grid_24">
+    <div class="box_top"> <a name="news"></a>
+      <h2 class="icon pages">Neuigkeiten</h2>
+      <ul class="sorting">
+        <li><a href="#listing" class="active">Listing</a></li>
+        <li><a href="#addnews">Add News</a></li>
+      </ul>
     </div>
-    <!--  TITLE END  -->    
-    <!-- #PORTLETS START -->
-    <div id="portlets">
-    <!-- FIRST SORTABLE COLUMN START -->
-      <div class="column" id="left">
-      <!--THIS IS A PORTLET-->
-		<div class="portlet">
-            <div class="portlet-header"><img src="images/icons/chart_bar.gif" width="16" height="16" alt="Reports" /> Visitors - Last 30 days</div>
-            <div class="portlet-content">
-            <!--THIS IS A PLACEHOLDER FOR FLOT - Report & Graphs -->
-            <div id="placeholder" style="width:auto; height:250px;"></div>
-            </div>
-        </div>      
-      <!--THIS IS A PORTLET-->
-        <div class="portlet">
-		<div class="portlet-header">Anything  (no icon too if you like it better)</div>
-
-		<div class="portlet-content">
-		  <p>This can be any content you want. I placed a basic form here with text editor so you can see the functionality of the forms too.</p>
-		  <h3>This is a form</h3>
-		  <form id="form1" name="form1" method="post" action="#">
-		    <label>Some title</label>
-		     <input type="text" name="textfield" id="textfield" class="smallInput" />
-			<label>Large input box</label>
-            <input type="text" name="textfield2" id="textfield2" class="largeInput" />
-            <label>This is a textarea</label>
-		    <textarea name="textarea" cols="45" rows="3" class="smallInput" id="textarea"></textarea>
-            <a class="button"><span>Submit in blue</span></a>
-            <a class="button_grey"><span>Submit this form</span></a>
-		  </form>
-		  <p>&nbsp;</p>
-		</div>
-        </div>
-      </div>
-      <!-- FIRST SORTABLE COLUMN END -->
-      <!-- SECOND SORTABLE COLUMN START -->
-      <div class="column">
-      <!--THIS IS A PORTLET-->        
-      <div class="portlet">
-		<div class="portlet-header"><img src="images/icons/comments.gif" width="16" height="16" alt="Comments" />Latest Comments</div>
-
-		<div class="portlet-content">
-         <p class="info" id="success"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-    <p class="info" id="error"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-    <p class="info" id="warning"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-<p class="info" id="info"><span class="info_inner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span></p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-       </div>    
-      <!--THIS IS A PORTLET--> 
-      <div class="portlet">
-		<div class="portlet-header"><img src="images/icons/feed.gif" width="16" height="16" alt="Feeds" />Your selected News source					</div>
-		<div class="portlet-content">
-        <ul class="news_items">
-        	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean  adipiscing massa quis arcu interdum scelerisque. Duis vitae nunc nisi.  Quisque eget leo a nibh gravida vulputate ut sed nulla. <a href="#">Donec quis  lectus turpis, sed mollis nibh</a>. Donec ut mi eu metus ultrices  porttitor. Phasellus nec elit in nisi</li>
-            <li>Nunc convallis, enim quis tincidunt dictum, ante ipsum  interdum massa, consequat sodales arcu magna nec eros.<a href="#"> Vivamus nec  placerat odio.</a> Sed nec mi sed orci mattis feugiat. Etiam est dui,  rutrum nec dictum vel, accumsan id sem. </li>
-            <li>Nunc convallis, enim quis tincidunt dictum, ante ipsum  interdum massa, consequat sodales arcu magna nec eros.<a href="#"> Vivamus nec  placerat odio.</a> Sed nec mi sed orci mattis feugiat. Etiam est dui,  rutrum nec dictum vel, accumsan id sem. </li>
-            <li>Nunc convallis, enim quis tincidunt dictum, ante ipsum  interdum massa, consequat sodales arcu magna nec eros.<a href="#"> Vivamus nec  placerat odio.</a> Sed nec mi sed orci mattis feugiat. Etiam est dui,  rutrum nec dictum vel, accumsan id sem. </li>
-            <li>Nunc convallis, enim quis tincidunt dictum, ante ipsum  interdum massa, consequat sodales arcu magna nec eros.<a href="#"> Vivamus nec  placerat odio.</a> Sed nec mi sed orci mattis feugiat. </li>
-        </ul>
-        <a href="#">&raquo; View all news items</a>
-        </div>
-       </div>                         
-    </div>
-	<!--  SECOND SORTABLE COLUMN END -->
-    <div class="clear"></div>
-    <!--THIS IS A WIDE PORTLET-->
-    <div class="portlet">
-        <div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" alt="Latest Registered Users" /> Last Registered users Table Example</div>
-		<div class="portlet-content nopadding">
-        <form action="#" method="post">
-          <table width="100%" cellpadding="0" cellspacing="0" id="box-table-a" summary="Employee Pay Sheet">
+    <div class="box_content">
+      <div class="tabs">
+        <div id="listing">
+          <table class="sorting">
             <thead>
               <tr>
-                <th width="34" scope="col"><input type="checkbox" name="allbox" id="allbox" onclick="checkAll()" /></th>
-                <th width="136" scope="col">Name</th>
-                <th width="102" scope="col">Username</th>
-                <th width="109" scope="col">Date</th>
-                <th width="129" scope="col">Location</th>
-                <th width="171" scope="col">E-mail</th>
-                <th width="123" scope="col">Phone</th>
-                <th width="90" scope="col">Actions</th>
+                <th class="checkers"><input type="checkbox" class="checkall" /></th>
+                <th class="align_left">Title</th>
+                <th class="align_left center">Author</th>
+                <th class="align_left center">Views</th>
+                <th class="align_left center">Comments</th>
+                <th class="align_left center">Added</th>
+                <th class="align_left center tools">Tools</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td width="34"><label>
-                    <input type="checkbox" name="checkbox" id="checkbox" />
-                </label></td>
-                <td>Stephen C. Cox</td>
-                <td>stephen</td>
-                <td>20.06.2009</td>
-                <td>Los Angeles, CA</td>
-                <td>address1@yahoo.com</td>
-                <td>332-5447879</td>
-                <td width="90"><a href="#" class="approve_icon" title="Approve"></a> <a href="#" class="reject_icon" title="Reject"></a> <a href="#" class="edit_icon" title="Edit"></a> <a href="#" class="delete_icon" title="Delete"></a></td>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Some technical issues</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
+                <td class="align_left center">12</td>
+                <td class="align_left center">3</td>
+                <td class="align_left center">1 hour ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
               </tr>
               <tr>
-                <td width="34"><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
-                <td>Josephin Tan</td>
-                <td>josephin</td>
-                <td>20.06.2009</td>
-                <td>Los Angeles, CA</td>
-                <td>address1@yahoo.com</td>
-                <td>332-5447879</td>
-                <td width="90"><a href="#" class="approve_icon" title="Approve"></a> <a href="#" class="reject_icon" title="Reject"></a> <a href="edit_modal.html" class="edit_icon" title="Edit"></a> <a href="#" class="delete_icon" title="Delete"></a></td>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">The new ipad is out!</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
+                <td class="align_left center">67</td>
+                <td class="align_left center">23</td>
+                <td class="align_left center">5 hours ago</td>
+                <td class="align_left center tools"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
               </tr>
               <tr>
-                <td width="34"><input type="checkbox" name="checkbox3" id="checkbox3" /></td>
-                <td>Joyce Ming</td>
-                <td>joyce_m</td>
-                <td>20.06.2009</td>
-                <td>Los Angeles, CA</td>
-                <td>address1@yahoo.com</td>
-                <td>332-5447879</td>
-                <td width="90"><a href="#" class="approve_icon" title="Approve"></a> <a href="#" class="reject_icon" title="Reject"></a> <a href="#" class="edit_icon" title="Edit"></a> <a href="#" class="delete_icon" title="Delete"></a></td>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Something just happend!</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
+                <td class="align_left center">145</td>
+                <td class="align_left center">21</td>
+                <td class="align_left center">10 hours ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
               </tr>
               <tr>
-                <td width="34"><input type="checkbox" name="checkbox4" id="checkbox4" /></td>
-                <td>James A. Pentel</td>
-                <td>james_pent</td>
-                <td>20.06.2009</td>
-                <td>Los Angeles, CA</td>
-                <td>address1@yahoo.com</td>
-                <td>332-5447879</td>
-                <td width="90"><a href="#" class="approve_icon" title="Approve"></a> <a href="#" class="reject_icon" title="Reject"></a> <a href="#" class="edit_icon" title="Edit"></a> <a href="#" class="delete_icon" title="Delete"></a></td>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Check this out</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
+                <td class="align_left center">67</td>
+                <td class="align_left center">43</td>
+                <td class="align_left center">13 hours ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
               </tr>
-              <tr class="footer">
-                <td colspan="4"><a href="#" class="edit_inline">Edit all</a><a href="#" class="delete_inline">Delete all</a><a href="#" class="approve_inline">Approve all</a><a href="#" class="reject_inline">Reject all</a></td>
-                <td align="right">&nbsp;</td>
-                <td colspan="3" align="right">
-				<!--  PAGINATION START  -->             
-                    <div class="pagination">
-                    <span class="previous-off">&laquo; Previous</span>
-                    <span class="active">1</span>
-                    <a href="dashboard4658.html?page=2">2</a>
-                    <a href="dashboard9ba9.html?page=3">3</a>
-                    <a href="dashboardfdb0.html?page=4">4</a>
-                    <a href="dashboardaf4d.html?page=5">5</a>
-                    <a href="dashboardc575.html?page=6">6</a>
-                    <a href="dashboard235c.html?page=7">7</a>
-                    <a href="dashboard4658.html?page=2" class="next">Next &raquo;</a>
-                    </div>  
-                <!--  PAGINATION END  -->       
-                </td>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Just got the new iPhone</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Joakim</a></td>
+                <td class="align_left center">453</td>
+                <td class="align_left center">64</td>
+                <td class="align_left center">1 day ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Working on this project</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Einar</a></td>
+                <td class="align_left center">565</td>
+                <td class="align_left center">34</td>
+                <td class="align_left center">1 day ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Have some great news!</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
+                <td class="align_left center">565</td>
+                <td class="align_left center">12</td>
+                <td class="align_left center">2 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Wondering what</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Jessie</a></td>
+                <td class="align_left center">5765</td>
+                <td class="align_left center">322</td>
+                <td class="align_left center">3 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">How could this be</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
+                <td class="align_left center">367</td>
+                <td class="align_left center">32</td>
+                <td class="align_left center">3 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Did anyone watch this?</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
+                <td class="align_left center">3464</td>
+                <td class="align_left center">54</td>
+                <td class="align_left center">4 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Working on this</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Janne</a></td>
+                <td class="align_left center">673</td>
+                <td class="align_left center">423</td>
+                <td class="align_left center">5 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">And we're live again!</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Administrator</a></td>
+                <td class="align_left center">2351</td>
+                <td class="align_left center">13</td>
+                <td class="align_left center">6 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">Bought the new iMac!</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Janne</a></td>
+                <td class="align_left center">564</td>
+                <td class="align_left center">65</td>
+                <td class="align_left center">6 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
+              </tr>
+              <tr>
+                <th class="checkers"><input type="checkbox" /></th>
+                <td class="align_left"><a href="#">We changed some things</a></td>
+                <td class="align_left center"><a href="#messages" class="popup">Bob</a></td>
+                <td class="align_left center">6443</td>
+                <td class="align_left center">75</td>
+                <td class="align_left center">7 days ago</td>
+                <td class="align_left tools center"><a href="#" class="edit tip" title="edit">edit</a> <a href="#" class="view tip" title="view">view</a> <a href="#" class="delete tip" title="delete">delete</a></td>
               </tr>
             </tbody>
           </table>
-        </form>
-		</div>
+          <div class="table_actions">
+            <input type="checkbox" class="checkall" />
+            <select>
+              <option>Choose action</option>
+              <option>Delete</option>
+              <option>Edit</option>
+            </select>
+            <button class="left">Apply to Selected</button>
+          </div>
+        </div>
+        <div id="addnews" class="padding">
+          <p class="note"> <span class="icon info"></span> You could setup your news adding page like this so users can easily add news without going to a new page </p>
+          <div class="field">
+            <label class="left">News Title</label>
+            <input type="text" class="left validate">
+            <p class="error left small nomargin"> <span class="icon cross"></span> Let the users know what the problem is </p>
+          </div>
+          <div class="field">
+            <label class="left">Tags</label>
+            <input type="text" class="left validate tip-stay" title="Add a tip for focus!">
+            <p class="info left small nomargin"> <span class="icon info"></span> Or some information about what they should write </p>
+          </div>
+          <div class="field">
+            <label>News Content</label>
+            <textarea class="wysiwyg"></textarea>
+          </div>
+          <button>Publish News</button>
+          <button class="secondary" type="reset">Reset</button>
+          <button disabled="">Disabled Button</button>
+        </div>
       </div>
-<!--  END #PORTLETS -->  
-   </div>
-    <div class="clear"> </div>
-<!-- END CONTENT-->    
+    </div>
   </div>
-<div class="clear"> </div>
-
-		<!-- This contains the hidden content for modal box calls -->
-		<div class='hidden'>
-			<div id="inline_example1" title="This is a modal box" style='padding:10px; background:#fff;'>
-			<p><strong>This content comes from a hidden element on this page.</strong></p>
-            			
-			<p><strong>Try testing yourself!</strong></p>
-            <p>You can call as many dialogs you want with jQuery UI.</p>
-			</div>
-		</div>
+  <div class="grid_8">
+    <div class="box_top">
+      <h2 class="icon graph">Statistiken</h2>
+    </div>
+    <div class="box_content">
+      <table>
+        <tr>
+          <td><span class="icon graph"></span> Status</td>
+          <td class="right_end green">online</td>
+        </tr>
+        <tr>
+          <td><span class="icon pages"></span> Pages</td>
+          <td class="right_end">934</td>
+        </tr>
+        <tr>
+          <td><span class="icon pages"></span> News</td>
+          <td class="right_end">453</td>
+        </tr>
+        <tr>
+          <td><span class="icon users"></span> Users</td>
+          <td class="right_end">67</td>
+        </tr>
+        <tr>
+          <td><span class="icon pictures"></span> Images</td>
+          <td class="right_end">78</td>
+        </tr>
+        <tr>
+          <td><span class="icon time"></span> Events</td>
+          <td class="right_end">16</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="grid_24">
+    <div id="footer">
+      <ul class="right">
+        <li><a href="#" class="icon dashboard tip active" title="Übersicht">Übersicht</a></li>
+        <li><a href="#" class="icon users tip" title="Benutzer">Benutzer</a></li>
+        <li><a href="#" class="icon settings tip" title="Einstellungen">Einstellungen</a></li>
+        <li><a href="#" class="icon support tip" title="Wiki">Wiki</a></li>
+        <li><a href="#" class="icon home tip" title="Hauptseite">Hauptseite</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<!-- WRAPPER END -->
-<!-- FOOTER START -->
-<div class="container_16" id="footer">
-Website Administration by <a href="http://www.webgurus.biz/">WebGurus</a></div>
-<!-- FOOTER END -->
+<script type="text/javascript" src="js/jquery.visualize-tooltip.js"></script>
+<script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+<script type="text/javascript" src="js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/jquery.facebox.js"></script>
+<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="js/syntaxHighlighter/shCore.js"></script>
+<script type="text/javascript" src="js/syntaxHighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="js/syntaxHighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/syntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="js/syntaxHighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 </body>
-
-<!-- Mirrored from www.webgurus.biz/adminskin2/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 08 May 2010 07:33:34 GMT -->
 </html>
