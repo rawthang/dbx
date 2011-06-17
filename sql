@@ -3,17 +3,14 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 16. Juni 2011 um 02:26
+-- Erstellungszeit: 17. Juni 2011 um 02:00
 -- Server Version: 5.1.56
 -- PHP-Version: 5.3.6
 
---
--- Do, 16. Juni 11
---
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
--- Datenbank: `iload`
+-- Datenbank: `blah`
 --
 
 -- --------------------------------------------------------
@@ -27,12 +24,12 @@ CREATE TABLE IF NOT EXISTS `cms_blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` int(14) DEFAULT NULL,
   `rubric` int(11) DEFAULT NULL,
-  `headline` varchar(255) DEFAULT NULL,
-  `content` text,
-  `link1` varchar(255) DEFAULT NULL,
-  `url1` varchar(255) DEFAULT NULL,
-  `link2` varchar(255) DEFAULT NULL,
-  `url2` varchar(255) DEFAULT NULL,
+  `headline` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `content` text CHARACTER SET latin1 COLLATE latin1_general_ci,
+  `link1` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url1` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `link2` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url2` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -52,9 +49,9 @@ INSERT INTO `cms_blog` (`id`, `date`, `rubric`, `headline`, `content`, `link1`, 
 DROP TABLE IF EXISTS `cms_blog_rubrics`;
 CREATE TABLE IF NOT EXISTS `cms_blog_rubrics` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rubric` varchar(255) NOT NULL DEFAULT '',
+  `rubric` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=61 ;
 
 --
 -- Daten für Tabelle `cms_blog_rubrics`
@@ -64,6 +61,24 @@ INSERT INTO `cms_blog_rubrics` (`id`, `rubric`) VALUES
 (1, 'Webseiten'),
 (2, 'Allgemein'),
 (3, 'IT');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cms_download`
+--
+
+DROP TABLE IF EXISTS `cms_download`;
+CREATE TABLE IF NOT EXISTS `cms_download` (
+  `download` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `cms_download`
+--
+
+INSERT INTO `cms_download` (`download`) VALUES
+('<b>Die Downloads sind in Arbeit.</b> :bounce:');
 
 -- --------------------------------------------------------
 
@@ -242,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `cms_modules` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Daten für Tabelle `cms_modules`
@@ -254,9 +269,70 @@ INSERT INTO `cms_modules` (`id`, `name`) VALUES
 (3, 'downloads'),
 (4, 'imprint'),
 (5, 'news'),
-(6, 'users'),
-(7, 'blog'),
-(8, 'register');
+(6, 'polls'),
+(7, 'users'),
+(8, 'blog'),
+(9, 'register');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cms_news`
+--
+
+DROP TABLE IF EXISTS `cms_news`;
+CREATE TABLE IF NOT EXISTS `cms_news` (
+  `newsID` int(11) NOT NULL AUTO_INCREMENT,
+  `date` int(14) DEFAULT NULL,
+  `rubric` int(11) DEFAULT NULL,
+  `lang1` char(2) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `headline1` varchar(67) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `content1` text CHARACTER SET latin1 COLLATE latin1_general_ci,
+  `poster` int(11) DEFAULT NULL,
+  `link1` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url1` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `window1` int(11) DEFAULT NULL,
+  `link2` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url2` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `window2` int(11) DEFAULT NULL,
+  `link3` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url3` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `window3` int(11) DEFAULT NULL,
+  `link4` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `url4` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `window4` int(11) DEFAULT NULL,
+  `saved` int(1) DEFAULT NULL,
+  `published` int(11) DEFAULT NULL,
+  PRIMARY KEY (`newsID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `cms_news`
+--
+
+INSERT INTO `cms_news` (`newsID`, `date`, `rubric`, `lang1`, `headline1`, `content1`, `poster`, `link1`, `url1`, `window1`, `link2`, `url2`, `window2`, `link3`, `url3`, `window3`, `link4`, `url4`, `window4`, `saved`, `published`) VALUES
+(1, 1295377999, 0, '0', '0', '0', 1, '0', '0', 0, '0', '0', 0, '0', '0', 0, '0', '0', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cms_news_rubrics`
+--
+
+DROP TABLE IF EXISTS `cms_news_rubrics`;
+CREATE TABLE IF NOT EXISTS `cms_news_rubrics` (
+  `rubricID` int(11) NOT NULL AUTO_INCREMENT,
+  `rubric` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `pic` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`rubricID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `cms_news_rubrics`
+--
+
+INSERT INTO `cms_news_rubrics` (`rubricID`, `rubric`, `pic`) VALUES
+(1, 'Allgemein', '');
 
 -- --------------------------------------------------------
 
@@ -267,10 +343,10 @@ INSERT INTO `cms_modules` (`id`, `name`) VALUES
 DROP TABLE IF EXISTS `cms_settings`;
 CREATE TABLE IF NOT EXISTS `cms_settings` (
   `settingID` int(11) NOT NULL AUTO_INCREMENT,
-  `hpurl` varchar(255) NOT NULL DEFAULT '',
-  `sitename` varchar(255) NOT NULL DEFAULT '',
-  `adminname` varchar(255) NOT NULL DEFAULT '',
-  `adminemail` varchar(255) NOT NULL DEFAULT '',
+  `hpurl` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `sitename` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `adminname` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `adminemail` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `news` int(11) NOT NULL DEFAULT '0',
   `newsarchiv` int(11) NOT NULL DEFAULT '0',
   `headlines` int(11) NOT NULL DEFAULT '0',
@@ -280,14 +356,14 @@ CREATE TABLE IF NOT EXISTS `cms_settings` (
   `hideboards` int(1) NOT NULL DEFAULT '0',
   `users` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`settingID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=2 ;
 
 --
 -- Daten für Tabelle `cms_settings`
 --
 
 INSERT INTO `cms_settings` (`settingID`, `hpurl`, `sitename`, `adminname`, `adminemail`, `news`, `newsarchiv`, `headlines`, `headlineschars`, `topics`, `posts`, `hideboards`, `users`) VALUES
-(1, 'URL', 'Name', 'Admin', 'E-Mail', 1, 1, 1, 20, 1, 1, 0, 1);
+(1, 'http://www.d-acor.de', 'D''acor', 'Theseus, Haaze', 'l.adore@weibsvolk.org', 5, 300, 7, 20, 10, 10, 1, 60);
 
 -- --------------------------------------------------------
 
@@ -300,60 +376,28 @@ CREATE TABLE IF NOT EXISTS `cms_user` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
   `registerdate` int(14) NOT NULL DEFAULT '0',
   `lastlogin` int(14) NOT NULL DEFAULT '0',
-  `username` varchar(255) NOT NULL DEFAULT '',
-  `password` varchar(255) NOT NULL DEFAULT '',
-  `nickname` varchar(255) NOT NULL DEFAULT '',
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `firstname` varchar(255) NOT NULL DEFAULT '',
-  `lastname` varchar(255) NOT NULL DEFAULT '',
-  `sex` char(1) NOT NULL DEFAULT '',
-  `country` varchar(255) NOT NULL DEFAULT '',
-  `town` varchar(255) NOT NULL DEFAULT '',
-  `birthday` int(14) NOT NULL DEFAULT '0',
-  `icq` varchar(255) NOT NULL DEFAULT '',
-  `avatar` varchar(255) NOT NULL DEFAULT '',
-  `usertext` varchar(255) NOT NULL DEFAULT '',
-  `userpic` varchar(255) NOT NULL DEFAULT '',
-  `clantag` varchar(255) NOT NULL DEFAULT 'N/A',
-  `clanname` varchar(255) NOT NULL DEFAULT 'N/A',
-  `clanhp` varchar(255) NOT NULL DEFAULT '',
-  `clanirc` varchar(255) NOT NULL DEFAULT 'N/A',
-  `clanhistory` text,
-  `cpu` varchar(255) NOT NULL DEFAULT 'N/A',
-  `mainboard` varchar(255) NOT NULL DEFAULT 'N/A',
-  `ram` varchar(255) NOT NULL DEFAULT 'N/A',
-  `monitor` varchar(255) NOT NULL DEFAULT 'N/A',
-  `graphiccard` varchar(255) NOT NULL DEFAULT 'N/A',
-  `soundcard` varchar(255) NOT NULL DEFAULT 'N/A',
-  `connection` varchar(255) NOT NULL DEFAULT 'N/A',
-  `keyboard` varchar(255) NOT NULL DEFAULT 'N/A',
-  `mouse` varchar(255) NOT NULL DEFAULT 'N/A',
-  `mousepad` varchar(255) NOT NULL DEFAULT 'N/A',
-  `newsletter` int(1) NOT NULL DEFAULT '1',
-  `about` text NOT NULL,
-  `pmgot` int(11) NOT NULL DEFAULT '0',
-  `pmsent` int(11) NOT NULL DEFAULT '0',
-  `visits` int(11) NOT NULL DEFAULT '0',
+  `username` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `password` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `nickname` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `email` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `firstname` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `country` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `avatar` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `usertext` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `userpic` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `hp` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `banned` int(1) NOT NULL DEFAULT '0',
-  `ip` varchar(255) NOT NULL DEFAULT '',
-  `topics` text NOT NULL,
-  `articles` text NOT NULL,
-  `comments` tinyint(1) NOT NULL DEFAULT '1',
-  `newcomments` int(11) NOT NULL DEFAULT '0',
-  `server` varchar(125) NOT NULL DEFAULT 'N/A',
-  `rassen` varchar(255) NOT NULL DEFAULT 'N/A',
-  `klassen` varchar(255) NOT NULL DEFAULT 'N/A',
-  `skill` varchar(10) NOT NULL DEFAULT 'N/A',
-  `wowid` varchar(15) NOT NULL DEFAULT '',
+  `ip` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `topics` text COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`userID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1079 ;
 
 --
 -- Daten für Tabelle `cms_user`
 --
 
-INSERT INTO `cms_user` (`userID`, `registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `firstname`, `lastname`, `sex`, `country`, `town`, `birthday`, `icq`, `avatar`, `usertext`, `userpic`, `clantag`, `clanname`, `clanhp`, `clanirc`, `clanhistory`, `cpu`, `mainboard`, `ram`, `monitor`, `graphiccard`, `soundcard`, `connection`, `keyboard`, `mouse`, `mousepad`, `newsletter`, `about`, `pmgot`, `pmsent`, `visits`, `banned`, `ip`, `topics`, `articles`, `comments`, `newcomments`, `server`, `rassen`, `klassen`, `skill`, `wowid`) VALUES
-(1, 1102617722, 1272213681, 'Theseus', '202cb962ac59075b964b07152d234b70', 'Theseus', 'l.adore@weibsvolk.org', 'Lars', 'B.', 'm', 'ca', 'Löhne', 454543200, '75354337', '1.jpg', 'life, love...regret', '1.jpg', 'Dacor', 'D''acor', 'www.d-acor.de', '', '[b]CS[/b]: team.hYbrid, dmk, jS, e-lamorz, tra, DkH, brd.union[br][br][b]CoD[/b]: my-r, plan-B, GaB, TlS, DivS, oFe, !n-R, p3g[br][br][b]WoW[/b]: Avalons Krieger, Black Knights', 'Intel Pentium 4 3.2 GHz (Prescott)', 'ASUS P4C800 Deluxe', 'Infinieon 1.5 GB PC2700', 'ADi 715A', 'Terratec Mistify GeForce 5800 Ultra', 'Creative Audigy 2 Platinum', 'Teleos 128 kBit Flatrate', 'Logitech Elite Keyboard', 'Logitech MX 500', 'fUnc SUrface 1030 Blau-Orange', 1, '[b]Norhtcon 2004[/b]: mit !n-R und p3g erster im 5on5 und 3on3 Call of Duty Turnier. ( Grüße an Sunshine [Jens] :D )', 7, 19, 641, 0, '127.0.0.1', '1:1119177424:4:1119173599:2:1119181425:3:1119192816:8:1119180059:7:1119180279', '', 0, 0, 'Blackmoore', 'Mensch', 'Paladin (60), Priest (13)', '(05/10/36)', '158395');
+INSERT INTO `cms_user` (`userID`, `registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `firstname`, `country`, `avatar`, `usertext`, `userpic`, `hp`, `banned`, `ip`, `topics`) VALUES
+(1, 1102617722, 1272213681, 'Theseus', '202cb962ac59075b964b07152d234b70', 'Theseus', 'l.adore@weibsvolk.org', 'Lars', 'ca', '1.jpg', 'life, love...regret', '1.jpg', 'www.d-acor.de', 0, '127.0.0.1', '1:1119177424:4:1119173599:2:1119181425:3:1119192816:8:1119180059:7:1119180279');
 
 -- --------------------------------------------------------
 
@@ -375,8 +419,59 @@ CREATE TABLE IF NOT EXISTS `cms_user_groups` (
   `user` int(1) NOT NULL DEFAULT '0',
   `page` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`usgID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 --
 -- Daten für Tabelle `cms_user_groups`
 --
+
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `pastebin`
+--
+
+DROP TABLE IF EXISTS `pastebin`;
+CREATE TABLE IF NOT EXISTS `pastebin` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT,
+  `poster` varchar(16) DEFAULT NULL,
+  `posted` datetime DEFAULT NULL,
+  `code` text,
+  `parent_pid` int(11) DEFAULT '0',
+  `format` varchar(16) DEFAULT NULL,
+  `codefmt` mediumtext,
+  `codecss` text,
+  `domain` varchar(255) DEFAULT '',
+  `expires` datetime DEFAULT NULL,
+  `expiry_flag` enum('d','m','f') NOT NULL DEFAULT 'm',
+  PRIMARY KEY (`pid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `pastebin`
+--
+
+INSERT INTO `pastebin` (`pid`, `poster`, `posted`, `code`, `parent_pid`, `format`, `codefmt`, `codecss`, `domain`, `expires`, `expiry_flag`) VALUES
+(1, 'Test', '2011-06-15 02:25:12', '/**\r\n* default expiry time d (day) m (month) or f (forever)\r\n*/\r\n$CONF[''default_expiry'']=''m'';\r\n\r\n/**\r\n* this is the path to the script - you may want to\r\n* to use / for even shorter urls if the main script\r\n* is renamed to index.php\r\n*/\r\n$CONF[''this_script'']=''http://192.168.178.241:6978/pastebin/public_html/pastebin.php'';\r\n\r\n/**\r\n* what''s the maximum number of posts we want to keep?\r\n* Set this to 0 to have no limit on retained posts\r\n*/\r\n$CONF[''max_posts'']=0;\r\n\r\n/**\r\n* what''s the highlight char?\r\n*/\r\n$CONF[''highlight_prefix'']=''@@'';\r\n\r\n/**\r\n* how many elements in the base domain name? This is used to determine\r\n* what makes a "private" pastebin, i.e. for pastebin.com there are 2\r\n* elements ''pastebin'' and ''com'' - for pastebin.mysite.com there 3. Got it?\r\n* Good!\r\n*/\r\n$CONF[''base_domain_elements'']=2;', 0, 'php', '<div class="php" style="font-family: monospace;"><ol><li class="li1"><div class="de1"><span class="coMULTI">/**</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* default expiry time d (day) m (month) or f (forever)</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">*/</span></div></li>\n<li class="li2"><div class="de2"><span class="re0">$CONF</span><span class="br0">&#91;</span><span class="st0">''default_expiry''</span><span class="br0">&#93;</span>=<span class="st0">''m''</span>;</div></li>\n<li class="li1"><div class="de1">&nbsp;</div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">/**</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">* this is the path to the script - you may want to</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* to use / for even shorter urls if the main script</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">* is renamed to index.php</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">*/</span></div></li>\n<li class="li1"><div class="de1"><span class="re0">$CONF</span><span class="br0">&#91;</span><span class="st0">''this_script''</span><span class="br0">&#93;</span>=<span class="st0">''http://192.168.178.241:6978/pastebin/public_html/pastebin.php''</span>;</div></li>\n<li class="li2"><div class="de2">&nbsp;</div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">/**</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* what''s the maximum number of posts we want to keep?</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">* Set this to 0 to have no limit on retained posts</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">*/</span></div></li>\n<li class="li1"><div class="de1"><span class="re0">$CONF</span><span class="br0">&#91;</span><span class="st0">''max_posts''</span><span class="br0">&#93;</span>=<span class="nu0">0</span>;</div></li>\n<li class="li2"><div class="de2">&nbsp;</div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">/**</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* what''s the highlight char?</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">*/</span></div></li>\n<li class="li2"><div class="de2"><span class="re0">$CONF</span><span class="br0">&#91;</span><span class="st0">''highlight_prefix''</span><span class="br0">&#93;</span>=<span class="st0">''@@''</span>;</div></li>\n<li class="li1"><div class="de1">&nbsp;</div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">/**</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">* how many elements in the base domain name? This is used to determine</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* what makes a &quot;private&quot; pastebin, i.e. for pastebin.com there are 2</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">* elements ''pastebin'' and ''com'' - for pastebin.mysite.com there 3. Got it?</span></div></li>\n<li class="li2"><div class="de2"><span class="coMULTI">* Good!</span></div></li>\n<li class="li1"><div class="de1"><span class="coMULTI">*/</span></div></li>\n<li class="li2"><div class="de2"><span class="re0">$CONF</span><span class="br0">&#91;</span><span class="st0">''base_domain_elements''</span><span class="br0">&#93;</span>=<span class="nu0">2</span>; </div></li></ol></div>', '/* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */\n.php .de1, .php .de2 {font-family: ''Courier New'', Courier, monospace; font-weight: normal;}\n.php  {font-family: monospace;}\n.php .imp {font-weight: bold; color: red;}\n.php li {background: #ffffff;}\n.php li.li2 {background: #f8f8f8;}\n.php .kw1 {color: ##000088;}\n.php .kw2 {color: ##000088;}\n.php .kw3 {color: ##000088;}\n.php .co1 {color: #008800;}\n.php .co2 {color: #808080; }\n.php .coMULTI {color: #008800;}\n.php .es0 {color: #000099;}\n.php .br0 {color: #ff0000;}\n.php .st0 {color: #008888;}\n.php .nu0 {color: #cc66cc;}\n.php .me1 {color: #006600;}\n.php .me2 {color: #006600;}\n.php .re0 {color: #000088;}\n', '192.168', '2011-06-16 02:25:12', 'd');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `recent`
+--
+
+DROP TABLE IF EXISTS `recent`;
+CREATE TABLE IF NOT EXISTS `recent` (
+  `domain` varchar(255) NOT NULL DEFAULT '',
+  `pid` int(11) NOT NULL,
+  `seq_no` int(11) NOT NULL,
+  PRIMARY KEY (`domain`,`seq_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `recent`
+--
+
+INSERT INTO `recent` (`domain`, `pid`, `seq_no`) VALUES
+('192.168', 1, 1);
