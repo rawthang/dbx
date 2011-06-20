@@ -33,16 +33,15 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		<div class="exploit-">
 			<h3 class="category-title">Remote Exploits</h3>
 			<table>
-				<tr><th>Date</th><th>DL</th><th>V</th><th>Description</th><th>DL's</th><th>Platform</th><th>Author</th></tr>
-				
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td>Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</td><td>200</td><td>windows</td><td>anonymous</td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td>DATAC RealWin SCADA Server 2 On_FC_CONNECT_FCS_a_FILE Buffer Overflow</td><td>1580</td><td>linux</td><td>anonymous</td></tr>
-				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td> Black Ice Fax Voice SDK v12.6 Remote Code Execution Exploit</td><td>2</td><td>schice</td><td>anonymous</td></tr>			
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td> Black Ice Cover Page SDK insecure method DownloadImageFileURL() exploit</td><td>14</td><td>mac</td><td>anonymous</td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td>MS11-050 IE mshtml!CObjectElement Use After Free</td><td>10000</td><td>windows</td><td>anroid</td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td>  IBM Tivoli Endpoint Manager POST Query Buffer Overflow</td><td>250</td><td>windows</td><td>dec</td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td>Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</td><td>128</td><td>windows</td><td>lin64</td></tr>
-				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td>Simple web-server 1.2 Directory Traversal</td><td>47</td><td>nAN</td><td>anonymous</td></tr>
+				<tr><th>Date</th><th>DL</th><th>V</th><th>Description</th><th>DL's</th><th>Platform</th><th>Author</th></tr>				
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</a></td><td>200</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">DATAC RealWin SCADA Server 2 On_FC_CONNECT_FCS_a_FILE Buffer Overflow</a></td><td>1580</td><td><a href="index.php">linux</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td><a href="index.php"> Black Ice Fax Voice SDK v12.6 Remote Code Execution Exploit</a></td><td>2</td><td><a href="index.php">schice</a></td><td><a href="index.php">anonymous</a></td></tr>			
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php"> Black Ice Cover Page SDK insecure method DownloadImageFileURL() exploit</a></td><td>14</td><td><a href="index.php">mac</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">MS11-050 IE mshtml!CObjectElement Use After Free</a></td><td>10000</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">  IBM Tivoli Endpoint Manager POST Query Buffer Overflow</a></td><td>250</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</a></td><td>128</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
+				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td><a href="index.php">Simple web-server 1.2 Directory Traversal</a></td><td>47</td><td><a href="index.php">nAN</a></td><td><a href="index.php">anonymous</a></td></tr>
 
 
 			</table>
