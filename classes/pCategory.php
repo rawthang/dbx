@@ -17,7 +17,7 @@ class pCategory extends Category{
 				$p->id($value['id']);
 				$p->name($value['cat']);
 				$p->dbh=$this->dbh();
-				$platforms[]=$p;
+				$platforms[$value['id']]=$p;
 
 			}
 			return $platforms;

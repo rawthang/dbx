@@ -22,7 +22,7 @@ class pPlatform extends Platform{
 				$p->id($value['id']);
 				$p->name($value['name']);
 				$p->dbh=$this->dbh();
-				$platforms[]=$p;
+				$platforms[$value['id']]=$p;
 				
 			}
 			return $platforms;
