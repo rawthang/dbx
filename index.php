@@ -1,17 +1,24 @@
 <?php
 require_once('credentials.php');
 require_once('classes/helper/Dbhelper.php');
-require_once('classes/Exploit.php');
 require_once ('classes/other/geshi/geshi.php');
+
+
+require_once('classes/Exploit.php');
+require_once('classes/pExploit.php');
 require ('classes/Platform.php');
 require ('classes/pPlatform.php');
 
 require_once 'classes/Category.php';
-
+require_once 'classes/pCategory.php';
 /**Passwörter*/
 require_once 'classes/other/phpass-0.3/PasswordHash.php';
 require_once 'classes/helper/Login.php';
+
 require_once 'classes/helper/Session.php';
+require_once 'classes/helper/Upload.php';
+require_once 'classes/helper/Getvars.php';
+require_once 'classes/helper/Formgen.php';
 
 $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
@@ -60,7 +67,39 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		</div>
 		<div class="exploit-">
 			<h4 class="category-title">Papers</h4>
-
+				<table>
+		<?php 
+		$e= new pExploit();
+		$e->dbh($dbh);
+		
+		
+		
+		
+		
+		
+		$exploits=$e->mySqlSelectByCategory(5);
+		
+		foreach ($exploits as $e){
+			$f=new Formgen();
+	
+			$viewExploit=$f->getLink($e->title(), "ShowExploit.php", array("view"=> $e->id()));
+			$viewByAuthor=$f->getLink($e->autor(), "index.php", array("id"=>-1));	
+			$viewByPlatform=$f->getLink($e->loadPlatform(), "index.php", array("id"=>-1));
+			
+			$download="";
+				if ($e->file()!='')
+					$download=$f->getLink('&#9112;', $e->file());
+			$verified="&#10003;";
+				if ($e->verified())		
+					$verified="&#10006;";		
+				
+			echo "<tr><td>{$e->date()}</td><td>$download</td><td>$verified</td><td>$viewExploit</a></td><td>{$e->hits()}</td><td>$viewByPlatform</td><td>$viewByAuthor</td></tr>";
+		}
+	
+		
+		
+		?>
+			</table>
 		</div>
 		<div class="exploit-">
 			<h4 class="category-title">DoS/PoC</h4>
