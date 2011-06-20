@@ -31,17 +31,3 @@ class HardCodedLogin implements  CLogin{
 		return false;	
 	}//validateLogin				
 }//class
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

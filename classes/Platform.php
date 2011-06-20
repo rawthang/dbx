@@ -22,5 +22,3 @@ abstract class Platform extends Dbhelper
 	public function name($name=""){ if (empty($name)){return $this->name; }else{$this->name=$name; } }
 
 }//class
-
-?>

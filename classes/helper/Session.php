@@ -36,4 +36,3 @@ class Session{
 		return $this->loggedIn;
 	}
 }
-?>

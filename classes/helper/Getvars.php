@@ -91,4 +91,3 @@ class Getvars{
 	public function missingVars($missingVars=""){ if (empty($missingVars)){return $this->missingVars; }else{$this->missingVars=$missingVars; } }
 
 }//Getvars
-?>

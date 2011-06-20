@@ -90,6 +90,3 @@ class Formgen{
 		return "<a href=\"$reference?$v\">$text<a>";
 	}
 }//class
-
-
-?>

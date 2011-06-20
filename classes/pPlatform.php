@@ -22,9 +22,11 @@ class pPlatform extends Platform{
 				$p->id($value['id']);
 				$p->name($value['name']);
 				$p->dbh=$this->dbh();
+			//	echo $value['id'] . "  " . $value['name']. "\n";
 				$platforms[$value['id']]=$p;
 				
 			}
+		//	print_r($platforms);
 			return $platforms;
 		} else {		
 			$sql="SELECT * FROM cms_platform WHERE id=?";			
@@ -67,4 +69,3 @@ class pPlatform extends Platform{
 		
 	}//Update
 }//class
-?>

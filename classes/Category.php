@@ -20,9 +20,6 @@ abstract class Category extends Dbhelper {
 
 
 	public function __toString(){
-		return "id {$this->id()} name {$this->name()}";
+		return "{$this->name()}";
 	}
 }//class
-
-?>
-

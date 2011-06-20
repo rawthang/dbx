@@ -9,18 +9,18 @@ class pCategory extends Category{
 			$sql="SELECT * FROM cms_cat";
 			$stmt=$this->dbh->prepare($sql);
 			$stmt->execute();
-			$platforms=array();
+			$categories=array();
 				
 			foreach($stmt->fetchAll() as $value){
 
-				$p = new pPlatform();
+				$p = new pCategory();
 				$p->id($value['id']);
 				$p->name($value['cat']);
 				$p->dbh=$this->dbh();
-				$platforms[$value['id']]=$p;
+				$categories[$p->id]=$p;
 
 			}
-			return $platforms;
+			return $categories;
 		} else {
 			$sql="SELECT * FROM cms_cat WHERE id=?";
 			$stmt=$this->dbh->prepare($sql);
@@ -55,4 +55,3 @@ class pCategory extends Category{
 		return $stmt->execute();
 	}
 }
-?>

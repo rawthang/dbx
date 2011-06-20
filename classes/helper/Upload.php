@@ -137,5 +137,3 @@ class Upload{
 	}
 
 }//class
-
-?>
