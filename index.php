@@ -37,48 +37,21 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 	</div>
 	<div>
 		<!-- aus jeder kategorie 7-8 ausgeben. div drum, werte in table -->
-		<div class="exploit-">
-			<h3 class="category-title">Remote Exploits</h3>
-			<table>
-				<tr><th>Date</th><th>DL</th><th>V</th><th>Description</th><th>DL's</th><th>Platform</th><th>Author</th></tr>				
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</a></td><td>200</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">DATAC RealWin SCADA Server 2 On_FC_CONNECT_FCS_a_FILE Buffer Overflow</a></td><td>1580</td><td><a href="index.php">linux</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td><a href="index.php"> Black Ice Fax Voice SDK v12.6 Remote Code Execution Exploit</a></td><td>2</td><td><a href="index.php">schice</a></td><td><a href="index.php">anonymous</a></td></tr>			
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php"> Black Ice Cover Page SDK insecure method DownloadImageFileURL() exploit</a></td><td>14</td><td><a href="index.php">mac</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">MS11-050 IE mshtml!CObjectElement Use After Free</a></td><td>10000</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">  IBM Tivoli Endpoint Manager POST Query Buffer Overflow</a></td><td>250</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td>&#9112;</td><td>&#10006;</td><td><a href="index.php">Mozilla Firefox "nsTreeRange" Dangling Pointer Exploit</a></td><td>128</td><td><a href="index.php">windows</a></td><td><a href="index.php">anonymous</a></td></tr>
-				<tr><td>2011-06-20</td><td></td><td>&#10003;</td><td><a href="index.php">Simple web-server 1.2 Directory Traversal</a></td><td>47</td><td><a href="index.php">nAN</a></td><td><a href="index.php">anonymous</a></td></tr>
-
-
-			</table>
-		</div>
-		<div class="exploit-">
-			<h4 class="category-title">Web Applications</h4>
-		
-		</div>
-		<div class="exploit-">
-			<h4 class="category-title">Local Exploits</h4>
-	
-		</div>
-		<div class="exploit-">
-			<h4 class="category-title">Shellcode</h4>
-	
-		</div>
-		<div class="exploit-">
-			<h4 class="category-title">Papers</h4>
-				<table>
 		<?php 
+		$c=new pCategory();
+		$c->dbh($dbh);
+		$categories=$c->mysqlSelect();
+		
+
+		foreach ($categories as $c){
+
+
+		//-----lsExploits--------------------------------------------------------------------------------------------------------------------------------------------------------------
 		$e= new pExploit();
 		$e->dbh($dbh);
-		
-		
-		
-		
-		
-		
-		$exploits=$e->mySqlSelectByCategory(5);
-		
+		$exploits=$e->mySqlSelectByCategory($c->id(),0, 8);		
+		echo "<div class=\"exploit-category\">\n";
+		echo "<h4 class=\"category-title\">{$c->name()}</h4><table>\n";
 		foreach ($exploits as $e){
 			$f=new Formgen();
 	
@@ -94,18 +67,11 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 					$verified="&#10006;";		
 				
 			echo "<tr><td>{$e->date()}</td><td>$download</td><td>$verified</td><td>$viewExploit</a></td><td>{$e->hits()}</td><td>$viewByPlatform</td><td>$viewByAuthor</td></tr>";
+		}//each
+		echo "</table></div>";
+		//-----lsExploits--------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		}
-	
-		
-		
 		?>
-			</table>
-		</div>
-		<div class="exploit-">
-			<h4 class="category-title">DoS/PoC</h4>
-
-		</div>
-
 	</div>
 
 </body>
