@@ -82,7 +82,7 @@ foreach($platforms as $p_db)
 echo " $p_db";
 
 echo "<h5>Element mit id 1 ausgeben + löschen - klappt nur einmal</h5>";
-
+?>
 	<div id="head">
 		<h1>ue-cr3w exploits</h1>
 		<img src="img/logo.png" alt="logo" />
@@ -104,7 +104,7 @@ echo "<h5>Element mit id 1 ausgeben + löschen - klappt nur einmal</h5>";
 	
 	$p = new pPlatform();
 	
-<<<<<<< HEAD
+///<<<<<<< HEAD
 	
 
 	$p->dbh($dbh);

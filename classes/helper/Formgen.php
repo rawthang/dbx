@@ -68,6 +68,23 @@ class Formgen{
 		$retval.="\n</form>";	
 		return $retval;
 	}
+	public function getLink($text, $reference, $get=array(),$confirmBeforeGo=false,$confirmMsg="confirm before you go"){
+		
+		
+		
+		
+		$vars=array();
+		foreach ($get as $key =>$value)
+			$vars[]="{$key}={$value}";
+					
+		$v=implode($vars, "&");
+
+		if ($confirmBeforeGo)
+			return "<a href=\"javascript:confirmGo('$confirmMsg','$reference?$v')\">$text</a>";		
+		
+		
+		return "<a href=\"$reference?$v\">$text<a>";
+	}
 }//class
 
 
