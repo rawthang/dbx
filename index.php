@@ -51,7 +51,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$e= new pExploit();
 		$e->dbh($dbh);
 		$exploits=$e->mySqlSelectByCategory($c->id(),0, 8);
-		$viewByCategory=$f->getLink($c->name(), "ShowByCategory.php", array("view"=> $c->id()));
+		$viewByCategory=$f->getLink($c->name(), "ViewByCategory.php", array("view"=> $c->id()));
 		echo "<div class=\"exploit-category\">\n";
 		echo "<h4 class=\"category-title\">$viewByCategory</h4><table>\n";
 		$ctr=0;
@@ -59,7 +59,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 			$ctr%2==0 ? $modulo="table-gerade" : $modulo="table-ungerade";
 			
 
-			$viewExploit=$f->getLink($e->title(), "ShowExploit.php", array("view"=> $e->id()));
+			$viewExploit=$f->getLink($e->title(), "ViewExploit.php", array("view"=> $e->id()));
 			$viewByAuthor=$f->getLink($e->autor(), "ViewByAuthor.php", array("view"=>1));
 			$viewByPlatform=$f->getLink($e->loadPlatform(), "ViewByPlatform.php", array("view"=>$e->platform()));
 
