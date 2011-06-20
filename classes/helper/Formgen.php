@@ -68,11 +68,13 @@ class Formgen{
 		$retval.="\n</form>";	
 		return $retval;
 	}
-	public function getLink($text, $reference, $get=array(),$confirmBeforeGo=false,$confirmMsg="confirm before you go"){
+	
+	public function getHeading($text, $order=1){
+		return "<h$order>$text</h$order>";
 		
 		
-		
-		
+	}
+	public function getLink($text, $reference, $get=array(),$confirmBeforeGo=false,$confirmMsg="confirm before you go"){		
 		$vars=array();
 		foreach ($get as $key =>$value)
 			$vars[]="{$key}={$value}";

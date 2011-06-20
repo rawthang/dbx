@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_blog`
+-- Tabellenstruktur fï¿½r Tabelle `cms_blog`
 --
 
 DROP TABLE IF EXISTS `cms_blog`;
@@ -34,16 +34,16 @@ CREATE TABLE IF NOT EXISTS `cms_blog` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Daten für Tabelle `cms_blog`
+-- Daten fï¿½r Tabelle `cms_blog`
 --
 
 INSERT INTO `cms_blog` (`id`, `date`, `rubric`, `headline`, `content`, `link1`, `url1`, `link2`, `url2`) VALUES
-(1, 1119175578, 1, 'Apple-Chef Steve Jobs: Eine Auszeit mit Folgen', '<b>Auch in New York bricht der Kurs der Apple-Aktie nach der Krankmeldung von Steve Jobs ein. Dabei ist noch nicht einmal genau klar, woran der Apple-Chef überhaupt leidet. Börsianer sprechen inzwischen vom „Jobs-Schock“. </b>\r\n\r\nZweiter Akt des Dramas: Die gesundheitlichen Probleme von Apple-Chef Steve Jobs haben die Aktie des iPhone-Herstellers in New York nach unten gedrückt. Im frühen Handels an der Technologiebörse Nasdaq verlor das Papier fast sechs Prozent. Das entspricht einem Börsenwert von mehr als 15 Milliarden Dollar. Im weiteren Verlauf erholte sich die Aktie allerdings wieder.\r\n\r\nJobs hatte zwar schon am Montag eine Auszeit auf unbestimmte Zeit angekündigt. Die US-Börsen hatten jedoch wegen eines Feiertages geschlossen. In Frankfurt hatte die Apple-Aktie am Vortag rund sechs Prozent eingebüßt.', 'fr-online', 'http://www.fr-online.de/wirtschaft/eine-auszeit-mit-folgen/-/1472780/5979502/-/view/asFirstTeaser/-/index.html', NULL, NULL);
+(1, 1119175578, 1, 'Apple-Chef Steve Jobs: Eine Auszeit mit Folgen', '<b>Auch in New York bricht der Kurs der Apple-Aktie nach der Krankmeldung von Steve Jobs ein. Dabei ist noch nicht einmal genau klar, woran der Apple-Chef ï¿½berhaupt leidet. Bï¿½rsianer sprechen inzwischen vom ï¿½Jobs-Schockï¿½. </b>\r\n\r\nZweiter Akt des Dramas: Die gesundheitlichen Probleme von Apple-Chef Steve Jobs haben die Aktie des iPhone-Herstellers in New York nach unten gedrï¿½ckt. Im frï¿½hen Handels an der Technologiebï¿½rse Nasdaq verlor das Papier fast sechs Prozent. Das entspricht einem Bï¿½rsenwert von mehr als 15 Milliarden Dollar. Im weiteren Verlauf erholte sich die Aktie allerdings wieder.\r\n\r\nJobs hatte zwar schon am Montag eine Auszeit auf unbestimmte Zeit angekï¿½ndigt. Die US-Bï¿½rsen hatten jedoch wegen eines Feiertages geschlossen. In Frankfurt hatte die Apple-Aktie am Vortag rund sechs Prozent eingebï¿½ï¿½t.', 'fr-online', 'http://www.fr-online.de/wirtschaft/eine-auszeit-mit-folgen/-/1472780/5979502/-/view/asFirstTeaser/-/index.html', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_blog_rubrics`
+-- Tabellenstruktur fï¿½r Tabelle `cms_blog_rubrics`
 --
 
 DROP TABLE IF EXISTS `cms_blog_rubrics`;
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `cms_blog_rubrics` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=61 ;
 
 --
--- Daten für Tabelle `cms_blog_rubrics`
+-- Daten fï¿½r Tabelle `cms_blog_rubrics`
 --
 
 INSERT INTO `cms_blog_rubrics` (`id`, `rubric`) VALUES
@@ -65,7 +65,7 @@ INSERT INTO `cms_blog_rubrics` (`id`, `rubric`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_download`
+-- Tabellenstruktur fï¿½r Tabelle `cms_download`
 --
 
 DROP TABLE IF EXISTS `cms_download`;
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `cms_download` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `cms_download`
+-- Daten fï¿½r Tabelle `cms_download`
 --
 
 INSERT INTO `cms_download` (`download`) VALUES
@@ -83,7 +83,7 @@ INSERT INTO `cms_download` (`download`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_exploit_cat`
+-- Tabellenstruktur fï¿½r Tabelle `cms_exploit_cat`
 --
 
 DROP TABLE IF EXISTS `cms_exploit_cat`;
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `cms_exploit_cat` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Daten für Tabelle `cms_exploit_cat`
+-- Daten fï¿½r Tabelle `cms_exploit_cat`
 --
 
 INSERT INTO `cms_exploit_cat` (`id`, `cat`) VALUES
@@ -108,7 +108,7 @@ INSERT INTO `cms_exploit_cat` (`id`, `cat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_exploit_platform`
+-- Tabellenstruktur fï¿½r Tabelle `cms_exploit_platform`
 --
 
 DROP TABLE IF EXISTS `cms_exploit_platform`;
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `cms_exploit_platform` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 --
--- Daten für Tabelle `cms_exploit_platform`
+-- Daten fï¿½r Tabelle `cms_exploit_platform`
 --
 
 INSERT INTO `cms_exploit_platform` (`id`, `name`) VALUES
@@ -175,7 +175,7 @@ INSERT INTO `cms_exploit_platform` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_exploit_threads`
+-- Tabellenstruktur fï¿½r Tabelle `cms_exploit_threads`
 --
 
 DROP TABLE IF EXISTS `cms_exploit_threads`;
@@ -193,14 +193,14 @@ CREATE TABLE IF NOT EXISTS `cms_exploit_threads` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `cms_exploit_threads`
+-- Daten fï¿½r Tabelle `cms_exploit_threads`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_languages`
+-- Tabellenstruktur fï¿½r Tabelle `cms_languages`
 --
 
 DROP TABLE IF EXISTS `cms_languages`;
@@ -213,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `cms_languages` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Daten für Tabelle `cms_languages`
+-- Daten fï¿½r Tabelle `cms_languages`
 --
 
 INSERT INTO `cms_languages` (`id`, `language`, `where`, `what`) VALUES
@@ -223,13 +223,13 @@ INSERT INTO `cms_languages` (`id`, `language`, `where`, `what`) VALUES
 (4, 'en', 'SITE_NAME', 'This is my website'),
 (5, 'de', 'SLOGAN', 'Dies ist mein Motto'),
 (6, 'en', 'SLOGAN', 'This is my slogan'),
-(7, 'de', 'ERROR_Text', '<h2>Seite nicht gefunden...</h2>\r\n							<p>Entschuldigung, die von Ihnen gesuchte Seite existiert nicht mehr. Sie wurde möglicherweise verschoben oder gelöscht.</p>\r\n							<br/>\r\n							<ol>\r\n								<li><span>Überprüfen Sie die Web-Adresse in Ihrem Browser nach Fehlern.</span></li>\r\n								<li><span>Besuchen Sie unten einen Link.</span></li>\r\n							</ol>\r\n												<div id="MenuBarHorizontal">	\r\n								<ul class="MenuBarHorizontal">\r\n									<li class="home"><a href="#">Home</a></li>\r\n									<li class="about"><a href="#">Über</a></li>\r\n									<li class="contact"><a href="#">Impressum</a></li>\r\n								</ul>\r\n							</div>'),
+(7, 'de', 'ERROR_Text', '<h2>Seite nicht gefunden...</h2>\r\n							<p>Entschuldigung, die von Ihnen gesuchte Seite existiert nicht mehr. Sie wurde mï¿½glicherweise verschoben oder gelï¿½scht.</p>\r\n							<br/>\r\n							<ol>\r\n								<li><span>ï¿½berprï¿½fen Sie die Web-Adresse in Ihrem Browser nach Fehlern.</span></li>\r\n								<li><span>Besuchen Sie unten einen Link.</span></li>\r\n							</ol>\r\n												<div id="MenuBarHorizontal">	\r\n								<ul class="MenuBarHorizontal">\r\n									<li class="home"><a href="#">Home</a></li>\r\n									<li class="about"><a href="#">ï¿½ber</a></li>\r\n									<li class="contact"><a href="#">Impressum</a></li>\r\n								</ul>\r\n							</div>'),
 (8, 'en', 'ERROR_Text', '<h2>Page not found...</h2>\r\n							<p>Sorry, it appears the page you were looking for doesn''t exist anymore, might have been moved or something else.</p>\r\n							<br/>\r\n							<ol>\r\n								<li><span>checking the web address for typos.</span></li>\r\n								<li><span>visiting the website (link to the left).</span></li>\r\n							</ol>\r\n							<br/>\r\n							<div id="MenuBarHorizontal">	\r\n								<ul class="MenuBarHorizontal">\r\n									<li class="home"><a href="#">Home</a></li>\r\n									<li class="about"><a href="#">About</a></li>\r\n									<li class="contact"><a href="#">Imprint</a></li>\r\n								</ul>\r\n							</div>');
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_livesearch`
+-- Tabellenstruktur fï¿½r Tabelle `cms_livesearch`
 --
 
 DROP TABLE IF EXISTS `cms_livesearch`;
@@ -241,14 +241,14 @@ CREATE TABLE IF NOT EXISTS `cms_livesearch` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `cms_livesearch`
+-- Daten fï¿½r Tabelle `cms_livesearch`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_modules`
+-- Tabellenstruktur fï¿½r Tabelle `cms_modules`
 --
 
 DROP TABLE IF EXISTS `cms_modules`;
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `cms_modules` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
--- Daten für Tabelle `cms_modules`
+-- Daten fï¿½r Tabelle `cms_modules`
 --
 
 INSERT INTO `cms_modules` (`id`, `name`) VALUES
@@ -277,7 +277,7 @@ INSERT INTO `cms_modules` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_news`
+-- Tabellenstruktur fï¿½r Tabelle `cms_news`
 --
 
 DROP TABLE IF EXISTS `cms_news`;
@@ -307,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `cms_news` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Daten für Tabelle `cms_news`
+-- Daten fï¿½r Tabelle `cms_news`
 --
 
 INSERT INTO `cms_news` (`newsID`, `date`, `rubric`, `lang1`, `headline1`, `content1`, `poster`, `link1`, `url1`, `window1`, `link2`, `url2`, `window2`, `link3`, `url3`, `window3`, `link4`, `url4`, `window4`, `saved`, `published`) VALUES
@@ -316,7 +316,7 @@ INSERT INTO `cms_news` (`newsID`, `date`, `rubric`, `lang1`, `headline1`, `conte
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_news_rubrics`
+-- Tabellenstruktur fï¿½r Tabelle `cms_news_rubrics`
 --
 
 DROP TABLE IF EXISTS `cms_news_rubrics`;
@@ -328,7 +328,7 @@ CREATE TABLE IF NOT EXISTS `cms_news_rubrics` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Daten für Tabelle `cms_news_rubrics`
+-- Daten fï¿½r Tabelle `cms_news_rubrics`
 --
 
 INSERT INTO `cms_news_rubrics` (`rubricID`, `rubric`, `pic`) VALUES
@@ -337,7 +337,7 @@ INSERT INTO `cms_news_rubrics` (`rubricID`, `rubric`, `pic`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_settings`
+-- Tabellenstruktur fï¿½r Tabelle `cms_settings`
 --
 
 DROP TABLE IF EXISTS `cms_settings`;
@@ -359,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `cms_settings` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=2 ;
 
 --
--- Daten für Tabelle `cms_settings`
+-- Daten fï¿½r Tabelle `cms_settings`
 --
 
 INSERT INTO `cms_settings` (`settingID`, `hpurl`, `sitename`, `adminname`, `adminemail`, `news`, `newsarchiv`, `headlines`, `headlineschars`, `topics`, `posts`, `hideboards`, `users`) VALUES
@@ -368,7 +368,7 @@ INSERT INTO `cms_settings` (`settingID`, `hpurl`, `sitename`, `adminname`, `admi
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_user`
+-- Tabellenstruktur fï¿½r Tabelle `cms_user`
 --
 
 DROP TABLE IF EXISTS `cms_user`;
@@ -393,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `cms_user` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1079 ;
 
 --
--- Daten für Tabelle `cms_user`
+-- Daten fï¿½r Tabelle `cms_user`
 --
 
 INSERT INTO `cms_user` (`userID`, `registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `firstname`, `country`, `avatar`, `usertext`, `userpic`, `hp`, `banned`, `ip`, `topics`) VALUES
@@ -402,7 +402,7 @@ INSERT INTO `cms_user` (`userID`, `registerdate`, `lastlogin`, `username`, `pass
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cms_user_groups`
+-- Tabellenstruktur fï¿½r Tabelle `cms_user_groups`
 --
 
 DROP TABLE IF EXISTS `cms_user_groups`;
@@ -422,14 +422,14 @@ CREATE TABLE IF NOT EXISTS `cms_user_groups` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `cms_user_groups`
+-- Daten fï¿½r Tabelle `cms_user_groups`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `pastebin`
+-- Tabellenstruktur fï¿½r Tabelle `pastebin`
 --
 
 DROP TABLE IF EXISTS `pastebin`;
@@ -449,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `pastebin` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Daten für Tabelle `pastebin`
+-- Daten fï¿½r Tabelle `pastebin`
 --
 
 INSERT INTO `pastebin` (`pid`, `poster`, `posted`, `code`, `parent_pid`, `format`, `codefmt`, `codecss`, `domain`, `expires`, `expiry_flag`) VALUES
@@ -458,7 +458,7 @@ INSERT INTO `pastebin` (`pid`, `poster`, `posted`, `code`, `parent_pid`, `format
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `recent`
+-- Tabellenstruktur fï¿½r Tabelle `recent`
 --
 
 DROP TABLE IF EXISTS `recent`;
@@ -470,8 +470,55 @@ CREATE TABLE IF NOT EXISTS `recent` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `recent`
+-- Daten fï¿½r Tabelle `recent`
 --
 
 INSERT INTO `recent` (`domain`, `pid`, `seq_no`) VALUES
 ('192.168', 1, 1);
+
+
+
+
+
+
+
+
+--
+-- Tabellenstruktur fÃ¼r Tabelle `cms_exploit`
+--
+
+CREATE TABLE IF NOT EXISTS `cms_exploit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `verified` tinyint(1) NOT NULL,
+  `hits` int(11) NOT NULL,
+  `autor` varchar(255) NOT NULL,
+  `code_language` varchar(100) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `category` int(11) NOT NULL,
+  `platform` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=160 ;
+
+--
+-- Daten fÃ¼r Tabelle `cms_exploit`
+--
+
+INSERT INTO `cms_exploit` (`id`, `date`, `verified`, `hits`, `autor`, `code_language`, `title`, `content`, `file`, `category`, `platform`) VALUES
+(158, '2011-06-20 12:34:04', 0, 0, 'anonymous', 'bnf', 'Hello World in Brainfuck', '// Hello World in brainfuck \r\n// http://dtors.ath.cx/brainfuck.txt\r\n// Creds to Speedy\r\n&gt;+++++++++[&lt;++++++++&gt;-]&lt;.&gt;+++++++[&lt;++++&gt;-]&lt;+.+++++++..+++.[-]\r\n&gt;++++++++[&lt;++++&gt;-] &lt;.&gt;+++++++++++[&lt;++++++++&gt;-]&lt;-.--------.+++\r\n.------.--------.[-]&gt;++++++++[&lt;++++&gt;- ]&lt;+.[-]++++++++++.', 'upload/02863.jpg', 0, 0),
+(159, '2011-06-20 12:34:42', 0, 0, 'anonymous', 'php', 'Hello World in php', '&lt;?php\r\n// PHP \r\n&lt;?= &quot;Hello world\\n&quot;;\r\n?&gt;\r\n\r\nor\r\n\r\n&lt;?=&quot;Hello world\\n&quot; ?&gt; ', 'upload/02925.jpg', 3, 42),
+(155, '2011-06-20 12:31:36', 0, 0, 'anonymous', 'bash', 'Hello World in Bash', 'Bash  \r\n#!/bin/bash  \r\necho &quot;Hello world&quot;  ', NULL, 1, 19),
+(156, '2011-06-20 12:32:12', 0, 0, 'anonymous', 'perl', 'Hello World in Perl', 'Perl  \r\n#!/usr/bin perl -w  \r\nprint (&quot;hello world&quot;);', 'upload/03044.jpg', 3, 5),
+(157, '2011-06-20 12:33:30', 0, 0, 'anonymous', 'cpp', 'Hello World in C++', 'Beschreibung eingeben// C++\r\n#include &lt;iostream.h&gt;\r\nint main(void)\r\n{\r\n    cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; endl;\r\n    return 0;\r\n}', 'upload/02862.jpg', 4, 9);
+
+
+
+
+
+
+
+
+
+
