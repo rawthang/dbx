@@ -58,7 +58,9 @@ class Formgen{
 	public function addUpload($label="upload", $name="upload"){
 		$this->fields[]="<h5>$label</h5>\n<input type=\"file\" name=\"$name\">\n";
 	}
-	
+	public function addHidden($name, $value){
+		$this->fields[]="<input type=\"hidden\" name=\"$name\" value=\"$value\">\n";
+	}
 	public function getForm(){
 		$retval="<form method=\"{$this->method}\" action=\"{$this->action}\" enctype=\"multipart/form-data\">\n";
 		foreach ($this->fields as $field)

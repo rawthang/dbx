@@ -78,6 +78,15 @@ class Getvars{
 		}
 
 	}
+	
+	public function __toString(){
+		$r="==vars==\n";
+		foreach ($this->vars as $key=>$value){
+			$r.="$key\t$value\n";
+		}
+		return $r;
+	}
+	
 	/**SetGetter**/
 	public function missingVars($missingVars=""){ if (empty($missingVars)){return $this->missingVars; }else{$this->missingVars=$missingVars; } }
 
