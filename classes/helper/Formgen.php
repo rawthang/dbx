@@ -31,8 +31,11 @@ class Formgen{
 		$this->method=$method;
 		$this->action=$action;
 	}
-	public function addCheckBox($label, $name="checkbox", $value="false"){
-		$this->fields[]="<br><input type=\"Checkbox\" name=\"$name\">$label\n";
+	public function addCheckBox($label, $name="checkbox", $value=false){
+		$checked="";
+		if ($value==true)
+			$checked="checked=\"true\"";
+		$this->fields[]="<br><input type=\"Checkbox\" name=\"$name\" $checked >$label\n";
 		
 	}
 	public function addTextField($label="Text" , $name="textfield", $value="", $size=50){
