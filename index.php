@@ -47,19 +47,21 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 
 
 		//-----lsExploits--------------------------------------------------------------------------------------------------------------------------------------------------------------
+		$f=new Formgen();
 		$e= new pExploit();
 		$e->dbh($dbh);
 		$exploits=$e->mySqlSelectByCategory($c->id(),0, 8);
+		$viewByCategory=$f->getLink($c->name(), "ShowByCategory.php", array("view"=> $c->id()));
 		echo "<div class=\"exploit-category\">\n";
-		echo "<h4 class=\"category-title\">{$c->name()}</h4><table>\n";
+		echo "<h4 class=\"category-title\">$viewByCategory</h4><table>\n";
 		$ctr=0;
 		foreach ($exploits as $e){			
 			$ctr%2==0 ? $modulo="table-gerade" : $modulo="table-ungerade";
-			$f=new Formgen();
+			
 
 			$viewExploit=$f->getLink($e->title(), "ShowExploit.php", array("view"=> $e->id()));
-			$viewByAuthor=$f->getLink($e->autor(), "index.php", array("id"=>-1));
-			$viewByPlatform=$f->getLink($e->loadPlatform(), "index.php", array("id"=>-1));
+			$viewByAuthor=$f->getLink($e->autor(), "ViewByAuthor.php", array("view"=>1));
+			$viewByPlatform=$f->getLink($e->loadPlatform(), "ViewByPlatform.php", array("view"=>$e->platform()));
 
 			$download="";
 			if ($e->file()!='')
