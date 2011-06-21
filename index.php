@@ -32,7 +32,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 </head>
 <body>
 	<div id="head">
-		<h1>ue-cr3w exploits</h1>
+		<h1><a href="index.php">ue-cr3w exploits</a></h1>
 		<img src="img/logo.png" alt="logo" />
 	</div>
 	<div>
@@ -52,8 +52,10 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$e->dbh($dbh);
 		$exploits=$e->mySqlSelectByCategory($c->id(),0, 8);
 		$viewByCategory=$f->getLink($c->name(), "ViewByCategory.php", array("view"=> $c->id()));
+		
 		echo "<div class=\"exploit-category\">\n";
 		echo "<h4 class=\"category-title\">$viewByCategory</h4><table>\n";
+		echo "<tr><th>Date</th><th>DL</th><th>V</th><th>Description</th><th>DL's</th><th>Platform</th><th>Author</th></tr>";
 		$ctr=0;
 		foreach ($exploits as $e){			
 			$ctr%2==0 ? $modulo="table-gerade" : $modulo="table-ungerade";

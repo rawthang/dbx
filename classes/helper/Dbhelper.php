@@ -19,7 +19,7 @@ abstract class Dbhelper{
 		
 		if(!$this->dbh() || !is_numeric($this->id()) || $this->tablename=='')
 			return false;
-		echo "<h3>in</h3>";
+		
 		$sql="DELETE FROM {$this->tablename} WHERE id=?";
 		$stmt=$this->dbh->prepare($sql);
 		
@@ -27,6 +27,20 @@ abstract class Dbhelper{
 		$stmt->execute();		
 		return $sql;
 	}
+	
+	public function mysqlCount(){
+		if(!$this->dbh() || $this->tablename=='')
+			return false;
+		$sql="select COUNT(*) from {$this->tablename};";		
+		$stmt=$this->dbh->prepare($sql);
+		$stmt->execute();
+		$value=$stmt->fetch(PDO::FETCH_ASSOC);			
+		if($value==null)
+			return 0;					
+		return $value['COUNT(*)'];
+		
+	}
+	
 	protected function setTableName($name){
 		$this->tablename=$name;
 		
