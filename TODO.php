@@ -21,5 +21,7 @@
  *
  *---------------------------
  *@todo: mod-rewrite
+ *
+ *@todo: navigation durch 600 seiten exploits
 */
 ?>

@@ -68,15 +68,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$n=$e->mysqlCountByCategory($get->view());															//anpassen
 		
 
-		/***************
-		 * navigation *
-		 **************/
-		$nav=new Navigation($f);
-		$nav->currentSite($get->site());
-		$nav->nElements($n);
-		$nav->itemsPerSite(15);
-		$nav->targetUrl($sitename);									
-		$nav->additionalUrlParams(array('view'=>$get->view()));
+
 		//-----lsExploits--------------------------------------------------------------------------------------------------------------------------------------------------------------
 		$e= new pExploit();
 		$e->dbh($dbh);
@@ -96,13 +88,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		
 		$get->order()=="asc"?$cursor="&#8593;" :  $cursor="&#8595;";
 		$get->order()=="asc"?$order="desc" :  $order="asc";
-		$strDate="Date";
-		$strHits="hits";
-		$strVerified="V";
-		$strDownloads="DL's";
-		$strPlatform="Platform";
-		$strAuthor="Author";
-		 
+
 		$values=array(	'hits'=>'hits'
 						,'platform'=>'platform'
 						,'autor'=>'author'
@@ -119,7 +105,20 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$authorlink=$f->getLink($values['autor'], "",array('order_by'=>'autor',  'order'=>$order) +  $currentVars);
 		$datelink=$f->getLink($values['date'], "",array('order_by'=>'date',  'order'=>$order) +  $currentVars);
 		$verified=$f->getLink($values['verified'], "",array('order_by'=>'verified',  'order'=>$order) +  $currentVars);
-		$exploits=$e->mySqlSelectByCategory($get->view(),$nav->mysqlStart(), $nav->itemsPerSite(),$orderBy,$order);			//anpassen				
+			
+		/***************
+		 * navigation *
+		 **************/
+		$nav=new Navigation($f);
+		$nav->currentSite($get->site());
+		$nav->nElements($n);
+		$nav->itemsPerSite(15);
+		$nav->targetUrl($sitename);									
+		$nav->additionalUrlParams(array('view'=>$get->view(), 'order_by' =>$get->order_by(), 'order'=>$get->order()));			
+		
+		
+		
+		$exploits=$e->mySqlSelectByCategory($get->view(),$nav->mysqlStart(), $nav->itemsPerSite(),$orderBy,$order);			//anpassen
 		/*******order*******************/
 		$viewByCategory=$f->getLink($c->name(), $sitename, array("view"=> $c->id()));	
 		echo "<div class=\"exploit-category\">\n";
