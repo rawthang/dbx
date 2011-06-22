@@ -1,4 +1,10 @@
 <?php
+/**
+ * 
+ * unicode cursor up &#8593;
+ * 			cursor down &#8595;
+ * 
+ */
 require_once('credentials.php');
 require_once('classes/helper/Dbhelper.php');
 require_once ('classes/other/geshi/geshi.php');
@@ -49,8 +55,13 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 	$get->requireVar('view');
 	$get->assignVar('back');
 	$get->assignVar('forward');
-	$get->assignVar('site');
+	$get->assignVar('site');	
 	$get->assignVar('type');
+	/**sortieren ***/
+	$get->assignVar('order');
+	$get->assignVar('order_by');
+	/**sortieren ***/
+	
 	if($get->validateVars()){
 		$e= new pExploit();
 		$e->dbh($dbh);
@@ -72,14 +83,48 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$c=new pCategory();
 		$c->dbh($dbh);
 		$c->mysqlSelect($get->view());
-		$exploits=$e->mySqlSelectByCategory($get->view(),$nav->mysqlStart(), $nav->itemsPerSite());			//anpassen
+		/*******order*******************/
+		$currentVars=array("view"=>$get->view());
+		$order="asc";		//asc||desc
+		$orderBy="date";	//order by column field
+		
+		if ($get->order_by()!="" && $get->order()!=""){
+			$orderBy=$get->order_by();
+			$order=$get->order();
+		}
+		
+		
+		$get->order()=="asc"?$cursor="&#8593;" :  $cursor="&#8595;";
+		$get->order()=="asc"?$order="desc" :  $order="asc";
+		$strDate="Date";
+		$strHits="hits";
+		$strVerified="V";
+		$strDownloads="DL's";
+		$strPlatform="Platform";
+		$strAuthor="Author";
+		 
+		$values=array(	'hits'=>'hits'
+						,'platform'=>'platform'
+						,'autor'=>'author'
+						,'date' =>'date'
+						,'verified' =>'V'
+					);
+		
+		$values[$get->order_by()]=$cursor.' ' . $values[$get->order_by()];
 		
 		
 		
+		$hitlink=$f->getLink($values['hits'], "",array('order_by'=>'hits',  'order'=>$order) +  $currentVars);
+		$platformlink=$f->getLink($values['platform'], "",array('order_by'=>'platform',  'order'=>$order) +  $currentVars);
+		$authorlink=$f->getLink($values['autor'], "",array('order_by'=>'autor',  'order'=>$order) +  $currentVars);
+		$datelink=$f->getLink($values['date'], "",array('order_by'=>'date',  'order'=>$order) +  $currentVars);
+		$verified=$f->getLink($values['verified'], "",array('order_by'=>'verified',  'order'=>$order) +  $currentVars);
+		$exploits=$e->mySqlSelectByCategory($get->view(),$nav->mysqlStart(), $nav->itemsPerSite(),$orderBy,$order);			//anpassen				
+		/*******order*******************/
 		$viewByCategory=$f->getLink($c->name(), $sitename, array("view"=> $c->id()));	
 		echo "<div class=\"exploit-category\">\n";
-		echo "<h4 class=\"category-title\">$viewByCategory</h4><table>\n";
-		echo "<tr><th>Date</th><th>DL</th><th>V</th><th>Description</th><th>DL's</th><th>Platform</th><th>Author</th></tr>";
+		echo "<h4 class=\"category-title\">$viewByCategory</h4><table class=\"exploit-table\">\n";
+		echo "<tr><th>$datelink</th><th>DL</th><th>$verified</th><th>Description</th><th>$hitlink</th><th>$platformlink</th><th>$authorlink</th></tr>";
 		$ctr=0;
 		foreach ($exploits as $e){
 			$ctr%2==0 ? $modulo="table-gerade" : $modulo="table-ungerade";
@@ -99,12 +144,17 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 			$ctr++;
 		}//each
 		echo "</table></div>\n";
-	}
+	
 	//-----lsExploits--------------------------------------------------------------------------------------------------------------------------------------------------------------
 	?>
 
 		<div class="list-navigation">
-		<?php echo $nav;?>
+		<?php echo $nav;
+		
+		
+		
+	}
+		?>
 		</div>
 	</div>
 </body>

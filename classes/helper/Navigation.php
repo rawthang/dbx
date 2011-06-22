@@ -41,7 +41,7 @@ class Navigation
 	/**
 	 * id für Button vorwärts berechnen
 	 */
-	private function nextSite(){	
+	private function nextSite(){					
 		$next=1+ $this->currentSite();
 		$next>=$this->sites()? $next=$this->sites():$next=$next;
 		
@@ -92,10 +92,19 @@ class Navigation
 			$this->targetUrl=$targetUrl; 
 		} 
 	}
+	public function currentSite($currentSite=""){ 
+		if (empty($currentSite)){
+			if ($this->currentSite=="")
+				$this->currentSite=1;
+			return $this->currentSite; 
+		}else{
+			$this->currentSite=$currentSite; 
+		}
+	 }
 	/**SetGetter**/
 	public function itemsPerSite($itemsPerSite=""){ if (empty($itemsPerSite)){return $this->itemsPerSite; }else{$this->itemsPerSite=$itemsPerSite; } }
 	public function nElements($nElements=""){ if (empty($nElements)){return $this->nElements; }else{$this->nElements=$nElements; } }
-	public function currentSite($currentSite=""){ if (empty($currentSite)){return $this->currentSite; }else{$this->currentSite=$currentSite; } }
+	
 
 	public function additionalUrlParams(Array $additionalUrlParams=null){ if (empty($additionalUrlParams)){return $this->additionalUrlParams; }else{$this->additionalUrlParams=$additionalUrlParams; } }
 }//class

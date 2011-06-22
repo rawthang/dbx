@@ -28,6 +28,20 @@ html,body,h1,form,fieldset,legend,ol,li {
 	
 	}
 
+/**** tabelle*****/
+.exploit-table {
+	width:80%;
+}
+.exploit-table th a{
+	color:white;
+	text-decoration:none;
+	
+}
+.exploit-table th a:hover{
+	color:yellow;
+	
+	
+}
 
 /***********formular***********/
 /*form {
