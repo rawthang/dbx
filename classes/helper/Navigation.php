@@ -32,8 +32,8 @@ class Navigation
 	/**
 	 * id für Button zurück berechnen
 	 */
-	private function previousSite(){
-		$prev=$this->currentSite()-1;
+	private function previousSite($n=1){
+		$prev=$this->currentSite()-$n;
 		$prev<=0 ? $prev=1: $prev=$prev;
 		return $prev;
 	}
@@ -41,8 +41,8 @@ class Navigation
 	/**
 	 * id für Button vorwärts berechnen
 	 */
-	private function nextSite(){					
-		$next=1+ $this->currentSite();
+	private function nextSite($n=1){					
+		$next=$n+ $this->currentSite();
 		$next>=$this->sites()? $next=$this->sites():$next=$next;
 		
 		return $next;
@@ -50,8 +50,10 @@ class Navigation
 
 	
 	public function __toString(){
-		$back=$this->formgen->getLink("<<", $this->targetUrl(), array('site'=> $this->previousSite()) +  $this->additionalUrlParams);
-		$forward=$this->formgen->getLink(">>", $this->targetUrl(), array('site'=> $this->nextSite()) +  $this->additionalUrlParams);
+		$back=$this->formgen->getLink("<", $this->targetUrl(), array('site'=> $this->previousSite()) +  $this->additionalUrlParams);
+		$back5=$this->formgen->getLink("<<", $this->targetUrl(), array('site'=> $this->previousSite(5)) +  $this->additionalUrlParams);
+		$forward=$this->formgen->getLink(">", $this->targetUrl(), array('site'=> $this->nextSite()) +  $this->additionalUrlParams);
+		$forward5=$this->formgen->getLink(">>", $this->targetUrl(), array('site'=> $this->nextSite(5)) +  $this->additionalUrlParams);
 		$ls="";
 		
 		for ($i=1; $i<=$this->sites(); $i++ ){
@@ -65,7 +67,7 @@ class Navigation
 		}
 		if(empty($ls))	
 			return "";				
-		return "$back\n $ls $forward\n" ;				
+		return "$back5\n $back\n $ls $forward\n $forward5\n" ;				
 	}//toString
 
 	public function mysqlStart($mysqlStart=""){		

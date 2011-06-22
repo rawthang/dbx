@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * unicode cursor up &#8593;
+ * 	unicode cursor up &#8593;
  * 			cursor down &#8595;
  * 
  */
@@ -95,9 +95,9 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 						,'date' =>'date'
 						,'verified' =>'V'
 					);
-		
+		if ($get->order_by()!=''){
 		$values[$get->order_by()]=$cursor.' ' . $values[$get->order_by()];
-		
+		}
 		
 		
 		$hitlink=$f->getLink($values['hits'], "",array('order_by'=>'hits',  'order'=>$order) +  $currentVars);
