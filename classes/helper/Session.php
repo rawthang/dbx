@@ -130,7 +130,7 @@ class Session
 /*
     Examples:
 */
-
+/*
 // We get the instance
 $data = Session::getInstance();
 
@@ -140,7 +140,7 @@ $data->age = 18;
 
 // Let's display datas
 printf( '<p>My name is %s and I\'m %d years old.</p>' , $data->nickname , $data->age );
-
+*/
 /*
     It will display:
    
@@ -150,7 +150,7 @@ printf( '<p>My name is %s and I\'m %d years old.</p>' , $data->nickname , $data-
         [age] => 18
     )
 */
-
+/*
 printf( '<pre>%s</pre>' , print_r( $_SESSION , TRUE ));
 
 // TRUE
@@ -161,5 +161,5 @@ $data->destroy();
 
 // FALSE
 var_dump( isset( $data->nickname ));
-
+*/
 ?>
