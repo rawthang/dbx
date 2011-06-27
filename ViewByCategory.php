@@ -28,6 +28,7 @@ require_once 'classes/helper/Formgen.php';
 require_once 'classes/helper/Navigation.php';
 $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
+define('NUMBERS_PER_SIDE', 15);
 ?>
 <!DOCTYPE html>
 <html>
@@ -112,7 +113,7 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht 
 		$nav=new Navigation($f);
 		$nav->currentSite($get->site());
 		$nav->nElements($n);
-		$nav->itemsPerSite(15);
+		$nav->itemsPerSite(NUMBERS_PER_SIDE);
 		$nav->targetUrl($sitename);									
 		$nav->additionalUrlParams(array('view'=>$get->view(), 'order_by' =>$get->order_by(), 'order'=>$get->order()));			
 		
