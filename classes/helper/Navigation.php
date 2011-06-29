@@ -24,8 +24,8 @@ class Navigation
 	 * Mit der Klasse läßt sich eine Listennavigation darstellen
 	 * @param $f Instanz der Klasse Formgen
 	 */
-	public function __construct(Formgen $f ){
-		$this->formgen=$f;
+	public function __construct(){
+		$this->formgen=new Formgen();
 	}//__construct
 	
 	

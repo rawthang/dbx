@@ -26,6 +26,8 @@ require_once 'classes/helper/Upload.php';
 require_once 'classes/helper/Getvars.php';
 require_once 'classes/helper/Formgen.php';
 require_once 'classes/helper/Navigation.php';
+require_once 'classes/helper/Table.php';
+require_once 'classes/helper/AntiHitFaker.php';
 $dbh=new PDO(DB_DSN, DB_USR, DB_PASS);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);		//@todo das steht nur zum üben hier
 define('NUMBERS_PER_SIDE', 15);
